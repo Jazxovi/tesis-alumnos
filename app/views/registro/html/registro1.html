@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container" ng-app="registro">
+        <h2>FECHA DE REGISTRO</h2>
+        <div class="row" ng-controller="registro1">
+            <div class="col-md-6">
+                <form action="">
+
+                    <div class="form-group">
+                        <label for="grupo">Grupo</label>
+                        <input type="text" class="form-control" name="grupo" required>
+                    </div>            
+
+                    <div class="form-group">
+                        <label for="turno">Turno</label>
+                        <input type="text" class="form-control" name="turno" ng-model="turno" required readonly>
+                        <button class="btn btn-success espacio" type="button" ng-click="matutino()">Matutino</button>
+                        <button class="btn btn-success espacio" type="button" ng-click="vespertino()">Vespertino</button>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semestre">Semestre</label>
+                        <input type="text" class="form-control" name="semestre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" class="form-control" name="especialidad" ng-model="especialidad" required readonly>
+                        <button class="btn btn-success espacio" type="button" ng-click="tecnicoenlogistica()">Tecnico en Logistica</button>
+                        <button class="btn btn-success espacio" type="button" ng-click="tecnicoysoporteymantenimientodeequipodecomputo()">Tecnico Soporte</button>
+                    </div>            
+
+                    <div class="form-group">
+                        <button class="btn btn-info">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>   
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

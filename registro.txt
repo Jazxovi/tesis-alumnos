@@ -1,0 +1,6 @@
+tabla registro
+
+grupo					tipo=string
+turno					tipo=string
+semestre				tipo=string
+especialidad			tipo=string

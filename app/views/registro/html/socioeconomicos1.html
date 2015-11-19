@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container" ng-app="registro">
+        <h2>Datos Socioeconomicos</h2>
+        <div class="row" ng-controller="socioeconomicos1">
+            <div class="col-md-10">
+                <form action="">
+                      
+                    <div class="form-group">
+                        <label for="no_de_personas_que_viven_contigo">¿No. de personas que viven contigo?:</label>
+                        <input type="text" class="form-control" name="no_de_personas_que_viven_contigo" required>
+                    </div>
+                      
+                </form>
+            </div>
+        </div>   
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-nordered table-hover table-striped">
+                    <thead>
+                        <tr class="info">
+                            <th class="text-center">Parentesco</th>
+                            <th class="text-center">Edad</th>
+                            <th class="text-center">Grado escolar</th>
+                            <th class="text-center">Ocupacion</th>
+                            <th class="text-center">Lugar de estudio o trabajo</th>
+                            <th class="text-center">Ingreso mensual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th><input type="text" class="form-control"></th>
+                            <th><input type="text" class="form-control"></th>
+                            <th><input type="text" class="form-control"></th>
+                            <th><input type="text" class="form-control"></th>
+                            <th><input type="text" class="form-control"></th>
+                            <th><input type="text" class="form-control"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

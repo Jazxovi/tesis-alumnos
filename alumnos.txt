@@ -1,0 +1,15 @@
+tabla alumnos			
+
+nombres					tipo=string
+edad					tipo=integer 
+fecha_nacimiento		tipo=string
+sexo					tipo=string
+direccion				tipo=string
+colonia					tipo=string
+municipio				tipo=string
+estado 					tipo=string
+cp						tipo=integer
+telefono				tipo=integer
+mail 					tipo=string
+estado_civil			tipo=string
+
