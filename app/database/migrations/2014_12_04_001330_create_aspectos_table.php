@@ -17,7 +17,7 @@ class CreateAspectosTable extends Migration {
 			$table->increments('id');	
 
 			$table->integer('alumno_id')->unsigned();
-			$table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');
+			$table->foreign('alumno_id')->references('id')->on('layout')->onDelete('cascade');
 
 			$table->string('que_momento_convive_toda_la_familia');
 			$table->string('lugares_que_acudes_con_tu_familia');

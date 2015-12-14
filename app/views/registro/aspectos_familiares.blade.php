@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>REGISTRO</title>
-    <link rel="stylesheet" href="{{asset ('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('css/estilos.css')}}">
-</head>
-<body>
+@extends('layout.main')
+@section('contenido')
     <div class="container" ng-app="registro" ng-controller="aspectos_familiares">
         <h2 class="text-center">ASPECTOS FAMILIARES</h2>
         
@@ -79,5 +72,4 @@
     <script src="{{asset('js/angular.js')}}"></script>
     <script src="{{asset('js/appl.js')}}"></script>
     <script src="{{asset('js/controllers/aspectos_familiares.js')}}"></script>
-</body>
-</html>
+@endsection

@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>REGISTRO</title>
-   <link rel="stylesheet" href="{{asset ('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('css/estilos.css')}}">
-</head>
-<body>
+@extends('layout.main')
+@section('contenido')
     <div class="container" ng-app="registro">
         <h2>Datos Socioeconomicos</h2>
         <div class="row">
@@ -105,5 +98,4 @@
     <script src="{{asset('js/angular.js')}}"></script>
     <script src="{{asset('js/appl.js')}}"></script>
     <script src="{{asset('js/controllers/socioeconomico.js')}}"></script>
-</body>
-</html>
+@endsection

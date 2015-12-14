@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'www.cbtis251.edu.mx',
-			'database'  => 'cbtised8_tutoria',
-			'username'  => 'cbtised8_tuto',
-			'password'  => 'tutorias2015',
+			'host'      => 'localhost',
+			'database'  => 'horario',
+			'username'  => 'root',
+			'password'  => 'mysql',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

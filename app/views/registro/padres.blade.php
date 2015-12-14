@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>REGISTRO</title>
-    <link rel="stylesheet" href="{{asset ('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('css/estilos.css')}}">
-    <script src="{{asset('js/vendor/jquery-2.1.1.min.js')}}"></script>
-</head>
-<body>
+@extends('layout.main')
+@section('contenido')
     <div class="container" ng-app="registro">
         <h2 class="text-center">Datos Generales de los Padres</h2>
         <div class="row" ng-controller="padres">
@@ -57,7 +49,9 @@
 
                     <div class="form-group">
                         <label for="esta_vivo">Esta viva:</label>
-                        <input type="text" class="form-control" name="esta_vivo_m" required>
+                        <input type="text" class="form-control" name="esta_vivo_m" required ng-model="padres" readonly>
+                        <button class="btn btn-success espacio" type="button" ng-click="si()" id="hidr">Si</button>
+                        <button class="btn btn-success espacio" type="button" ng-click="no()" id="showr">No</button>
                     </div>
 
                     <div class="form-group">
@@ -132,5 +126,4 @@
     <script src="{{asset('js/angular.js')}}"></script>
     <script src="{{asset('js/appl.js')}}"></script>
     <script src="{{asset('js/controllers/padres.js')}}"></script>
-</body>
-</html>
+@endsection

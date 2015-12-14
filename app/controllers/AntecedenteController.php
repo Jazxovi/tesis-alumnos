@@ -8,9 +8,9 @@ class AntecedenteController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index($id)
+	public function index( )
 	{
-		return View::make('registro.antecedentes', compact('id'));
+		return View::make('registro.antecedentes');
 	}
 
 	/**

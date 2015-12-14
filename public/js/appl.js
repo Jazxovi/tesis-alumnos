@@ -1,1 +1,3 @@
-var app = angular.module('registro', []);
+(function(){
+	var app = angular.module("app",  []);
+}());

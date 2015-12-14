@@ -12,7 +12,7 @@ class CreateAlumnosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('alumnos', function(Blueprint $table)
+		Schema::create('layout', function(Blueprint $table)
 		{
 			$table->increments('id');
             $table->string('nombres');
@@ -54,7 +54,7 @@ class CreateAlumnosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('alumnos');
+		Schema::drop('layout');
 	}
 
 }

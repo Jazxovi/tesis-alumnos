@@ -17,7 +17,7 @@ class CreateComidasTable extends Migration {
 			$table->increments('id');
 
 			$table->integer('alumno_id')->unsigned();
-			$table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');
+			$table->foreign('alumno_id')->references('id')->on('layout')->onDelete('cascade');
 
 
 			$table->string('ya_consumiste_alimento');

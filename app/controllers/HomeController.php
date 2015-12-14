@@ -3,27 +3,14 @@
 
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
 	public function home()
 	{
+		$alumno = "";
 		$grupo = Grupo::where('status', 1)->get();
 		$turno = Turno::all();
-		$area = Carrera::all();
 		$semestre = Semestre::all();
 
-		return View::make('registro.index', compact('grupo', 'turno', 'area', 'semestre'));
+		return View::make('registro.index', compact('grupo', 'turno', 'semestre'));
 	}
 
 	public function store()
@@ -33,7 +20,7 @@ class HomeController extends BaseController {
 		$alumno->grupo_id = Input::get('grupo_id');
 		$alumno->save();
 
-		$x = DB::select('SELECT id FROM alumnos WHERE nombres = ?
+		$x = DB::select('SELECT id FROM layout WHERE nombres = ?
 			AND grupo_id = ?',
 			[Input::get('nombres'),
 			Input::get('grupo_id')]);

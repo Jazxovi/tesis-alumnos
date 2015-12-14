@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>REGISTRO</title>
-    <link rel="stylesheet" href="{{asset ('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset ('css/estilos.css')}}">
-</head>
-<body>
+
     <div class="container" ng-app="registro">
-        <h2 class="text-center">Datos Generales del Alumno</h2>
+        <h2 class="text-center">Datos del Alumno</h2>
         <div class="row" ng-controller="formulario-registro">
             <div class="col-md-4"></div>
             <div class="col-md-4">
