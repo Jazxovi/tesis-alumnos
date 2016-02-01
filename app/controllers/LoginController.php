@@ -20,21 +20,14 @@ class LoginController extends \BaseController {
         $data = Input::except('_token');
 
         $rules = [ 
-            'usuario'  => 'required | unique:users,usuario',
+            'usuario'   => 'required | unique:users,usuario',
             'password'  => 'required',
             'nombres'   => 'required',
-            'edad'  => 'required',
-            'fecha_nacimiento'  => 'required',
-            'sexo' => 'required',
-            'cp' => 'required',
-            'municipio' => 'required',
-            'direccion' => 'required',
-            'colonia' => 'required',
-            'estado' => 'required',
-            'telefono' => 'required',
-            'mail' => 'required',
+            'edad'      => 'required',
+            'sexo'      => 'required',
+            'mail'      => 'required',
             'estado_civil' => 'required',
-            'grupo_id'  => 'required',
+            'grupo_id'  => 'required'
         ];
         $validator = Validator::make( $data, $rules);
 
@@ -48,14 +41,7 @@ class LoginController extends \BaseController {
             $alumno                 = new Alumno();
             $alumno->nombres        = Input::get('nombres');
             $alumno->edad           = Input::get('edad');
-            $alumno->fecha_nacimiento        = Input::get('fecha_nacimiento');
             $alumno->sexo           = Input::get('sexo');
-            $alumno->cp             = Input::get('cp');
-            $alumno->municipio      = Input::get('municipio');
-            $alumno->direccion      = Input::get('direccion');
-            $alumno->colonia        = Input::get('colonia');
-            $alumno->estado         = Input::get('estado');
-            $alumno->telefono       = Input::get('telefono');
             $alumno->mail           = Input::get('mail');
             $alumno->estado_civil   = Input::get('estado_civil');
             $alumno->grupo_id        = Input::get('grupo_id');
@@ -65,7 +51,7 @@ class LoginController extends \BaseController {
             return $this->postLogin();
         }
 
-        return Redirect::back();
+        return Redirect::back()->withInput()->withErrors($validator->messages());
     }
 
 	public function postLogin()

@@ -22,9 +22,9 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	| Rutas de datos del alumno
 	|_________________________________________________________________________
 	|*/
-
+	Route::get('registro/datos_del_alumno', ['as'=> 'alumno', 'uses' => 'AlumnoController@index']);
 	
-	Route::post('registro/datos_del_alumno', ['as'=> 'alumno', 'uses' => 'LoginController@create']);
+	Route::post('registro/datos_del_alumno', ['as'=> 'alumno.post', 'uses' => 'LoginController@create']);
 
 	/*
 	|--------------------------------------------------------------------------

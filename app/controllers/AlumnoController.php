@@ -2,23 +2,11 @@
 
 class AlumnoController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /alumno
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
-		//
+		return View::make('alumno.index');
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /alumno/create
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
 		//

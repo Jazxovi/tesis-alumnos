@@ -64,48 +64,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                                <input type="text" class="form-control input-sm" name="fecha_nacimiento" required placeholder="11 Junio 1992">
-                            </div>
-
-                            <div class="form-group">
                                 <label for="sexo">Sexo</label>
                                 <select name="sexo" class="form-control input-sm">
                                     <option value="Hombre">Hombre</option>
                                     <option value="Mujer">Mujer</option>
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <label for="cp">Código Postal</label>
-                                <input type="text" class="form-control input-sm" name="cp" size="5" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="municipio">Municipio</label>
-                                <input type="text" class="form-control input-sm" name="municipio" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="direccion">Dirección</label>
-                                <input type="text" class="form-control input-sm" name="direccion" required required placeholder="Calle y Numero o s/n">
-                            </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="colonia">Colonia</label>
-                                <input type="text" class="form-control input-sm" name="colonia" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="estado">Estado</label>
-                                <input type="text" class="form-control input-sm" name="estado" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="telefono">Telefono</label>
-                                <input type="text" class="form-control input-sm" name="telefono" required>
-                            </div>
 
                             <div class="form-group">
                                 <label for="mail">E-mail</label>
@@ -140,7 +106,20 @@
             </div>
         </div>
     </div>
-
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <p>{{ $errors->first('nombres', ':message')}}</p>
+            <p>{{ $errors->first('edad', ':message')}}</p>
+            <p>{{ $errors->first('grupo_id', ':message')}}</p>
+            <p>{{ $errors->first('sexo', ':message')}}</p>
+            <p>{{ $errors->first('mail', ':message')}}</p>
+            <p>{{ $errors->first('estado_civil', ':message')}}</p>
+            <p>{{ $errors->first('usuario', ':message')}}</p>
+            <p>{{ $errors->first('password', ':message')}}</p>
+        </div>
+    </div>
 </div>
 <script>
     $('#myTabs a').click(function (e) {

@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{route('p')}}">Datos Escolares</a></li>
-                <li><a href="#">Datos del Alumno</a></li>
+                <li><a href="{{route('alumno')}}">Datos del Alumno</a></li>
                 <li><a href="{{route('antecedentes')}}">Antecedentes</a></li>
                 <li><a href="{{route('padres')}}">Datos de los Padres</a></li>
                 <li><a href="{{route('socioeconomico')}}">Socioeconomicos</a></li>

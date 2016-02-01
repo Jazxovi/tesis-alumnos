@@ -10,12 +10,14 @@
     
     <!--Angular-->
     <script src="{{asset('js/angular.min.js')}}"></script>
+    <script src="{{asset('js/ngMask.js')}}"></script>
     
     <!--Angular Scripts-->
-    <script src="{{asset('js/appl.js')}}"></script>
-
+    <script src="{{asset('app/app.js')}}"></script>
+    <script src="{{asset('app/controllers/estadoController.js')}}"></script>
+    <script src="{{asset('app/controllers/antecedentesController.js')}}"></script>
     <!--Angular Controllers-->
-    <script src="{{asset('js/controllers/registro.js')}}"></script>
+
     @yield('scripts')
 </head>
 <body ng-app="app">

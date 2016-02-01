@@ -7,38 +7,31 @@
         {{ Form::open(['route' => 'registro.store']) }}
             <div class="form-group">
                 <label for="nombres">Nombre del Alumno</label>
-                <input type="text" class="form-control" name="nombres" ng-change="registro()" required ng-model="nombres">
+                {{ Form::text('nombres', $alumno->nombres, ['class' => 'form-control', 'readonly']) }}
             </div>
 
             <div class="form-group">
                 <label for="grupo_id">Grupo</label>
-                <select class="form-control" name="grupo_id">
-                    @foreach($grupo as $d)
-                    <option value="{{$d->id}}">{{$d->grupo}}</option>
-                    @endforeach
-                </select>
+                {{ Form::text('grupo', $alumnoGrupo->grupo, ['class' => 'form-control', 'readonly']) }}
+
             </div>
 
             <div class="form-group">
                 <label for="turno_id">Turno</label>
-                 <select class="form-control" name="turno_id">
-                   @foreach($turno as $d)
-                    <option value="{{$d->id}}">{{$d->turno}}</option>
-                    @endforeach
-                </select>
+                @foreach($alumnoTurno as $d)
+                    {{ Form::text('turno_id', $d->turno, ['class' => 'form-control', 'readonly']) }}
+                @endforeach
             </div>
 
             <div class="form-group">
                 <label for="semestre_id">Semestre</label>
-                 <select class="form-control" name="semestre_id">
-                    @foreach($semestre as $d)
-                    <option value="{{$d->id}}">{{$d->semestre}}</option>
-                    @endforeach
-                </select>
+                @foreach($alumnoSemestre as $d)
+                    {{ Form::text('semestre_id', $d->semestre, ['class' => 'form-control', 'readonly']) }}
+                @endforeach
             </div>
 
             <div class="form-group">
-                <button class="btn btn-info" type="@{{tipo}}">Guardar</button>
+
             </div>
         {{Form::close()}}
     </div>
