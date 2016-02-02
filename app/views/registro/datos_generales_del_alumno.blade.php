@@ -9,12 +9,6 @@
                     @endforeach
                 {{ Form::open(array('route' => ['registro.update', $id], 'method' => 'PUT')) }}
 
-
-                    <div class="form-group">
-                        <label for="edad">Edad</label>
-                        <input type="number" class="form-control" name="edad" required>
-                    </div>
-
                     <div class="form-group">
                         <label for="fecha_nacimiento">Fecha de Nacimiento</label>
                         <input type="text" class="form-control" name="fecha_nacimiento" required placeholder="11 Junio 1992">

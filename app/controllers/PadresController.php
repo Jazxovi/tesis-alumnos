@@ -2,9 +2,9 @@
 
 class PadresController extends \BaseController {
 
-	public function index($id)
+	public function index()
 	{
-		return View::make('registro.padres', compact('id'));
+		return View::make('registro.padres');
 	}
 
 	public function create()

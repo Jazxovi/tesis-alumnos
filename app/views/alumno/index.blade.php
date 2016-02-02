@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">CP</label>
-                    <input type="text" class="form-control" mask="99999" ng-model="cp">
+                    <inzput type="text" class="form-control" mask="99999" ng-model="cp">
                 </div>
                 <div class="form-group">
                     <label for="">Telefono</label>
