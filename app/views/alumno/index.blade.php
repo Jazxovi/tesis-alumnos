@@ -3,10 +3,7 @@
     <div class="container" ng-controller="EstadoController">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="form-group">
-                    <label for="">Edad</label>
-                    <input type="text" class="form-control" mask="99" ng-model="edad">
-                </div>
+
                 <div class="form-group">
                     <label for="">Fecha de nacimiento</label>
                     <input type="text" class="form-control" mask="39/19/9999" ng-model="fecha_nacimiento" placeholder="dd/mm/aaaa">
