@@ -10,7 +10,8 @@ class AntecedenteController extends \BaseController {
 	 */
 	public function index( )
 	{
-		return View::make('registro.antecedentes');
+		$data = Antecedente::where('alumno_id', $this->getInfoAlumno()->first()->id)->first();
+		return View::make('antecedentes.index', compact('data'));
 	}
 
 	/**
@@ -21,7 +22,7 @@ class AntecedenteController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('antecedentes.create');
 	}
 
 	/**
@@ -30,10 +31,10 @@ class AntecedenteController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store($id)
+	public function store()
 	{
 		$antecedente = new Antecedente();
-		$antecedente->alumno_id = $id;
+		$antecedente->alumno_id = $this->getInfoAlumno()->first()->id;
 		$antecedente->la_primaria_la_cursaste_en_escuela = Input::get('la_primaria_la_cursaste_en_escuela');
 		$antecedente->promedio_primaria = Input::get('promedio_primaria');
 		$antecedente->la_secundaria_la_cursaste_en_escuela = Input::get('la_secundaria_la_cursaste_en_escuela');
@@ -48,7 +49,7 @@ class AntecedenteController extends \BaseController {
 		$antecedente->con_que_frecuencia = Input::get('con_que_frecuencia');
 		$antecedente->save();
 		
-		return Redirect::route('padres', [$id]);
+		return Redirect::route('antecedentes');
 
 	}
 
@@ -98,6 +99,12 @@ class AntecedenteController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function getInfoAlumno()
+	{
+		$user = Alumno::where('usuario_id', Auth::user()->id);
+		return $user;
 	}
 
 }

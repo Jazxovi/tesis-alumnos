@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 Route::get('/', ['as' => 'sesion', 'uses'=> 'LoginController@login' ]);
 
@@ -13,9 +13,11 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 
 	Route::get('/datos_escolares', ['as' => 'p', 'uses' => 'HomeController@home' ]);
 
-	Route::post('/datos_escolares', ['as' => 'registro.store', 'uses' => 'HomeController@store' ]);
+	Route::get('/datos_escolares/edit', ['as' => 'datos.escolares.edit', 'uses' => 'HomeController@edit' ]);
 
-	Route::put('/datos_escolares/{id}', ['as' => 'registro.update', 'uses' => 'HomeController@update' ]);
+	Route::put('/datos_escolares/update/{id}', ['as' => 'datos.escolares.update', 'uses' => 'HomeController@update' ]);
+
+	Route::post('/datos_escolares', ['as' => 'registro.store', 'uses' => 'HomeController@store' ]);
 
 	/*
 	|-------------------------------------------------------------------------
@@ -23,8 +25,12 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	|_________________________________________________________________________
 	|*/
 	Route::get('registro/datos_del_alumno', ['as'=> 'alumno', 'uses' => 'AlumnoController@index']);
+
+	Route::get('registro/editar/datos_del_alumno', ['as'=> 'alumno.edit', 'uses' => 'AlumnoController@edit']);	
+
+	Route::put('registro/datos_del_alumno', ['as'=> 'alumno.update', 'uses' => 'AlumnoController@update']);
 	
-	Route::post('registro/datos_del_alumno', ['as'=> 'alumno.post', 'uses' => 'LoginController@create']);
+	Route::post('registro/datos_del_alumno/{id}', ['as'=> 'alumno.post', 'uses' => 'LoginController@create']);
 
 	/*
 	|--------------------------------------------------------------------------
@@ -35,7 +41,9 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 
 	Route::get('/registro/antecedentes', ['as' => 'antecedentes', 'uses' => 'AntecedenteController@index' ]);
 
-	Route::post('/registro/antecedentes', ['as' => 'antecedentes.post', 'uses' => 'AntecedenteController@store' ]);
+	Route::get('/registro/crear/antecedentes', ['as' => 'antecedentes.create', 'uses' => 'AntecedenteController@create' ]);
+
+	Route::post('/registro/antecedentes', ['as' => 'antecedentes.store', 'uses' => 'AntecedenteController@store' ]);
 
 	/*
 	|--------------------------------------------------------------------------
@@ -44,7 +52,11 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	|
 	*/
 
-	Route::get('/registro/padres', ['as' => 'padres', 'uses' => 'PadresController@index' ]);
+	Route::get('/registro/padres', ['as' => 'padres', 'uses' => 'PadresController@index']);
+
+	Route::get('/registro/crear/padres', ['as' => 'padres.create', 'uses' => 'PadresController@create']);
+
+	Route::get('/registro/editar/padres', ['as' => 'padres.edit', 'uses' => 'PadresController@edit']);
 
 	Route::post('/registro/padres', ['as' => 'padres.post', 'uses' => 'PadresController@store' ]);
 
@@ -57,6 +69,12 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 
 	Route::get('/registro/alimenticios', ['as' => 'alimentacion', 'uses' => 'ComidaController@index' ]);
 
+	Route::get('/registro/crear-alimenticios', ['as' => 'alimentacion.create', 'uses' => 'ComidaController@create' ]);
+
+	Route::get('/registro/actualizar-alimenticios', ['as' => 'alimentacion.edit', 'uses' => 'ComidaController@edit' ]);
+
+	Route::put('/registro/actualizar-alimenticios/{id}', ['as' => 'alimentacion.update', 'uses' => 'ComidaController@update' ]);
+
 	Route::post('/registro/alimenticios', ['as' => 'alimentacion.post', 'uses' => 'ComidaController@store' ]);
 
 	/*
@@ -65,11 +83,16 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	|--------------------------------------------------------------------------
 	|
 	*/
-	Route::get('/registro/familiares', ['as' => 'familiares', 'uses' => 'FamiliaController@index' ]);
+	Route::get('/registro/aspectos-familiares', ['as' => 'familiares', 'uses' => 'FamiliaController@index' ]);
+
+	Route::get('/registro/crear/aspectos-familiares', ['as' => 'familiares.create', 'uses' => 'FamiliaController@create' ]);
+
+	Route::get('/registro/editar/aspectos-familiares', ['as' => 'familiares.edit', 'uses' => 'FamiliaController@edit' ]);
+
+	Route::put('/registro/editar/aspectos-familiares', ['as' => 'familiares.update', 'uses' => 'FamiliaController@update' ]);
 
 	Route::post('/registro/familiares', ['as' => 'familiares.post', 'uses' => 'FamiliaController@store' ]);
 
-	Route::post('/registro/familiares', ['as' => 'logout', 'uses' => 'FamiliaController@store' ]);
 
 	/*
 	|--------------------------------------------------------------------------

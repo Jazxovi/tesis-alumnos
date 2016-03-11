@@ -3,7 +3,7 @@
     <div class="container" ng-app="registro" ng-controller="aspectos_familiares">
         <h2 class="text-center">ASPECTOS FAMILIARES</h2>
         
-            {{Form::open(['route' => ['familiares.post', $id]]) }}        
+            {{Form::open(['route' => ['familiares.post']]) }}        
                 <div class="row">
                     <div class="col-md-3"></div>
                     <div class="col-md-6">

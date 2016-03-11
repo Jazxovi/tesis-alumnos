@@ -8,9 +8,9 @@ class EconomicoController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index($id)
+	public function index()
 	{
-		return View::make('registro.economico', compact('id'));	
+		return View::make('registro.economico');	
 	}
 
 	/**

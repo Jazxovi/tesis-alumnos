@@ -1,4 +1,4 @@
-
+	
 <?php
 
 class HomeController extends BaseController {
@@ -25,7 +25,31 @@ class HomeController extends BaseController {
 		$turno = Turno::all();
 		$semestre = Semestre::all();
 
-		return View::make('registro.index', compact('alumno', 'alumnoGrupo', 'alumnoTurno', 'alumnoSemestre','grupo', 'turno', 'semestre'));
+		return View::make('datos_escolares.index', compact('alumno', 'alumnoGrupo', 'alumnoTurno', 'alumnoSemestre','grupo', 'turno', 'semestre'));
+	}
+
+	public function edit()
+	{
+		$alumno = Auth::user()
+			->join('alumnos', 'users.id', '=', 'alumnos.usuario_id')
+			->where('users.id', Auth::user()->id)
+			->first();
+			
+		$alumnoGrupo = DB::table('alumnos')->join('grupos', 'alumnos.grupo_id', '=', 'grupos.id')
+			->where('alumnos.usuario_id', Auth::user()->id)
+			->first();
+		$alumnoTurno =  DB::select('select usuario_id, nombres, grupo, turno from alumnos
+			join grupos on alumnos.grupo_id = grupos.id
+			join turnos on grupos.turno_id = turnos.id
+			where alumnos.usuario_id = ?', [Auth::user()->id]);
+		$alumnoSemestre = DB::select('select usuario_id, nombres, grupo, semestre from alumnos
+			join grupos on alumnos.grupo_id = grupos.id
+			join semestres on grupos.semestre_id = semestres.id
+			where alumnos.usuario_id = ? limit 1', [Auth::user()->id]);
+		$grupo = Grupo::where('status', 1)->get();
+		$turno = Turno::all();
+		$semestre = Semestre::all();
+		return View::make('datos_escolares.edit', compact('alumno', 'alumnoGrupo', 'alumnoTurno', 'alumnoSemestre','grupo', 'turno', 'semestre'));
 	}
 
 	public function store()
@@ -46,6 +70,15 @@ class HomeController extends BaseController {
 
 	public function update($id)
 	{
+		$alumno = Alumno::find($id);
+		$alumno->nombres 	= Input::get('nombres');
+		$alumno->grupo_id 	= Input::get('grupo_id');
+		$alumno->save();
+		return Redirect::route('p');
+	}
+
+	/*public function update($id)
+	{
 		$alumno	= Alumno::find($id);
 
 		$alumno->edad = Input::get('edad');
@@ -63,6 +96,6 @@ class HomeController extends BaseController {
 		$alumno->save();
 
 		return Redirect::route('antecedentes', [$id]);
-	}
+	}*/
 
 }

@@ -1,6 +1,6 @@
-drop database horario;
-create database horario;
-use horario;
+drop database residencia;
+create database residencia;
+use residencia;
 --
 -- Estructura de tabla para la tabla `users`
 --
@@ -18,8 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 -- Volcado de datos para la tabla `users`
 --
 INSERT INTO `users` (`id`, `usuario`, `tipo`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'user', 'maestro', '$2y$10$FQx0ChFsf3u6lMIxywlM1uYRnfQQXquZQBWNCVWSV6MpESynMcWb.', 'bEF6uacTmtq0fPWYvl7iYExKcAW608gRDYkPyvMrz7HcQnohO04dLnwWhGsp', '2014-12-07 04:28:18', '2015-10-13 20:16:54'),
-(2, 'admin', 'maestro', '$2y$10$WuiPz5H3k66gdgfCjmKpOeZdS5QL4nltGuS8O.ruzqH1Ivl4cUIp2', '2nWw7TUYMuRhqPwmj8ISxopkPNuNfZ4cT6iOGGxvBdnFUnN84n6yGEkJn8F0', '2014-12-07 04:28:18', '2015-10-06 22:13:55');
+(1, 'admin', 'maestro', '$2y$10$lYMBPRvfEBjCS5AddApTfO24GfWhl4atnp/vdqxqTvYGInh59n5GS', '2nWw7TUYMuRhqPwmj8ISxopkPNuNfZ4cT6iOGGxvBdnFUnN84n6yGEkJn8F0', '2014-12-07 04:28:18', '2015-10-06 22:13:55');
 
 /*********************************************/
 #tala de configuracion carreras
@@ -370,6 +369,7 @@ create table alumnos(
 	direccion varchar(30) not null,
 	colonia varchar(30) not null,
 	municipio varchar(30) not null,
+	localidad varchar(30) not null,
 	estado varchar(30) not null,
 	mail varchar(30) not null,
 	estado_civil varchar(30) not null,

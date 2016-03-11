@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
         <h1 class="text-center"><span class="label label-default">Datos Escolares</span></h1>
-        {{ Form::open(['route' => 'registro.store']) }}
+
             <div class="form-group">
                 <label for="nombres">Nombre del Alumno</label>
                 {{ Form::text('nombres', $alumno->nombres, ['class' => 'form-control', 'readonly']) }}
@@ -31,9 +31,8 @@
             </div>
 
             <div class="form-group">
-
+                <a href="{{ route('datos.escolares.edit') }}" class="btn btn-warning">Editar</a>
             </div>
-        {{Form::close()}}
     </div>
 </div>
 @endsection

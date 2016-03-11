@@ -23,7 +23,8 @@
                     <div ng-show="padre == 'si'">
                         <div class="form-group">
                             <label for="telefono">Telefono</label>
-                            <input type="text" class="form-control" name="telefono_p" mask="999 999 9999" ng-model="telefono1">
+                            {{Form::text('telefono_p', null, ['class' => 'form-control', 'mask' => '999 999 9999',
+                            'ng-model' => 'telefono', 'restrict' => 'reject', 'ng-value' => ''])}}
                         </div>
                         
                         <div class="form-group">
@@ -54,9 +55,25 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="horario_laboral">Horario laboral:</label>
-                            <input type="text" class="form-control" name="horario_laboral_p" ng-model="horarioP"
-                            mask="19:69am-19:69pm" placeholder="11:10am-09:30pm">
+                            <div class="form-group">
+                                <label for="horario_laboral">Horario laboral:</label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="horaMinPapa" placeholder="9:30am" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="horaMaxPapa" placeholder="6:30pm" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="horario_laboral_p" 
+                                    value="@{{horaMinPapa}} a @{{horaMaxPapa}}" readonly>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -76,12 +93,17 @@
                     <div ng-show="madre == 'si'">
                         <div class="form-group">
                             <label for="telefono_m">Telefono:</label>
-                            <input type="text" class="form-control" name="telefono_m" mask="999 999 9999" ng-model="telefono2">
+                            {{Form::text('telefono_m', null, ['class' => 'form-control', 'mask' => '999 999 9999',
+                            'ng-model' => 'telefono2', 'restrict' => 'reject', 'ng-value' => ''])}}
                         </div>
                         
                         <div class="form-group">
                             <label for="edad">Edad:</label>
-                            <input type="number" class="form-control" name="edad_m" required>
+                            <select name="edad_m" class="form-control">
+                                @for($indice=25; $indice<= 100; $indice++)
+                                <option value="{{$indice}}">{{$indice}}</option>
+                                @endfor
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -101,10 +123,27 @@
                                 <option value="doctorado">Doctorado</option>
                             </select>
                         </div>
-
+                        
                         <div class="form-group">
-                            <label for="horario_laboral">Horario laboral:</label>
-                            <input type="text" class="form-control" name="horario_laboral_m" required>
+                            <div class="form-group">
+                                <label for="horario_laboral">Horario laboral:</label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="horaMinMama" placeholder="9:30am" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="horaMaxMama" placeholder="7:30pm" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="horario_laboral_m" 
+                                    value="@{{horaMinMama}} a @{{horaMaxMama}}" readonly>
+                                </div>
+                            </div>
                         </div>
                     </div>
                         
@@ -125,12 +164,20 @@
                     
                     <div class="form-group">
                         <label for="numero_hermanos">Numero de hermanos:</label>
-                        <input type="number" class="form-control" name="numero_hermanos" required>
+                        <select name="numero_hermanos" class="form-control">
+                        @for($indice=0; $indice<= 10; $indice++)
+                        <option value="{{$indice}}">{{$indice}}</option>
+                        @endfor
+                        </select>
                     </div>
 
                     <div class="form-group">
                         <label for="que_lugar_ocupas_en_la_familia">Que lugar ocupas en la familia?</label>
-                        <input type="text" class="form-control" name="que_lugar_ocupas_en_la_familia" required>
+                        <select name="que_lugar_ocupas_en_la_familia" class="form-control">
+                        @for($indice=0; $indice<= 10; $indice++)
+                        <option value="{{$indice}}">{{$indice}}</option>
+                        @endfor
+                        </select>
                     </div>
 
                     <div class="form-group">

@@ -3,6 +3,20 @@
         .controller('EstadoController', estadoController);
 
     function estadoController($scope){
+        $scope.edit = true;
+
+        $scope.editEstado = function(){
+            $scope.edit = !$scope.edit;
+        }
+
+        $scope.cambiouno = function(data){
+            $("#estado2").val(data);
+        }
+
+        $scope.cambiodos = function(data){
+            $("#municipio2").val(data);
+        }
+
         $scope.estados =
          [
                     {
@@ -25,7 +39,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "CosÌo"
+                                    "nombre": "Cos√≠o"
                                 },
                                 {
                                     "id": 5,
@@ -33,15 +47,15 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Jes˙s MarÌa"
+                                    "nombre": "Jes√∫s Mar√≠a"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "PabellÛn de Arteaga"
+                                    "nombre": "Pabell√≥n de Arteaga"
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "RincÛn de Romos"
+                                    "nombre": "Rinc√≥n de Romos"
                                 },
                                 {
                                     "id": 9,
@@ -49,11 +63,11 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "San JosÈ de Gracia"
+                                    "nombre": "San Jos√© de Gracia"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Tepezal·"
+                                    "nombre": "Tepezal√°"
                                 }
                             ]
                     },
@@ -93,7 +107,7 @@
                         "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Comond˙"
+                                    "nombre": "Comond√∫"
                                 },
                                 {
                                     "id": 2,
@@ -109,7 +123,7 @@
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "MulegÈ"
+                                    "nombre": "Muleg√©"
                                 }
                             ]
                     },
@@ -125,7 +139,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "CalkinÌ"
+                                    "nombre": "Calkin√≠"
                                 },
                                 {
                                     "id": 3,
@@ -141,19 +155,19 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "ChampotÛn"
+                                    "nombre": "Champot√≥n"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "Esc·rcega"
+                                    "nombre": "Esc√°rcega"
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Hecelchak·n"
+                                    "nombre": "Hecelchak√°n"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "HopelchÈn"
+                                    "nombre": "Hopelch√©n"
                                 },
                                 {
                                     "id": 8,
@@ -177,7 +191,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "AcuÒa"
+                                    "nombre": "Acu√±a"
                                 },
                                 {
                                     "id": 3,
@@ -193,11 +207,11 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "CastaÒos"
+                                    "nombre": "Casta√±os"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "CuatrociÈnegas"
+                                    "nombre": "Cuatroci√©negas"
                                 },
                                 {
                                     "id": 8,
@@ -225,11 +239,11 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "JimÈnez"
+                                    "nombre": "Jim√©nez"
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Ju·rez"
+                                    "nombre": "Ju√°rez"
                                 },
                                 {
                                     "id": 14,
@@ -249,7 +263,7 @@
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "M˙zquiz"
+                                    "nombre": "M√∫zquiz"
                                 },
                                 {
                                     "id": 17,
@@ -309,7 +323,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "TorreÛn"
+                                    "nombre": "Torre√≥n"
                                 },
                                 {
                                     "id": 30,
@@ -317,7 +331,7 @@
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "Villa UniÛn"
+                                    "nombre": "Villa Uni√≥n"
                                 },
                                 {
                                     "id": 38,
@@ -333,7 +347,7 @@
                         "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "ArmerÌa"
+                                    "nombre": "Armer√≠a"
                                 },
                                 {
                                     "id": 2,
@@ -345,15 +359,15 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Coquimatl·n"
+                                    "nombre": "Coquimatl√°n"
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "CuauhtÈmoc"
+                                    "nombre": "Cuauht√©moc"
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Ixtlahuac·n"
+                                    "nombre": "Ixtlahuac√°n"
                                 },
                                 {
                                     "id": 7,
@@ -361,11 +375,11 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Minatitl·n"
+                                    "nombre": "Minatitl√°n"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Tecom·n"
+                                    "nombre": "Tecom√°n"
                                 },
                                 {
                                     "id": 8,
@@ -376,7 +390,7 @@
                     {
                         "id": 7,
                         "iso": "MX-CHP",
-                        "capital": "Tuxtla GutiÈrrez",
+                        "capital": "Tuxtla Guti√©rrez",
                         "nombre": "CHIAPAS",
                         "municipios": [
                                 {
@@ -401,7 +415,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Amat·n"
+                                    "nombre": "Amat√°n"
                                 },
                                 {
                                     "id": 7,
@@ -429,11 +443,11 @@
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "BenemÈrito de las AmÈricas"
+                                    "nombre": "Benem√©rito de las Am√©ricas"
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Berrioz·bal"
+                                    "nombre": "Berrioz√°bal"
                                 },
                                 {
                                     "id": 13,
@@ -441,15 +455,15 @@
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "Cacahoat·n"
+                                    "nombre": "Cacahoat√°n"
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "Catazaj·"
+                                    "nombre": "Catazaj√°"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "Chalchihuit·n"
+                                    "nombre": "Chalchihuit√°n"
                                 },
                                 {
                                     "id": 19,
@@ -465,7 +479,7 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "ChenalhÛ"
+                                    "nombre": "Chenalh√≥"
                                 },
                                 {
                                     "id": 19,
@@ -477,7 +491,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "ChicoasÈn"
+                                    "nombre": "Chicoas√©n"
                                 },
                                 {
                                     "id": 22,
@@ -485,7 +499,7 @@
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "ChilÛn"
+                                    "nombre": "Chil√≥n"
                                 },
                                 {
                                     "id": 28,
@@ -497,11 +511,11 @@
                                 },
                                 {
                                     "id": 24,
-                                    "nombre": "Comit·n de DomÌnguez"
+                                    "nombre": "Comit√°n de Dom√≠nguez"
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "Copainal·"
+                                    "nombre": "Copainal√°"
                                 },
                                 {
                                     "id": 26,
@@ -517,7 +531,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Francisco LeÛn"
+                                    "nombre": "Francisco Le√≥n"
                                 },
                                 {
                                     "id": 30,
@@ -529,15 +543,15 @@
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "Huehuet·n"
+                                    "nombre": "Huehuet√°n"
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Huitiup·n"
+                                    "nombre": "Huitiup√°n"
                                 },
                                 {
                                     "id": 32,
-                                    "nombre": "Huixt·n"
+                                    "nombre": "Huixt√°n"
                                 },
                                 {
                                     "id": 33,
@@ -545,11 +559,11 @@
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "Ixhuat·n"
+                                    "nombre": "Ixhuat√°n"
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "Ixtacomit·n"
+                                    "nombre": "Ixtacomit√°n"
                                 },
                                 {
                                     "id": 36,
@@ -569,7 +583,7 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Ju·rez"
+                                    "nombre": "Ju√°rez"
                                 },
                                 {
                                     "id": 49,
@@ -593,7 +607,7 @@
                                 },
                                 {
                                     "id": 44,
-                                    "nombre": "Larr·inzar"
+                                    "nombre": "Larr√°inzar"
                                 },
                                 {
                                     "id": 45,
@@ -613,7 +627,7 @@
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "MarquÈs de Comillas"
+                                    "nombre": "Marqu√©s de Comillas"
                                 },
                                 {
                                     "id": 48,
@@ -621,7 +635,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Mazat·n"
+                                    "nombre": "Mazat√°n"
                                 },
                                 {
                                     "id": 50,
@@ -641,7 +655,7 @@
                                 },
                                 {
                                     "id": 54,
-                                    "nombre": "Nicol·s RuÌz"
+                                    "nombre": "Nicol√°s Ru√≠z"
                                 },
                                 {
                                     "id": 55,
@@ -657,7 +671,7 @@
                                 },
                                 {
                                     "id": 56,
-                                    "nombre": "Ostuac·n"
+                                    "nombre": "Ostuac√°n"
                                 },
                                 {
                                     "id": 57,
@@ -673,7 +687,7 @@
                                 },
                                 {
                                     "id": 60,
-                                    "nombre": "PantelhÛ"
+                                    "nombre": "Pantelh√≥"
                                 },
                                 {
                                     "id": 61,
@@ -689,11 +703,11 @@
                                 },
                                 {
                                     "id": 78,
-                                    "nombre": "Pueblo Nuevo Solistahuac·n"
+                                    "nombre": "Pueblo Nuevo Solistahuac√°n"
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "RayÛn"
+                                    "nombre": "Ray√≥n"
                                 },
                                 {
                                     "id": 80,
@@ -709,11 +723,11 @@
                                 },
                                 {
                                     "id": 83,
-                                    "nombre": "San AndrÈs Duraznal"
+                                    "nombre": "San Andr√©s Duraznal"
                                 },
                                 {
                                     "id": 84,
-                                    "nombre": "San CristÛbal de las Casas"
+                                    "nombre": "San Crist√≥bal de las Casas"
                                 },
                                 {
                                     "id": 85,
@@ -741,7 +755,7 @@
                                 },
                                 {
                                     "id": 91,
-                                    "nombre": "Sital·"
+                                    "nombre": "Sital√°"
                                 },
                                 {
                                     "id": 92,
@@ -753,7 +767,7 @@
                                 },
                                 {
                                     "id": 94,
-                                    "nombre": "SoyalÛ"
+                                    "nombre": "Soyal√≥"
                                 },
                                 {
                                     "id": 95,
@@ -781,7 +795,7 @@
                                 },
                                 {
                                     "id": 101,
-                                    "nombre": "Tecpat·n"
+                                    "nombre": "Tecpat√°n"
                                 },
                                 {
                                     "id": 102,
@@ -797,7 +811,7 @@
                                 },
                                 {
                                     "id": 105,
-                                    "nombre": "Tonal·"
+                                    "nombre": "Tonal√°"
                                 },
                                 {
                                     "id": 106,
@@ -805,7 +819,7 @@
                                 },
                                 {
                                     "id": 107,
-                                    "nombre": "Tumbal·"
+                                    "nombre": "Tumbal√°"
                                 },
                                 {
                                     "id": 108,
@@ -813,11 +827,11 @@
                                 },
                                 {
                                     "id": 109,
-                                    "nombre": "Tuxtla GutiÈrrez"
+                                    "nombre": "Tuxtla Guti√©rrez"
                                 },
                                 {
                                     "id": 110,
-                                    "nombre": "Tuzant·n"
+                                    "nombre": "Tuzant√°n"
                                 },
                                 {
                                     "id": 111,
@@ -825,7 +839,7 @@
                                 },
                                 {
                                     "id": 112,
-                                    "nombre": "UniÛn Ju·rez"
+                                    "nombre": "Uni√≥n Ju√°rez"
                                 },
                                 {
                                     "id": 113,
@@ -833,7 +847,7 @@
                                 },
                                 {
                                     "id": 114,
-                                    "nombre": "Villa Comaltitl·n"
+                                    "nombre": "Villa Comaltitl√°n"
                                 },
                                 {
                                     "id": 115,
@@ -845,11 +859,11 @@
                                 },
                                 {
                                     "id": 117,
-                                    "nombre": "YajalÛn"
+                                    "nombre": "Yajal√≥n"
                                 },
                                 {
                                     "id": 118,
-                                    "nombre": "Zinacant·n"
+                                    "nombre": "Zinacant√°n"
                                 }
                             ]
                     },
@@ -873,15 +887,15 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Aquiles Serd·n"
+                                    "nombre": "Aquiles Serd√°n"
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "AscensiÛn"
+                                    "nombre": "Ascensi√≥n"
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "BachÌniva"
+                                    "nombre": "Bach√≠niva"
                                 },
                                 {
                                     "id": 7,
@@ -905,7 +919,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "CarichÌ"
+                                    "nombre": "Carich√≠"
                                 },
                                 {
                                     "id": 11,
@@ -917,7 +931,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "ChÌnipas"
+                                    "nombre": "Ch√≠nipas"
                                 },
                                 {
                                     "id": 14,
@@ -929,7 +943,7 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "CuauhtÈmoc"
+                                    "nombre": "Cuauht√©moc"
                                 },
                                 {
                                     "id": 19,
@@ -941,7 +955,7 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "Dr. Belisario DomÌnguez"
+                                    "nombre": "Dr. Belisario Dom√≠nguez"
                                 },
                                 {
                                     "id": 18,
@@ -953,7 +967,7 @@
                                 },
                                 {
                                     "id": 20,
-                                    "nombre": "GÛmez FarÌas"
+                                    "nombre": "G√≥mez Far√≠as"
                                 },
                                 {
                                     "id": 21,
@@ -985,7 +999,7 @@
                                 },
                                 {
                                     "id": 26,
-                                    "nombre": "Huejotit·n"
+                                    "nombre": "Huejotit√°n"
                                 },
                                 {
                                     "id": 27,
@@ -997,11 +1011,11 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "JimÈnez"
+                                    "nombre": "Jim√©nez"
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "Ju·rez"
+                                    "nombre": "Ju√°rez"
                                 },
                                 {
                                     "id": 31,
@@ -1013,7 +1027,7 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "LÛpez"
+                                    "nombre": "L√≥pez"
                                 },
                                 {
                                     "id": 32,
@@ -1029,7 +1043,7 @@
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "MatachÌ"
+                                    "nombre": "Matach√≠"
                                 },
                                 {
                                     "id": 36,
@@ -1097,7 +1111,7 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Santa B·rbara"
+                                    "nombre": "Santa B√°rbara"
                                 },
                                 {
                                     "id": 49,
@@ -1105,7 +1119,7 @@
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "SatevÛ"
+                                    "nombre": "Satev√≥"
                                 },
                                 {
                                     "id": 51,
@@ -1113,7 +1127,7 @@
                                 },
                                 {
                                     "id": 52,
-                                    "nombre": "TemÛsachi"
+                                    "nombre": "Tem√≥sachi"
                                 },
                                 {
                                     "id": 53,
@@ -1138,7 +1152,7 @@
                         "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Alvaro ObregÛn"
+                                    "nombre": "Alvaro Obreg√≥n"
                                 },
                                 {
                                     "id": 2,
@@ -1146,11 +1160,11 @@
                                 },
                                 {
                                     "id": 3,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Coyoac·n"
+                                    "nombre": "Coyoac√°n"
                                 },
                                 {
                                     "id": 5,
@@ -1158,7 +1172,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "CuauhtÈmoc"
+                                    "nombre": "Cuauht√©moc"
                                 },
                                 {
                                     "id": 7,
@@ -1186,7 +1200,7 @@
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Tl·huac"
+                                    "nombre": "Tl√°huac"
                                 },
                                 {
                                     "id": 12,
@@ -1211,7 +1225,7 @@
                             "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Canatl·n"
+                                    "nombre": "Canatl√°n"
                                 },
                                 {
                                     "id": 2,
@@ -1223,7 +1237,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "CuencamÈ"
+                                    "nombre": "Cuencam√©"
                                 },
                                 {
                                     "id": 5,
@@ -1235,11 +1249,11 @@
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "GÛmez Palacio"
+                                    "nombre": "G√≥mez Palacio"
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Gral. SimÛn BoÌvar"
+                                    "nombre": "Gral. Sim√≥n Bo√≠var"
                                 },
                                 {
                                     "id": 9,
@@ -1247,7 +1261,7 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "GuanacevÌ"
+                                    "nombre": "Guanacev√≠"
                                 },
                                 {
                                     "id": 9,
@@ -1255,7 +1269,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "IndÈ"
+                                    "nombre": "Ind√©"
                                 },
                                 {
                                     "id": 11,
@@ -1263,7 +1277,7 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "MapimÌ"
+                                    "nombre": "Mapim√≠"
                                 },
                                 {
                                     "id": 13,
@@ -1287,15 +1301,15 @@
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "Ot·ez"
+                                    "nombre": "Ot√°ez"
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "P·nuco de Coronado"
+                                    "nombre": "P√°nuco de Coronado"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "PeÒÛn Blanco"
+                                    "nombre": "Pe√±√≥n Blanco"
                                 },
                                 {
                                     "id": 19,
@@ -1323,7 +1337,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "San Juan del RÌo"
+                                    "nombre": "San Juan del R√≠o"
                                 },
                                 {
                                     "id": 24,
@@ -1343,7 +1357,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "S˙chil"
+                                    "nombre": "S√∫chil"
                                 },
                                 {
                                     "id": 29,
@@ -1381,7 +1395,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Ac·mbaro"
+                                    "nombre": "Ac√°mbaro"
                                 },
                                 {
                                     "id": 3,
@@ -1417,7 +1431,7 @@
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Cuer·maro"
+                                    "nombre": "Cuer√°maro"
                                 },
                                 {
                                     "id": 10,
@@ -1433,7 +1447,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "HuanÌmaro"
+                                    "nombre": "Huan√≠maro"
                                 },
                                 {
                                     "id": 14,
@@ -1445,11 +1459,11 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "JerÈcuaro"
+                                    "nombre": "Jer√©cuaro"
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "LeÛn"
+                                    "nombre": "Le√≥n"
                                 },
                                 {
                                     "id": 16,
@@ -1457,7 +1471,7 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "MoroleÛn"
+                                    "nombre": "Morole√≥n"
                                 },
                                 {
                                     "id": 18,
@@ -1465,7 +1479,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "PÈnjamo"
+                                    "nombre": "P√©njamo"
                                 },
                                 {
                                     "id": 20,
@@ -1473,7 +1487,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "PurÌsima del RincÛn"
+                                    "nombre": "Pur√≠sima del Rinc√≥n"
                                 },
                                 {
                                     "id": 22,
@@ -1489,7 +1503,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "San Diego de la UniÛn"
+                                    "nombre": "San Diego de la Uni√≥n"
                                 },
                                 {
                                     "id": 24,
@@ -1497,11 +1511,11 @@
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "San Francisco del RincÛn"
+                                    "nombre": "San Francisco del Rinc√≥n"
                                 },
                                 {
                                     "id": 26,
-                                    "nombre": "San JosÈ Iturbide"
+                                    "nombre": "San Jos√© Iturbide"
                                 },
                                 {
                                     "id": 27,
@@ -1517,7 +1531,7 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "Santiago MaravatÌo"
+                                    "nombre": "Santiago Maravat√≠o"
                                 },
                                 {
                                     "id": 31,
@@ -1549,11 +1563,11 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Villagr·n"
+                                    "nombre": "Villagr√°n"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Xich˙"
+                                    "nombre": "Xich√∫"
                                 },
                                 {
                                     "id": 38,
@@ -1571,7 +1585,7 @@
                             "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Acapulco de Ju·rez"
+                                    "nombre": "Acapulco de Ju√°rez"
                                 },
                                 {
                                     "id": 2,
@@ -1583,7 +1597,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Ajuchitl·n del Progreso"
+                                    "nombre": "Ajuchitl√°n del Progreso"
                                 },
                                 {
                                     "id": 5,
@@ -1603,7 +1617,7 @@
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Atenango del RÌo"
+                                    "nombre": "Atenango del R√≠o"
                                 },
                                 {
                                     "id": 8,
@@ -1623,15 +1637,15 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Azoy˙"
+                                    "nombre": "Azoy√∫"
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "Buenavista de CuÈllar"
+                                    "nombre": "Buenavista de Cu√©llar"
                                 },
                                 {
                                     "id": 15,
@@ -1643,7 +1657,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Coahuayutla de JosÈ MarÌa Izazaga"
+                                    "nombre": "Coahuayutla de Jos√© Mar√≠a Izazaga"
                                 },
                                 {
                                     "id": 16,
@@ -1667,11 +1681,11 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Coyuca de BenÌtez"
+                                    "nombre": "Coyuca de Ben√≠tez"
                                 },
                                 {
                                     "id": 22,
-                                    "nombre": "Coyuca de Catal·n"
+                                    "nombre": "Coyuca de Catal√°n"
                                 },
                                 {
                                     "id": 23,
@@ -1679,7 +1693,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "Cual·c"
+                                    "nombre": "Cual√°c"
                                 },
                                 {
                                     "id": 29,
@@ -1691,7 +1705,7 @@
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "Cutzamala de PinzÛn"
+                                    "nombre": "Cutzamala de Pinz√≥n"
                                 },
                                 {
                                     "id": 26,
@@ -1711,7 +1725,7 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "Huamuxtitl·n"
+                                    "nombre": "Huamuxtitl√°n"
                                 },
                                 {
                                     "id": 31,
@@ -1727,15 +1741,15 @@
                                 },
                                 {
                                     "id": 32,
-                                    "nombre": "Ixcateopan de CuauhtÈmoc"
+                                    "nombre": "Ixcateopan de Cuauht√©moc"
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "JosÈ Azueta"
+                                    "nombre": "Jos√© Azueta"
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "JosÈ Joaquin de Herrera"
+                                    "nombre": "Jos√© Joaquin de Herrera"
                                 },
                                 {
                                     "id": 35,
@@ -1743,7 +1757,7 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "La UniÛn de Isidoro Montes de Oca"
+                                    "nombre": "La Uni√≥n de Isidoro Montes de Oca"
                                 },
                                 {
                                     "id": 37,
@@ -1759,19 +1773,19 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "M·rtir de Cuilapan"
+                                    "nombre": "M√°rtir de Cuilapan"
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "MetlatÛnoc"
+                                    "nombre": "Metlat√≥noc"
                                 },
                                 {
                                     "id": 40,
-                                    "nombre": "Mochitl·n"
+                                    "nombre": "Mochitl√°n"
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "Olinal·"
+                                    "nombre": "Olinal√°"
                                 },
                                 {
                                     "id": 42,
@@ -1783,7 +1797,7 @@
                                 },
                                 {
                                     "id": 44,
-                                    "nombre": "Petatl·n"
+                                    "nombre": "Petatl√°n"
                                 },
                                 {
                                     "id": 45,
@@ -1799,7 +1813,7 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "San Luis Acatl·n"
+                                    "nombre": "San Luis Acatl√°n"
                                 },
                                 {
                                     "id": 59,
@@ -1811,7 +1825,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Taxco de AlarcÛn"
+                                    "nombre": "Taxco de Alarc√≥n"
                                 },
                                 {
                                     "id": 50,
@@ -1819,7 +1833,7 @@
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "TÈcpan de Galeana"
+                                    "nombre": "T√©cpan de Galeana"
                                 },
                                 {
                                     "id": 52,
@@ -1863,11 +1877,11 @@
                                 },
                                 {
                                     "id": 60,
-                                    "nombre": "Xalpatl·huac"
+                                    "nombre": "Xalpatl√°huac"
                                 },
                                 {
                                     "id": 61,
-                                    "nombre": "Xochihuehuetl·n"
+                                    "nombre": "Xochihuehuetl√°n"
                                 },
                                 {
                                     "id": 62,
@@ -1875,11 +1889,11 @@
                                 },
                                 {
                                     "id": 63,
-                                    "nombre": "Zapotitl·n Tablas"
+                                    "nombre": "Zapotitl√°n Tablas"
                                 },
                                 {
                                     "id": 78,
-                                    "nombre": "Zir·ndaro"
+                                    "nombre": "Zir√°ndaro"
                                 },
                                 {
                                     "id": 79,
@@ -1897,11 +1911,11 @@
                             "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Acatl·n"
+                                    "nombre": "Acatl√°n"
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Acaxochitl·n"
+                                    "nombre": "Acaxochitl√°n"
                                 },
                                 {
                                     "id": 3,
@@ -1957,7 +1971,7 @@
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "Chapulhuac·n"
+                                    "nombre": "Chapulhuac√°n"
                                 },
                                 {
                                     "id": 15,
@@ -1973,7 +1987,7 @@
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "Eloxochitl·n"
+                                    "nombre": "Eloxochitl√°n"
                                 },
                                 {
                                     "id": 17,
@@ -2021,15 +2035,15 @@
                                 },
                                 {
                                     "id": 26,
-                                    "nombre": "Jaltoc·n"
+                                    "nombre": "Jaltoc√°n"
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "Ju·rez Hidalgo"
+                                    "nombre": "Ju√°rez Hidalgo"
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "La MisiÛn"
+                                    "nombre": "La Misi√≥n"
                                 },
                                 {
                                     "id": 29,
@@ -2041,7 +2055,7 @@
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "Metztitl·n"
+                                    "nombre": "Metztitl√°n"
                                 },
                                 {
                                     "id": 38,
@@ -2057,7 +2071,7 @@
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "Mixquiahuala de Ju·rez"
+                                    "nombre": "Mixquiahuala de Ju√°rez"
                                 },
                                 {
                                     "id": 34,
@@ -2065,15 +2079,15 @@
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "Nicol·s Flores"
+                                    "nombre": "Nicol√°s Flores"
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Nopala de Villagr·n"
+                                    "nombre": "Nopala de Villagr√°n"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Omitl·n de Ju·rez"
+                                    "nombre": "Omitl√°n de Ju√°rez"
                                 },
                                 {
                                     "id": 38,
@@ -2089,15 +2103,15 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Progreso de ObregÛn"
+                                    "nombre": "Progreso de Obreg√≥n"
                                 },
                                 {
                                     "id": 40,
-                                    "nombre": "San AgustÌn Metzquititl·n"
+                                    "nombre": "San Agust√≠n Metzquititl√°n"
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "San AgustÌn Tlaxiaca"
+                                    "nombre": "San Agust√≠n Tlaxiaca"
                                 },
                                 {
                                     "id": 42,
@@ -2105,7 +2119,7 @@
                                 },
                                 {
                                     "id": 43,
-                                    "nombre": "San Felipe Orizatl·n"
+                                    "nombre": "San Felipe Orizatl√°n"
                                 },
                                 {
                                     "id": 44,
@@ -2141,15 +2155,15 @@
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "Tepehuac·n de Guerrero"
+                                    "nombre": "Tepehuac√°n de Guerrero"
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Tepeji del RÌo de Ocampo"
+                                    "nombre": "Tepeji del R√≠o de Ocampo"
                                 },
                                 {
                                     "id": 52,
-                                    "nombre": "Tepetitl·n"
+                                    "nombre": "Tepetitl√°n"
                                 },
                                 {
                                     "id": 53,
@@ -2209,7 +2223,7 @@
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "Xochicoatl·n"
+                                    "nombre": "Xochicoatl√°n"
                                 },
                                 {
                                     "id": 80,
@@ -2217,11 +2231,11 @@
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "Zacualtip·n de ¡ngeles"
+                                    "nombre": "Zacualtip√°n de √Ångeles"
                                 },
                                 {
                                     "id": 82,
-                                    "nombre": "Zapotl·n de Ju·rez"
+                                    "nombre": "Zapotl√°n de Ju√°rez"
                                 },
                                 {
                                     "id": 83,
@@ -2229,7 +2243,7 @@
                                 },
                                 {
                                     "id": 84,
-                                    "nombre": "Zimap·n"
+                                    "nombre": "Zimap√°n"
                                 }
                             ]
                         
@@ -2247,7 +2261,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Acatl·n de Ju·rez"
+                                    "nombre": "Acatl√°n de Ju√°rez"
                                 },
                                 {
                                     "id": 3,
@@ -2259,7 +2273,7 @@
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "Amatit·n"
+                                    "nombre": "Amatit√°n"
                                 },
                                 {
                                     "id": 6,
@@ -2291,11 +2305,11 @@
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Autl·n de Navarro"
+                                    "nombre": "Autl√°n de Navarro"
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Ayotl·n"
+                                    "nombre": "Ayotl√°n"
                                 },
                                 {
                                     "id": 13,
@@ -2303,7 +2317,7 @@
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "BolaÒos"
+                                    "nombre": "Bola√±os"
                                 },
                                 {
                                     "id": 15,
@@ -2311,7 +2325,7 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "CaÒadas de ObregÛn"
+                                    "nombre": "Ca√±adas de Obreg√≥n"
                                 },
                                 {
                                     "id": 19,
@@ -2323,15 +2337,15 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "Chimaltit·n"
+                                    "nombre": "Chimaltit√°n"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "Chiquilistl·n"
+                                    "nombre": "Chiquilistl√°n"
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Cihuatl·n"
+                                    "nombre": "Cihuatl√°n"
                                 },
                                 {
                                     "id": 20,
@@ -2339,15 +2353,15 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Colotl·n"
+                                    "nombre": "Colotl√°n"
                                 },
                                 {
                                     "id": 22,
-                                    "nombre": "ConcepciÛn de Buenos Aires"
+                                    "nombre": "Concepci√≥n de Buenos Aires"
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "Cuautitl·n de GarcÌa Barrag·n"
+                                    "nombre": "Cuautitl√°n de Garc√≠a Barrag√°n"
                                 },
                                 {
                                     "id": 28,
@@ -2355,7 +2369,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "CuquÌo"
+                                    "nombre": "Cuqu√≠o"
                                 },
                                 {
                                     "id": 24,
@@ -2375,7 +2389,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "El LimÛn"
+                                    "nombre": "El Lim√≥n"
                                 },
                                 {
                                     "id": 29,
@@ -2383,15 +2397,15 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "EncarnaciÛn de DÌaz"
+                                    "nombre": "Encarnaci√≥n de D√≠az"
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "Etzatl·n"
+                                    "nombre": "Etzatl√°n"
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "GÛmez FarÌas"
+                                    "nombre": "G√≥mez Far√≠as"
                                 },
                                 {
                                     "id": 39,
@@ -2407,7 +2421,7 @@
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "Huej˙car"
+                                    "nombre": "Huej√∫car"
                                 },
                                 {
                                     "id": 35,
@@ -2415,15 +2429,15 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Ixtlahuac·n de los Membrillos"
+                                    "nombre": "Ixtlahuac√°n de los Membrillos"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Ixtlahuac·n del RÌo"
+                                    "nombre": "Ixtlahuac√°n del R√≠o"
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "Jalostotitl·n"
+                                    "nombre": "Jalostotitl√°n"
                                 },
                                 {
                                     "id": 39,
@@ -2431,11 +2445,11 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Jes˙s MarÌa"
+                                    "nombre": "Jes√∫s Mar√≠a"
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Jilotl·n de los Dolores"
+                                    "nombre": "Jilotl√°n de los Dolores"
                                 },
                                 {
                                     "id": 40,
@@ -2443,11 +2457,11 @@
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "Juanacatl·n"
+                                    "nombre": "Juanacatl√°n"
                                 },
                                 {
                                     "id": 42,
-                                    "nombre": "Juchitl·n"
+                                    "nombre": "Juchitl√°n"
                                 },
                                 {
                                     "id": 43,
@@ -2479,7 +2493,7 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Mexticac·n"
+                                    "nombre": "Mexticac√°n"
                                 },
                                 {
                                     "id": 49,
@@ -2487,11 +2501,11 @@
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "Mixtl·n"
+                                    "nombre": "Mixtl√°n"
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Ocotl·n"
+                                    "nombre": "Ocotl√°n"
                                 },
                                 {
                                     "id": 52,
@@ -2503,7 +2517,7 @@
                                 },
                                 {
                                     "id": 54,
-                                    "nombre": "Poncitl·n"
+                                    "nombre": "Poncitl√°n"
                                 },
                                 {
                                     "id": 55,
@@ -2515,11 +2529,11 @@
                                 },
                                 {
                                     "id": 69,
-                                    "nombre": "San CristÛbal de la Barranca"
+                                    "nombre": "San Crist√≥bal de la Barranca"
                                 },
                                 {
                                     "id": 56,
-                                    "nombre": "San Diego de AlejandrÌa"
+                                    "nombre": "San Diego de Alejandr√≠a"
                                 },
                                 {
                                     "id": 57,
@@ -2535,7 +2549,7 @@
                                 },
                                 {
                                     "id": 60,
-                                    "nombre": "San Juli·n"
+                                    "nombre": "San Juli√°n"
                                 },
                                 {
                                     "id": 61,
@@ -2543,11 +2557,11 @@
                                 },
                                 {
                                     "id": 62,
-                                    "nombre": "San MartÌn de BolaÒos"
+                                    "nombre": "San Mart√≠n de Bola√±os"
                                 },
                                 {
                                     "id": 63,
-                                    "nombre": "San MartÌn Hidalgo"
+                                    "nombre": "San Mart√≠n Hidalgo"
                                 },
                                 {
                                     "id": 78,
@@ -2555,15 +2569,15 @@
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "San Sebasti·n del Oeste"
+                                    "nombre": "San Sebasti√°n del Oeste"
                                 },
                                 {
                                     "id": 80,
-                                    "nombre": "Santa MarÌa de los ?ngeles"
+                                    "nombre": "Santa Mar√≠a de los ?ngeles"
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "Santa MarÌa del Oro"
+                                    "nombre": "Santa Mar√≠a del Oro"
                                 },
                                 {
                                     "id": 82,
@@ -2587,7 +2601,7 @@
                                 },
                                 {
                                     "id": 87,
-                                    "nombre": "Tecalitl·n"
+                                    "nombre": "Tecalitl√°n"
                                 },
                                 {
                                     "id": 88,
@@ -2595,11 +2609,11 @@
                                 },
                                 {
                                     "id": 89,
-                                    "nombre": "Tecolotl·n"
+                                    "nombre": "Tecolotl√°n"
                                 },
                                 {
                                     "id": 90,
-                                    "nombre": "Tenamaxtl·n"
+                                    "nombre": "Tenamaxtl√°n"
                                 },
                                 {
                                     "id": 91,
@@ -2607,11 +2621,11 @@
                                 },
                                 {
                                     "id": 92,
-                                    "nombre": "Teocuitatl·n de Corona"
+                                    "nombre": "Teocuitatl√°n de Corona"
                                 },
                                 {
                                     "id": 93,
-                                    "nombre": "Tepatitl·n de Morelos"
+                                    "nombre": "Tepatitl√°n de Morelos"
                                 },
                                 {
                                     "id": 94,
@@ -2619,15 +2633,15 @@
                                 },
                                 {
                                     "id": 95,
-                                    "nombre": "Teuchitl·n"
+                                    "nombre": "Teuchitl√°n"
                                 },
                                 {
                                     "id": 96,
-                                    "nombre": "Tizap·n el Alto"
+                                    "nombre": "Tizap√°n el Alto"
                                 },
                                 {
                                     "id": 97,
-                                    "nombre": "Tlajomulco de Z˙Òiga"
+                                    "nombre": "Tlajomulco de Z√∫√±iga"
                                 },
                                 {
                                     "id": 98,
@@ -2635,15 +2649,15 @@
                                 },
                                 {
                                     "id": 99,
-                                    "nombre": "Tolim·n"
+                                    "nombre": "Tolim√°n"
                                 },
                                 {
                                     "id": 100,
-                                    "nombre": "Tomatl·n"
+                                    "nombre": "Tomatl√°n"
                                 },
                                 {
                                     "id": 101,
-                                    "nombre": "Tonal·"
+                                    "nombre": "Tonal√°"
                                 },
                                 {
                                     "id": 102,
@@ -2659,7 +2673,7 @@
                                 },
                                 {
                                     "id": 105,
-                                    "nombre": "Tototl·n"
+                                    "nombre": "Tototl√°n"
                                 },
                                 {
                                     "id": 106,
@@ -2675,11 +2689,11 @@
                                 },
                                 {
                                     "id": 109,
-                                    "nombre": "UniÛn de San Antonio"
+                                    "nombre": "Uni√≥n de San Antonio"
                                 },
                                 {
                                     "id": 110,
-                                    "nombre": "UniÛn de Tula"
+                                    "nombre": "Uni√≥n de Tula"
                                 },
                                 {
                                     "id": 111,
@@ -2687,7 +2701,7 @@
                                 },
                                 {
                                     "id": 112,
-                                    "nombre": "Valle de Ju·rez"
+                                    "nombre": "Valle de Ju√°rez"
                                 },
                                 {
                                     "id": 113,
@@ -2703,11 +2717,11 @@
                                 },
                                 {
                                     "id": 116,
-                                    "nombre": "Villa PurificaciÛn"
+                                    "nombre": "Villa Purificaci√≥n"
                                 },
                                 {
                                     "id": 117,
-                                    "nombre": "Yahualica de Gonz·lez Gallo"
+                                    "nombre": "Yahualica de Gonz√°lez Gallo"
                                 },
                                 {
                                     "id": 118,
@@ -2723,15 +2737,15 @@
                                 },
                                 {
                                     "id": 121,
-                                    "nombre": "Zapotitl·n de Vadillo"
+                                    "nombre": "Zapotitl√°n de Vadillo"
                                 },
                                 {
                                     "id": 122,
-                                    "nombre": "Zapotl·n del Rey"
+                                    "nombre": "Zapotl√°n del Rey"
                                 },
                                 {
                                     "id": 123,
-                                    "nombre": "Zapotl·n el Grande"
+                                    "nombre": "Zapotl√°n el Grande"
                                 },
                                 {
                                     "id": 124,
@@ -2765,11 +2779,11 @@
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "Almoloya de Ju·rez"
+                                    "nombre": "Almoloya de Ju√°rez"
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Almoloya del RÌo"
+                                    "nombre": "Almoloya del R√≠o"
                                 },
                                 {
                                     "id": 7,
@@ -2793,11 +2807,11 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "Atizap·n"
+                                    "nombre": "Atizap√°n"
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Atizap·n de Zaragoza"
+                                    "nombre": "Atizap√°n de Zaragoza"
                                 },
                                 {
                                     "id": 12,
@@ -2849,11 +2863,11 @@
                                 },
                                 {
                                     "id": 22,
-                                    "nombre": "Chimalhuac·n"
+                                    "nombre": "Chimalhuac√°n"
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "Coacalco de Berrioz·bal"
+                                    "nombre": "Coacalco de Berrioz√°bal"
                                 },
                                 {
                                     "id": 28,
@@ -2861,7 +2875,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Cocotitl·n"
+                                    "nombre": "Cocotitl√°n"
                                 },
                                 {
                                     "id": 24,
@@ -2869,11 +2883,11 @@
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "Cuautitl·n"
+                                    "nombre": "Cuautitl√°n"
                                 },
                                 {
                                     "id": 26,
-                                    "nombre": "Cuautitl·n Izcalli"
+                                    "nombre": "Cuautitl√°n Izcalli"
                                 },
                                 {
                                     "id": 27,
@@ -2941,7 +2955,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Jocotitl·n"
+                                    "nombre": "Jocotitl√°n"
                                 },
                                 {
                                     "id": 40,
@@ -2985,7 +2999,7 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Naucalpan de Ju·rez"
+                                    "nombre": "Naucalpan de Ju√°rez"
                                 },
                                 {
                                     "id": 49,
@@ -2993,11 +3007,11 @@
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "NezahualcÛyotl"
+                                    "nombre": "Nezahualc√≥yotl"
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Nicol·s Romero"
+                                    "nombre": "Nicol√°s Romero"
                                 },
                                 {
                                     "id": 52,
@@ -3033,11 +3047,11 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "Polotitl·n"
+                                    "nombre": "Polotitl√°n"
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "RayÛn"
+                                    "nombre": "Ray√≥n"
                                 },
                                 {
                                     "id": 60,
@@ -3049,11 +3063,11 @@
                                 },
                                 {
                                     "id": 62,
-                                    "nombre": "San JosÈ del RincÛn"
+                                    "nombre": "San Jos√© del Rinc√≥n"
                                 },
                                 {
                                     "id": 63,
-                                    "nombre": "San MartÌn de las Pir·mides"
+                                    "nombre": "San Mart√≠n de las Pir√°mides"
                                 },
                                 {
                                     "id": 78,
@@ -3061,15 +3075,15 @@
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "San SimÛn de Guerrero"
+                                    "nombre": "San Sim√≥n de Guerrero"
                                 },
                                 {
                                     "id": 80,
-                                    "nombre": "Santo Tom·s"
+                                    "nombre": "Santo Tom√°s"
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "Soyaniquilpan de Ju·rez"
+                                    "nombre": "Soyaniquilpan de Ju√°rez"
                                 },
                                 {
                                     "id": 82,
@@ -3077,7 +3091,7 @@
                                 },
                                 {
                                     "id": 83,
-                                    "nombre": "Tec·mac"
+                                    "nombre": "Tec√°mac"
                                 },
                                 {
                                     "id": 84,
@@ -3117,11 +3131,11 @@
                                 },
                                 {
                                     "id": 93,
-                                    "nombre": "Teoloyuc·n"
+                                    "nombre": "Teoloyuc√°n"
                                 },
                                 {
                                     "id": 94,
-                                    "nombre": "Teotihuac·n"
+                                    "nombre": "Teotihuac√°n"
                                 },
                                 {
                                     "id": 95,
@@ -3133,7 +3147,7 @@
                                 },
                                 {
                                     "id": 97,
-                                    "nombre": "Tepotzotl·n"
+                                    "nombre": "Tepotzotl√°n"
                                 },
                                 {
                                     "id": 98,
@@ -3141,7 +3155,7 @@
                                 },
                                 {
                                     "id": 99,
-                                    "nombre": "Texcaltitl·n"
+                                    "nombre": "Texcaltitl√°n"
                                 },
                                 {
                                     "id": 100,
@@ -3193,7 +3207,7 @@
                                 },
                                 {
                                     "id": 112,
-                                    "nombre": "Tultitl·n"
+                                    "nombre": "Tultitl√°n"
                                 },
                                 {
                                     "id": 113,
@@ -3209,7 +3223,7 @@
                                 },
                                 {
                                     "id": 116,
-                                    "nombre": "Villa del CarbÛn"
+                                    "nombre": "Villa del Carb√≥n"
                                 },
                                 {
                                     "id": 117,
@@ -3225,7 +3239,7 @@
                                 },
                                 {
                                     "id": 120,
-                                    "nombre": "Xonacatl·n"
+                                    "nombre": "Xonacatl√°n"
                                 },
                                 {
                                     "id": 121,
@@ -3241,7 +3255,7 @@
                                 },
                                 {
                                     "id": 124,
-                                    "nombre": "Zumpahuac·n"
+                                    "nombre": "Zumpahuac√°n"
                                 },
                                 {
                                     "id": 125,
@@ -3267,7 +3281,7 @@
                                 },
                                 {
                                     "id": 3,
-                                    "nombre": "Alvaro ObregÛn"
+                                    "nombre": "Alvaro Obreg√≥n"
                                 },
                                 {
                                     "id": 4,
@@ -3279,7 +3293,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Apatzing·n"
+                                    "nombre": "Apatzing√°n"
                                 },
                                 {
                                     "id": 7,
@@ -3299,7 +3313,7 @@
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "BriseÒas"
+                                    "nombre": "Brise√±as"
                                 },
                                 {
                                     "id": 10,
@@ -3307,7 +3321,7 @@
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Car·cuaro"
+                                    "nombre": "Car√°cuaro"
                                 },
                                 {
                                     "id": 12,
@@ -3323,7 +3337,7 @@
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "Cher·n"
+                                    "nombre": "Cher√°n"
                                 },
                                 {
                                     "id": 18,
@@ -3335,7 +3349,7 @@
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "Chuc·ndiro"
+                                    "nombre": "Chuc√°ndiro"
                                 },
                                 {
                                     "id": 17,
@@ -3351,7 +3365,7 @@
                                 },
                                 {
                                     "id": 20,
-                                    "nombre": "Coalcom·n de V·zquez Pallares"
+                                    "nombre": "Coalcom√°n de V√°zquez Pallares"
                                 },
                                 {
                                     "id": 21,
@@ -3359,7 +3373,7 @@
                                 },
                                 {
                                     "id": 22,
-                                    "nombre": "Cojumatl·n de RÈgules"
+                                    "nombre": "Cojumatl√°n de R√©gules"
                                 },
                                 {
                                     "id": 23,
@@ -3367,7 +3381,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "Cop·ndaro"
+                                    "nombre": "Cop√°ndaro"
                                 },
                                 {
                                     "id": 29,
@@ -3387,7 +3401,7 @@
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "ErongarÌcuaro"
+                                    "nombre": "Erongar√≠cuaro"
                                 },
                                 {
                                     "id": 28,
@@ -3423,7 +3437,7 @@
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "Ixtl·n"
+                                    "nombre": "Ixtl√°n"
                                 },
                                 {
                                     "id": 35,
@@ -3431,7 +3445,7 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "JimÈnez"
+                                    "nombre": "Jim√©nez"
                                 },
                                 {
                                     "id": 37,
@@ -3439,11 +3453,11 @@
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "JosÈ Sixto Verduzco"
+                                    "nombre": "Jos√© Sixto Verduzco"
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Ju·rez"
+                                    "nombre": "Ju√°rez"
                                 },
                                 {
                                     "id": 48,
@@ -3463,7 +3477,7 @@
                                 },
                                 {
                                     "id": 42,
-                                    "nombre": "L·zaro C·rdenas"
+                                    "nombre": "L√°zaro C√°rdenas"
                                 },
                                 {
                                     "id": 43,
@@ -3475,7 +3489,7 @@
                                 },
                                 {
                                     "id": 45,
-                                    "nombre": "MaravatÌo"
+                                    "nombre": "Maravat√≠o"
                                 },
                                 {
                                     "id": 46,
@@ -3491,7 +3505,7 @@
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "M˙gica"
+                                    "nombre": "M√∫gica"
                                 },
                                 {
                                     "id": 48,
@@ -3499,7 +3513,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "NocupÈtaro"
+                                    "nombre": "Nocup√©taro"
                                 },
                                 {
                                     "id": 50,
@@ -3511,7 +3525,7 @@
                                 },
                                 {
                                     "id": 52,
-                                    "nombre": "Numar·n"
+                                    "nombre": "Numar√°n"
                                 },
                                 {
                                     "id": 53,
@@ -3519,11 +3533,11 @@
                                 },
                                 {
                                     "id": 54,
-                                    "nombre": "Pajacuar·n"
+                                    "nombre": "Pajacuar√°n"
                                 },
                                 {
                                     "id": 55,
-                                    "nombre": "PanindÌcuaro"
+                                    "nombre": "Panind√≠cuaro"
                                 },
                                 {
                                     "id": 68,
@@ -3531,11 +3545,11 @@
                                 },
                                 {
                                     "id": 69,
-                                    "nombre": "Par·cuaro"
+                                    "nombre": "Par√°cuaro"
                                 },
                                 {
                                     "id": 56,
-                                    "nombre": "P·tzcuaro"
+                                    "nombre": "P√°tzcuaro"
                                 },
                                 {
                                     "id": 57,
@@ -3543,19 +3557,19 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "Perib·n"
+                                    "nombre": "Perib√°n"
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "PurÈpero"
+                                    "nombre": "Pur√©pero"
                                 },
                                 {
                                     "id": 60,
-                                    "nombre": "Puru·ndiro"
+                                    "nombre": "Puru√°ndiro"
                                 },
                                 {
                                     "id": 61,
-                                    "nombre": "QuerÈndaro"
+                                    "nombre": "Quer√©ndaro"
                                 },
                                 {
                                     "id": 62,
@@ -3587,11 +3601,11 @@
                                 },
                                 {
                                     "id": 83,
-                                    "nombre": "Tac·mbaro"
+                                    "nombre": "Tac√°mbaro"
                                 },
                                 {
                                     "id": 84,
-                                    "nombre": "TancÌtaro"
+                                    "nombre": "Tanc√≠taro"
                                 },
                                 {
                                     "id": 85,
@@ -3599,7 +3613,7 @@
                                 },
                                 {
                                     "id": 86,
-                                    "nombre": "TangancÌcuaro"
+                                    "nombre": "Tanganc√≠cuaro"
                                 },
                                 {
                                     "id": 87,
@@ -3611,7 +3625,7 @@
                                 },
                                 {
                                     "id": 89,
-                                    "nombre": "TarÌmbaro"
+                                    "nombre": "Tar√≠mbaro"
                                 },
                                 {
                                     "id": 90,
@@ -3619,7 +3633,7 @@
                                 },
                                 {
                                     "id": 91,
-                                    "nombre": "Ting?indÌn"
+                                    "nombre": "Ting?ind√≠n"
                                 },
                                 {
                                     "id": 92,
@@ -3627,7 +3641,7 @@
                                 },
                                 {
                                     "id": 93,
-                                    "nombre": "Tiquicheo de Nicol·s Romero"
+                                    "nombre": "Tiquicheo de Nicol√°s Romero"
                                 },
                                 {
                                     "id": 94,
@@ -3643,7 +3657,7 @@
                                 },
                                 {
                                     "id": 97,
-                                    "nombre": "TumbiscatÌo"
+                                    "nombre": "Tumbiscat√≠o"
                                 },
                                 {
                                     "id": 98,
@@ -3683,7 +3697,7 @@
                                 },
                                 {
                                     "id": 107,
-                                    "nombre": "YurÈcuaro"
+                                    "nombre": "Yur√©cuaro"
                                 },
                                 {
                                     "id": 108,
@@ -3695,11 +3709,11 @@
                                 },
                                 {
                                     "id": 110,
-                                    "nombre": "Zin·paro"
+                                    "nombre": "Zin√°paro"
                                 },
                                 {
                                     "id": 111,
-                                    "nombre": "ZinapÈcuaro"
+                                    "nombre": "Zinap√©cuaro"
                                 },
                                 {
                                     "id": 112,
@@ -3707,7 +3721,7 @@
                                 },
                                 {
                                     "id": 113,
-                                    "nombre": "Zit·cuaro"
+                                    "nombre": "Zit√°cuaro"
                                 }
                             ]
                         
@@ -3737,7 +3751,7 @@
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "Coatl·n del RÌo"
+                                    "nombre": "Coatl√°n del R√≠o"
                                 },
                                 {
                                     "id": 6,
@@ -3777,7 +3791,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Miacatl·n"
+                                    "nombre": "Miacatl√°n"
                                 },
                                 {
                                     "id": 14,
@@ -3801,7 +3815,7 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "Tepoztl·n"
+                                    "nombre": "Tepoztl√°n"
                                 },
                                 {
                                     "id": 18,
@@ -3809,7 +3823,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Tetela del Volc·n"
+                                    "nombre": "Tetela del Volc√°n"
                                 },
                                 {
                                     "id": 20,
@@ -3817,7 +3831,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Tlaltizap·n"
+                                    "nombre": "Tlaltizap√°n"
                                 },
                                 {
                                     "id": 22,
@@ -3867,15 +3881,15 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Ahuacatl·n"
+                                    "nombre": "Ahuacatl√°n"
                                 },
                                 {
                                     "id": 3,
-                                    "nombre": "Amatl·n de CaÒas"
+                                    "nombre": "Amatl√°n de Ca√±as"
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "BahÌa de Banderas"
+                                    "nombre": "Bah√≠a de Banderas"
                                 },
                                 {
                                     "id": 5,
@@ -3891,7 +3905,7 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Ixtl·n del RÌo"
+                                    "nombre": "Ixtl√°n del R√≠o"
                                 },
                                 {
                                     "id": 9,
@@ -3907,7 +3921,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "RuÌz"
+                                    "nombre": "Ru√≠z"
                                 },
                                 {
                                     "id": 11,
@@ -3919,7 +3933,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Santa MarÌa del Oro"
+                                    "nombre": "Santa Mar√≠a del Oro"
                                 },
                                 {
                                     "id": 14,
@@ -3965,7 +3979,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "An·huac"
+                                    "nombre": "An√°huac"
                                 },
                                 {
                                     "id": 5,
@@ -3981,7 +3995,7 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Cadereyta JimÈnez"
+                                    "nombre": "Cadereyta Jim√©nez"
                                 },
                                 {
                                     "id": 9,
@@ -3997,7 +4011,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "CiÈnega de Flores"
+                                    "nombre": "Ci√©nega de Flores"
                                 },
                                 {
                                     "id": 11,
@@ -4009,7 +4023,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Dr. Gonz·lez"
+                                    "nombre": "Dr. Gonz√°lez"
                                 },
                                 {
                                     "id": 14,
@@ -4017,7 +4031,7 @@
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "GarcÌa"
+                                    "nombre": "Garc√≠a"
                                 },
                                 {
                                     "id": 18,
@@ -4025,11 +4039,11 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Gral. Ter·n"
+                                    "nombre": "Gral. Ter√°n"
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "Gral. TreviÒo"
+                                    "nombre": "Gral. Trevi√±o"
                                 },
                                 {
                                     "id": 17,
@@ -4065,7 +4079,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Ju·rez"
+                                    "nombre": "Ju√°rez"
                                 },
                                 {
                                     "id": 24,
@@ -4089,7 +4103,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "MarÌn"
+                                    "nombre": "Mar√≠n"
                                 },
                                 {
                                     "id": 30,
@@ -4113,11 +4127,11 @@
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "Par·s"
+                                    "nombre": "Par√°s"
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "PesquerÌa"
+                                    "nombre": "Pesquer√≠a"
                                 },
                                 {
                                     "id": 35,
@@ -4133,11 +4147,11 @@
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "San Nicol·s de los Garza"
+                                    "nombre": "San Nicol√°s de los Garza"
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "San Pedro Garza GarcÌa"
+                                    "nombre": "San Pedro Garza Garc√≠a"
                                 },
                                 {
                                     "id": 48,
@@ -4171,7 +4185,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Acatl·n de PÈrez Figueroa"
+                                    "nombre": "Acatl√°n de P√©rez Figueroa"
                                 },
                                 {
                                     "id": 3,
@@ -4179,27 +4193,27 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "AsunciÛn Cacalotepec"
+                                    "nombre": "Asunci√≥n Cacalotepec"
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "AsunciÛn Cuyotepeji"
+                                    "nombre": "Asunci√≥n Cuyotepeji"
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "AsunciÛn Ixtaltepec"
+                                    "nombre": "Asunci√≥n Ixtaltepec"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "AsunciÛn Nochixtl·n"
+                                    "nombre": "Asunci√≥n Nochixtl√°n"
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "AsunciÛn Ocotl·n"
+                                    "nombre": "Asunci√≥n Ocotl√°n"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "AsunciÛn Tlacolulita"
+                                    "nombre": "Asunci√≥n Tlacolulita"
                                 },
                                 {
                                     "id": 8,
@@ -4211,7 +4225,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "Calihual·"
+                                    "nombre": "Calihual√°"
                                 },
                                 {
                                     "id": 11,
@@ -4219,7 +4233,7 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Capul·lpam de MÈndez"
+                                    "nombre": "Capul√°lpam de M√©ndez"
                                 },
                                 {
                                     "id": 13,
@@ -4231,11 +4245,11 @@
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "Chiquihuitl·n de Benito Ju·rez"
+                                    "nombre": "Chiquihuitl√°n de Benito Ju√°rez"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "CiÈnega de Zimatl·n"
+                                    "nombre": "Ci√©nega de Zimatl√°n"
                                 },
                                 {
                                     "id": 19,
@@ -4247,15 +4261,15 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "Coicoy·n de las Flores"
+                                    "nombre": "Coicoy√°n de las Flores"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "ConcepciÛn Buenavista"
+                                    "nombre": "Concepci√≥n Buenavista"
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "ConcepciÛn P·palo"
+                                    "nombre": "Concepci√≥n P√°palo"
                                 },
                                 {
                                     "id": 20,
@@ -4271,7 +4285,7 @@
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "Cuil·pam de Guerrero"
+                                    "nombre": "Cuil√°pam de Guerrero"
                                 },
                                 {
                                     "id": 28,
@@ -4287,7 +4301,7 @@
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "Eloxochitl·n de Flores MagÛn"
+                                    "nombre": "Eloxochitl√°n de Flores Mag√≥n"
                                 },
                                 {
                                     "id": 26,
@@ -4295,7 +4309,7 @@
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "Guadalupe de RamÌrez"
+                                    "nombre": "Guadalupe de Ram√≠rez"
                                 },
                                 {
                                     "id": 28,
@@ -4303,7 +4317,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Guelatao de Ju·rez"
+                                    "nombre": "Guelatao de Ju√°rez"
                                 },
                                 {
                                     "id": 30,
@@ -4315,7 +4329,7 @@
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "Heroica Ciudad de Huajuapan de LeÛ"
+                                    "nombre": "Heroica Ciudad de Huajuapan de Le√≥"
                                 },
                                 {
                                     "id": 39,
@@ -4327,7 +4341,7 @@
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "Huautla de JimÈnez"
+                                    "nombre": "Huautla de Jim√©nez"
                                 },
                                 {
                                     "id": 34,
@@ -4335,15 +4349,15 @@
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "Ixtl·n de Ju·rez"
+                                    "nombre": "Ixtl√°n de Ju√°rez"
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Juchit·n de Zaragoza"
+                                    "nombre": "Juchit√°n de Zaragoza"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "La CompaÒÌa"
+                                    "nombre": "La Compa√±√≠a"
                                 },
                                 {
                                     "id": 38,
@@ -4375,11 +4389,11 @@
                                 },
                                 {
                                     "id": 43,
-                                    "nombre": "Magdalena Ocotl·n"
+                                    "nombre": "Magdalena Ocotl√°n"
                                 },
                                 {
                                     "id": 44,
-                                    "nombre": "Magdalena PeÒasco"
+                                    "nombre": "Magdalena Pe√±asco"
                                 },
                                 {
                                     "id": 45,
@@ -4387,7 +4401,7 @@
                                 },
                                 {
                                     "id": 46,
-                                    "nombre": "Magdalena Tequisistl·n"
+                                    "nombre": "Magdalena Tequisistl√°n"
                                 },
                                 {
                                     "id": 47,
@@ -4395,27 +4409,27 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "Magdalena Yodocono de Porfirio DÌa"
+                                    "nombre": "Magdalena Yodocono de Porfirio D√≠a"
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "Magdalena Zahuatl·n"
+                                    "nombre": "Magdalena Zahuatl√°n"
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Mariscala de Ju·rez"
+                                    "nombre": "Mariscala de Ju√°rez"
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "M·rtires de Tacubaya"
+                                    "nombre": "M√°rtires de Tacubaya"
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "MatÌas Romero AvendaÒo"
+                                    "nombre": "Mat√≠as Romero Avenda√±o"
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Mazatl·n Villa de Flores"
+                                    "nombre": "Mazatl√°n Villa de Flores"
                                 },
                                 {
                                     "id": 52,
@@ -4423,11 +4437,11 @@
                                 },
                                 {
                                     "id": 53,
-                                    "nombre": "Miahuatl·n de Porfirio DÌaz"
+                                    "nombre": "Miahuatl√°n de Porfirio D√≠az"
                                 },
                                 {
                                     "id": 54,
-                                    "nombre": "Mixistl·n de la Reforma"
+                                    "nombre": "Mixistl√°n de la Reforma"
                                 },
                                 {
                                     "id": 55,
@@ -4451,11 +4465,11 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "Oaxaca de Ju·rez"
+                                    "nombre": "Oaxaca de Ju√°rez"
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "Ocotl·n de Morelos"
+                                    "nombre": "Ocotl√°n de Morelos"
                                 },
                                 {
                                     "id": 60,
@@ -4479,7 +4493,7 @@
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "Rojas de CuauhtÈmoc"
+                                    "nombre": "Rojas de Cuauht√©moc"
                                 },
                                 {
                                     "id": 80,
@@ -4487,95 +4501,95 @@
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "San AgustÌn Amatengo"
+                                    "nombre": "San Agust√≠n Amatengo"
                                 },
                                 {
                                     "id": 82,
-                                    "nombre": "San AgustÌn Atenango"
+                                    "nombre": "San Agust√≠n Atenango"
                                 },
                                 {
                                     "id": 83,
-                                    "nombre": "San AgustÌn Chayuco"
+                                    "nombre": "San Agust√≠n Chayuco"
                                 },
                                 {
                                     "id": 84,
-                                    "nombre": "San AgustÌn de las Juntas"
+                                    "nombre": "San Agust√≠n de las Juntas"
                                 },
                                 {
                                     "id": 85,
-                                    "nombre": "San AgustÌn Etla"
+                                    "nombre": "San Agust√≠n Etla"
                                 },
                                 {
                                     "id": 86,
-                                    "nombre": "San AgustÌn Loxicha"
+                                    "nombre": "San Agust√≠n Loxicha"
                                 },
                                 {
                                     "id": 87,
-                                    "nombre": "San AgustÌn Tlacotepec"
+                                    "nombre": "San Agust√≠n Tlacotepec"
                                 },
                                 {
                                     "id": 88,
-                                    "nombre": "San AgustÌn Yatareni"
+                                    "nombre": "San Agust√≠n Yatareni"
                                 },
                                 {
                                     "id": 89,
-                                    "nombre": "San AndrÈs Cabecera Nueva"
+                                    "nombre": "San Andr√©s Cabecera Nueva"
                                 },
                                 {
                                     "id": 90,
-                                    "nombre": "San AndrÈs Dinicuiti"
+                                    "nombre": "San Andr√©s Dinicuiti"
                                 },
                                 {
                                     "id": 91,
-                                    "nombre": "San AndrÈs Huaxpaltepec"
+                                    "nombre": "San Andr√©s Huaxpaltepec"
                                 },
                                 {
                                     "id": 92,
-                                    "nombre": "San AndrÈs Huayapam"
+                                    "nombre": "San Andr√©s Huayapam"
                                 },
                                 {
                                     "id": 93,
-                                    "nombre": "San AndrÈs Ixtlahuaca"
+                                    "nombre": "San Andr√©s Ixtlahuaca"
                                 },
                                 {
                                     "id": 94,
-                                    "nombre": "San AndrÈs Lagunas"
+                                    "nombre": "San Andr√©s Lagunas"
                                 },
                                 {
                                     "id": 95,
-                                    "nombre": "San AndrÈs NuxiÒo"
+                                    "nombre": "San Andr√©s Nuxi√±o"
                                 },
                                 {
                                     "id": 96,
-                                    "nombre": "San AndrÈs Paxtl·n"
+                                    "nombre": "San Andr√©s Paxtl√°n"
                                 },
                                 {
                                     "id": 97,
-                                    "nombre": "San AndrÈs Sinaxtla"
+                                    "nombre": "San Andr√©s Sinaxtla"
                                 },
                                 {
                                     "id": 98,
-                                    "nombre": "San AndrÈs Solaga"
+                                    "nombre": "San Andr√©s Solaga"
                                 },
                                 {
                                     "id": 99,
-                                    "nombre": "San AndrÈs Teotilalpam"
+                                    "nombre": "San Andr√©s Teotilalpam"
                                 },
                                 {
                                     "id": 100,
-                                    "nombre": "San AndrÈs Tepetlapa"
+                                    "nombre": "San Andr√©s Tepetlapa"
                                 },
                                 {
                                     "id": 101,
-                                    "nombre": "San AndrÈs Ya·"
+                                    "nombre": "San Andr√©s Ya√°"
                                 },
                                 {
                                     "id": 102,
-                                    "nombre": "San AndrÈs Zabache"
+                                    "nombre": "San Andr√©s Zabache"
                                 },
                                 {
                                     "id": 103,
-                                    "nombre": "San AndrÈs Zautla"
+                                    "nombre": "San Andr√©s Zautla"
                                 },
                                 {
                                     "id": 104,
@@ -4603,7 +4617,7 @@
                                 },
                                 {
                                     "id": 110,
-                                    "nombre": "San Antonio NanahuatÌpam"
+                                    "nombre": "San Antonio Nanahuat√≠pam"
                                 },
                                 {
                                     "id": 111,
@@ -4615,7 +4629,7 @@
                                 },
                                 {
                                     "id": 113,
-                                    "nombre": "San Baltazar Chichic·pam"
+                                    "nombre": "San Baltazar Chichic√°pam"
                                 },
                                 {
                                     "id": 114,
@@ -4639,23 +4653,23 @@
                                 },
                                 {
                                     "id": 119,
-                                    "nombre": "San BartolomÈ Ayautla"
+                                    "nombre": "San Bartolom√© Ayautla"
                                 },
                                 {
                                     "id": 120,
-                                    "nombre": "San BartolomÈ Loxicha"
+                                    "nombre": "San Bartolom√© Loxicha"
                                 },
                                 {
                                     "id": 121,
-                                    "nombre": "San BartolomÈ Quialana"
+                                    "nombre": "San Bartolom√© Quialana"
                                 },
                                 {
                                     "id": 122,
-                                    "nombre": "San BartolomÈ YucuaÒe"
+                                    "nombre": "San Bartolom√© Yucua√±e"
                                 },
                                 {
                                     "id": 123,
-                                    "nombre": "San BartolomÈ Zoogocho"
+                                    "nombre": "San Bartolom√© Zoogocho"
                                 },
                                 {
                                     "id": 124,
@@ -4671,19 +4685,19 @@
                                 },
                                 {
                                     "id": 127,
-                                    "nombre": "San CristÛbal Amatl·n"
+                                    "nombre": "San Crist√≥bal Amatl√°n"
                                 },
                                 {
                                     "id": 128,
-                                    "nombre": "San CristÛbal Amoltepec"
+                                    "nombre": "San Crist√≥bal Amoltepec"
                                 },
                                 {
                                     "id": 129,
-                                    "nombre": "San CristÛbal Lachirioag"
+                                    "nombre": "San Crist√≥bal Lachirioag"
                                 },
                                 {
                                     "id": 130,
-                                    "nombre": "San CristÛbal Suchixtlahuaca"
+                                    "nombre": "San Crist√≥bal Suchixtlahuaca"
                                 },
                                 {
                                     "id": 131,
@@ -4695,7 +4709,7 @@
                                 },
                                 {
                                     "id": 133,
-                                    "nombre": "San Dionisio Ocotl·n"
+                                    "nombre": "San Dionisio Ocotl√°n"
                                 },
                                 {
                                     "id": 134,
@@ -4703,7 +4717,7 @@
                                 },
                                 {
                                     "id": 135,
-                                    "nombre": "San Felipe Jalapa de DÌaz"
+                                    "nombre": "San Felipe Jalapa de D√≠az"
                                 },
                                 {
                                     "id": 136,
@@ -4715,7 +4729,7 @@
                                 },
                                 {
                                     "id": 138,
-                                    "nombre": "San Francisco Cahuacu·"
+                                    "nombre": "San Francisco Cahuacu√°"
                                 },
                                 {
                                     "id": 139,
@@ -4727,7 +4741,7 @@
                                 },
                                 {
                                     "id": 141,
-                                    "nombre": "San Francisco Chind˙a"
+                                    "nombre": "San Francisco Chind√∫a"
                                 },
                                 {
                                     "id": 142,
@@ -4735,11 +4749,11 @@
                                 },
                                 {
                                     "id": 143,
-                                    "nombre": "San Francisco Huehuetl·n"
+                                    "nombre": "San Francisco Huehuetl√°n"
                                 },
                                 {
                                     "id": 144,
-                                    "nombre": "San Francisco Ixhuat·n"
+                                    "nombre": "San Francisco Ixhuat√°n"
                                 },
                                 {
                                     "id": 145,
@@ -4747,7 +4761,7 @@
                                 },
                                 {
                                     "id": 146,
-                                    "nombre": "San Francisco LachigolÛ"
+                                    "nombre": "San Francisco Lachigol√≥"
                                 },
                                 {
                                     "id": 147,
@@ -4755,7 +4769,7 @@
                                 },
                                 {
                                     "id": 148,
-                                    "nombre": "San Francisco NuxaÒo"
+                                    "nombre": "San Francisco Nuxa√±o"
                                 },
                                 {
                                     "id": 149,
@@ -4783,7 +4797,7 @@
                                 },
                                 {
                                     "id": 155,
-                                    "nombre": "San Ildefonso Amatl·n"
+                                    "nombre": "San Ildefonso Amatl√°n"
                                 },
                                 {
                                     "id": 156,
@@ -4803,27 +4817,27 @@
                                 },
                                 {
                                     "id": 160,
-                                    "nombre": "San JerÛnimo Coatl·n"
+                                    "nombre": "San Jer√≥nimo Coatl√°n"
                                 },
                                 {
                                     "id": 161,
-                                    "nombre": "San JerÛnimo Silacayoapilla"
+                                    "nombre": "San Jer√≥nimo Silacayoapilla"
                                 },
                                 {
                                     "id": 162,
-                                    "nombre": "San JerÛnimo Sosola"
+                                    "nombre": "San Jer√≥nimo Sosola"
                                 },
                                 {
                                     "id": 163,
-                                    "nombre": "San JerÛnimo Taviche"
+                                    "nombre": "San Jer√≥nimo Taviche"
                                 },
                                 {
                                     "id": 164,
-                                    "nombre": "San JerÛnimo Teco·tl"
+                                    "nombre": "San Jer√≥nimo Teco√°tl"
                                 },
                                 {
                                     "id": 165,
-                                    "nombre": "San JerÛnimo Tlacochahuaya"
+                                    "nombre": "San Jer√≥nimo Tlacochahuaya"
                                 },
                                 {
                                     "id": 166,
@@ -4831,39 +4845,39 @@
                                 },
                                 {
                                     "id": 167,
-                                    "nombre": "San JosÈ Ayuquila"
+                                    "nombre": "San Jos√© Ayuquila"
                                 },
                                 {
                                     "id": 168,
-                                    "nombre": "San JosÈ Chiltepec"
+                                    "nombre": "San Jos√© Chiltepec"
                                 },
                                 {
                                     "id": 169,
-                                    "nombre": "San JosÈ del PeÒasco"
+                                    "nombre": "San Jos√© del Pe√±asco"
                                 },
                                 {
                                     "id": 170,
-                                    "nombre": "San JosÈ del Progreso"
+                                    "nombre": "San Jos√© del Progreso"
                                 },
                                 {
                                     "id": 171,
-                                    "nombre": "San JosÈ Estancia Grande"
+                                    "nombre": "San Jos√© Estancia Grande"
                                 },
                                 {
                                     "id": 172,
-                                    "nombre": "San JosÈ Independencia"
+                                    "nombre": "San Jos√© Independencia"
                                 },
                                 {
                                     "id": 173,
-                                    "nombre": "San JosÈ Lachiguiri"
+                                    "nombre": "San Jos√© Lachiguiri"
                                 },
                                 {
                                     "id": 174,
-                                    "nombre": "San JosÈ Tenango"
+                                    "nombre": "San Jos√© Tenango"
                                 },
                                 {
                                     "id": 175,
-                                    "nombre": "San Juan ?umÌ"
+                                    "nombre": "San Juan ?um√≠"
                                 },
                                 {
                                     "id": 176,
@@ -4883,7 +4897,7 @@
                                 },
                                 {
                                     "id": 180,
-                                    "nombre": "San Juan Bautista Cuicatl·n"
+                                    "nombre": "San Juan Bautista Cuicatl√°n"
                                 },
                                 {
                                     "id": 181,
@@ -4891,7 +4905,7 @@
                                 },
                                 {
                                     "id": 182,
-                                    "nombre": "San Juan Bautista Jayacatl·n"
+                                    "nombre": "San Juan Bautista Jayacatl√°n"
                                 },
                                 {
                                     "id": 183,
@@ -4923,7 +4937,7 @@
                                 },
                                 {
                                     "id": 190,
-                                    "nombre": "San Juan Chicomez˙chil"
+                                    "nombre": "San Juan Chicomez√∫chil"
                                 },
                                 {
                                     "id": 191,
@@ -4935,7 +4949,7 @@
                                 },
                                 {
                                     "id": 193,
-                                    "nombre": "San Juan CoatzÛspam"
+                                    "nombre": "San Juan Coatz√≥spam"
                                 },
                                 {
                                     "id": 194,
@@ -4947,11 +4961,11 @@
                                 },
                                 {
                                     "id": 196,
-                                    "nombre": "San Juan CotzocÛn"
+                                    "nombre": "San Juan Cotzoc√≥n"
                                 },
                                 {
                                     "id": 197,
-                                    "nombre": "San Juan de los CuÈs"
+                                    "nombre": "San Juan de los Cu√©s"
                                 },
                                 {
                                     "id": 198,
@@ -4959,7 +4973,7 @@
                                 },
                                 {
                                     "id": 199,
-                                    "nombre": "San Juan del RÌo"
+                                    "nombre": "San Juan del R√≠o"
                                 },
                                 {
                                     "id": 200,
@@ -4971,7 +4985,7 @@
                                 },
                                 {
                                     "id": 202,
-                                    "nombre": "San Juan GuelavÌa"
+                                    "nombre": "San Juan Guelav√≠a"
                                 },
                                 {
                                     "id": 203,
@@ -5007,7 +5021,7 @@
                                 },
                                 {
                                     "id": 211,
-                                    "nombre": "San Juan Mazatl·n"
+                                    "nombre": "San Juan Mazatl√°n"
                                 },
                                 {
                                     "id": 212,
@@ -5039,7 +5053,7 @@
                                 },
                                 {
                                     "id": 219,
-                                    "nombre": "San Juan Taba·"
+                                    "nombre": "San Juan Taba√°"
                                 },
                                 {
                                     "id": 220,
@@ -5063,7 +5077,7 @@
                                 },
                                 {
                                     "id": 225,
-                                    "nombre": "San Juan YaeÈ"
+                                    "nombre": "San Juan Yae√©"
                                 },
                                 {
                                     "id": 226,
@@ -5099,23 +5113,23 @@
                                 },
                                 {
                                     "id": 234,
-                                    "nombre": "San Lucas Camotl·n"
+                                    "nombre": "San Lucas Camotl√°n"
                                 },
                                 {
                                     "id": 235,
-                                    "nombre": "San Lucas Ojitl·n"
+                                    "nombre": "San Lucas Ojitl√°n"
                                 },
                                 {
                                     "id": 236,
-                                    "nombre": "San Lucas QuiavinÌ"
+                                    "nombre": "San Lucas Quiavin√≠"
                                 },
                                 {
                                     "id": 237,
-                                    "nombre": "San Lucas Zoqui·pam"
+                                    "nombre": "San Lucas Zoqui√°pam"
                                 },
                                 {
                                     "id": 238,
-                                    "nombre": "San Luis Amatl·n"
+                                    "nombre": "San Luis Amatl√°n"
                                 },
                                 {
                                     "id": 239,
@@ -5127,35 +5141,35 @@
                                 },
                                 {
                                     "id": 241,
-                                    "nombre": "San MartÌn de los Cansecos"
+                                    "nombre": "San Mart√≠n de los Cansecos"
                                 },
                                 {
                                     "id": 242,
-                                    "nombre": "San MartÌn Huamel˙lpam"
+                                    "nombre": "San Mart√≠n Huamel√∫lpam"
                                 },
                                 {
                                     "id": 243,
-                                    "nombre": "San MartÌn Itunyoso"
+                                    "nombre": "San Mart√≠n Itunyoso"
                                 },
                                 {
                                     "id": 244,
-                                    "nombre": "San MartÌn Lachil·"
+                                    "nombre": "San Mart√≠n Lachil√°"
                                 },
                                 {
                                     "id": 245,
-                                    "nombre": "San MartÌn Peras"
+                                    "nombre": "San Mart√≠n Peras"
                                 },
                                 {
                                     "id": 246,
-                                    "nombre": "San MartÌn Tilcajete"
+                                    "nombre": "San Mart√≠n Tilcajete"
                                 },
                                 {
                                     "id": 247,
-                                    "nombre": "San MartÌn Toxpalan"
+                                    "nombre": "San Mart√≠n Toxpalan"
                                 },
                                 {
                                     "id": 248,
-                                    "nombre": "San MartÌn Zacatepec"
+                                    "nombre": "San Mart√≠n Zacatepec"
                                 },
                                 {
                                     "id": 249,
@@ -5171,19 +5185,19 @@
                                 },
                                 {
                                     "id": 252,
-                                    "nombre": "San Mateo Nej·pam"
+                                    "nombre": "San Mateo Nej√°pam"
                                 },
                                 {
                                     "id": 253,
-                                    "nombre": "San Mateo PeÒasco"
+                                    "nombre": "San Mateo Pe√±asco"
                                 },
                                 {
                                     "id": 254,
-                                    "nombre": "San Mateo PiÒas"
+                                    "nombre": "San Mateo Pi√±as"
                                 },
                                 {
                                     "id": 255,
-                                    "nombre": "San Mateo RÌo Hondo"
+                                    "nombre": "San Mateo R√≠o Hondo"
                                 },
                                 {
                                     "id": 256,
@@ -5195,7 +5209,7 @@
                                 },
                                 {
                                     "id": 258,
-                                    "nombre": "San Mateo Yoloxochitl·n"
+                                    "nombre": "San Mateo Yoloxochitl√°n"
                                 },
                                 {
                                     "id": 259,
@@ -5207,19 +5221,19 @@
                                 },
                                 {
                                     "id": 261,
-                                    "nombre": "San Miguel Ahuehuetitl·n"
+                                    "nombre": "San Miguel Ahuehuetitl√°n"
                                 },
                                 {
                                     "id": 262,
-                                    "nombre": "San Miguel Alo·pam"
+                                    "nombre": "San Miguel Alo√°pam"
                                 },
                                 {
                                     "id": 263,
-                                    "nombre": "San Miguel Amatitl·n"
+                                    "nombre": "San Miguel Amatitl√°n"
                                 },
                                 {
                                     "id": 264,
-                                    "nombre": "San Miguel Amatl·n"
+                                    "nombre": "San Miguel Amatl√°n"
                                 },
                                 {
                                     "id": 265,
@@ -5231,7 +5245,7 @@
                                 },
                                 {
                                     "id": 267,
-                                    "nombre": "San Miguel Coatl·n"
+                                    "nombre": "San Miguel Coatl√°n"
                                 },
                                 {
                                     "id": 268,
@@ -5239,7 +5253,7 @@
                                 },
                                 {
                                     "id": 269,
-                                    "nombre": "San Miguel del RÌo"
+                                    "nombre": "San Miguel del R√≠o"
                                 },
                                 {
                                     "id": 270,
@@ -5287,7 +5301,7 @@
                                 },
                                 {
                                     "id": 281,
-                                    "nombre": "San Miguel Tecomatl·n"
+                                    "nombre": "San Miguel Tecomatl√°n"
                                 },
                                 {
                                     "id": 282,
@@ -5299,7 +5313,7 @@
                                 },
                                 {
                                     "id": 284,
-                                    "nombre": "San Miguel Tilqui·pam"
+                                    "nombre": "San Miguel Tilqui√°pam"
                                 },
                                 {
                                     "id": 285,
@@ -5319,15 +5333,15 @@
                                 },
                                 {
                                     "id": 289,
-                                    "nombre": "San Nicol·s"
+                                    "nombre": "San Nicol√°s"
                                 },
                                 {
                                     "id": 290,
-                                    "nombre": "San Nicol·s Hidalgo"
+                                    "nombre": "San Nicol√°s Hidalgo"
                                 },
                                 {
                                     "id": 291,
-                                    "nombre": "San Pablo Coatl·n"
+                                    "nombre": "San Pablo Coatl√°n"
                                 },
                                 {
                                     "id": 292,
@@ -5367,7 +5381,7 @@
                                 },
                                 {
                                     "id": 301,
-                                    "nombre": "San Pedro ApÛstol"
+                                    "nombre": "San Pedro Ap√≥stol"
                                 },
                                 {
                                     "id": 302,
@@ -5383,7 +5397,7 @@
                                 },
                                 {
                                     "id": 305,
-                                    "nombre": "San Pedro Coxcaltepec C·ntaros"
+                                    "nombre": "San Pedro Coxcaltepec C√°ntaros"
                                 },
                                 {
                                     "id": 306,
@@ -5399,7 +5413,7 @@
                                 },
                                 {
                                     "id": 309,
-                                    "nombre": "San Pedro Ixcatl·n"
+                                    "nombre": "San Pedro Ixcatl√°n"
                                 },
                                 {
                                     "id": 310,
@@ -5411,7 +5425,7 @@
                                 },
                                 {
                                     "id": 312,
-                                    "nombre": "San Pedro Jicay·n"
+                                    "nombre": "San Pedro Jicay√°n"
                                 },
                                 {
                                     "id": 313,
@@ -5423,15 +5437,15 @@
                                 },
                                 {
                                     "id": 315,
-                                    "nombre": "San Pedro M·rtir"
+                                    "nombre": "San Pedro M√°rtir"
                                 },
                                 {
                                     "id": 316,
-                                    "nombre": "San Pedro M·rtir Quiechapa"
+                                    "nombre": "San Pedro M√°rtir Quiechapa"
                                 },
                                 {
                                     "id": 317,
-                                    "nombre": "San Pedro M·rtir Yucuxaco"
+                                    "nombre": "San Pedro M√°rtir Yucuxaco"
                                 },
                                 {
                                     "id": 318,
@@ -5487,7 +5501,7 @@
                                 },
                                 {
                                     "id": 331,
-                                    "nombre": "San Pedro Tida·"
+                                    "nombre": "San Pedro Tida√°"
                                 },
                                 {
                                     "id": 332,
@@ -5515,7 +5529,7 @@
                                 },
                                 {
                                     "id": 338,
-                                    "nombre": "San Pedro YÛlox"
+                                    "nombre": "San Pedro Y√≥lox"
                                 },
                                 {
                                     "id": 339,
@@ -5527,55 +5541,55 @@
                                 },
                                 {
                                     "id": 341,
-                                    "nombre": "San Sebasti·n Abasolo"
+                                    "nombre": "San Sebasti√°n Abasolo"
                                 },
                                 {
                                     "id": 342,
-                                    "nombre": "San Sebasti·n Coatl·n"
+                                    "nombre": "San Sebasti√°n Coatl√°n"
                                 },
                                 {
                                     "id": 343,
-                                    "nombre": "San Sebasti·n Ixcapa"
+                                    "nombre": "San Sebasti√°n Ixcapa"
                                 },
                                 {
                                     "id": 344,
-                                    "nombre": "San Sebasti·n Nicananduta"
+                                    "nombre": "San Sebasti√°n Nicananduta"
                                 },
                                 {
                                     "id": 345,
-                                    "nombre": "San Sebasti·n RÌo Hondo"
+                                    "nombre": "San Sebasti√°n R√≠o Hondo"
                                 },
                                 {
                                     "id": 346,
-                                    "nombre": "San Sebasti·n Tecomaxtlahuaca"
+                                    "nombre": "San Sebasti√°n Tecomaxtlahuaca"
                                 },
                                 {
                                     "id": 347,
-                                    "nombre": "San Sebasti·n Teitipac"
+                                    "nombre": "San Sebasti√°n Teitipac"
                                 },
                                 {
                                     "id": 348,
-                                    "nombre": "San Sebasti·n Tutla"
+                                    "nombre": "San Sebasti√°n Tutla"
                                 },
                                 {
                                     "id": 349,
-                                    "nombre": "San SimÛn Almolongas"
+                                    "nombre": "San Sim√≥n Almolongas"
                                 },
                                 {
                                     "id": 350,
-                                    "nombre": "San SimÛn Zahuatl·n"
+                                    "nombre": "San Sim√≥n Zahuatl√°n"
                                 },
                                 {
                                     "id": 351,
-                                    "nombre": "San Vicente Coatl·n"
+                                    "nombre": "San Vicente Coatl√°n"
                                 },
                                 {
                                     "id": 352,
-                                    "nombre": "San Vicente LachixÌo"
+                                    "nombre": "San Vicente Lachix√≠o"
                                 },
                                 {
                                     "id": 353,
-                                    "nombre": "San Vicente NuÒ˙"
+                                    "nombre": "San Vicente Nu√±√∫"
                                 },
                                 {
                                     "id": 354,
@@ -5587,7 +5601,7 @@
                                 },
                                 {
                                     "id": 356,
-                                    "nombre": "Santa Ana CuauhtÈmoc"
+                                    "nombre": "Santa Ana Cuauht√©moc"
                                 },
                                 {
                                     "id": 357,
@@ -5611,7 +5625,7 @@
                                 },
                                 {
                                     "id": 362,
-                                    "nombre": "Santa Catalina QuierÌ"
+                                    "nombre": "Santa Catalina Quier√≠"
                                 },
                                 {
                                     "id": 363,
@@ -5635,7 +5649,7 @@
                                 },
                                 {
                                     "id": 368,
-                                    "nombre": "Santa Catarina Mechoac·n"
+                                    "nombre": "Santa Catarina Mechoac√°n"
                                 },
                                 {
                                     "id": 369,
@@ -5643,7 +5657,7 @@
                                 },
                                 {
                                     "id": 370,
-                                    "nombre": "Santa Catarina QuianÈ"
+                                    "nombre": "Santa Catarina Quian√©"
                                 },
                                 {
                                     "id": 371,
@@ -5655,11 +5669,11 @@
                                 },
                                 {
                                     "id": 373,
-                                    "nombre": "Santa Catarina Ticu·"
+                                    "nombre": "Santa Catarina Ticu√°"
                                 },
                                 {
                                     "id": 374,
-                                    "nombre": "Santa Catarina Yosonot˙"
+                                    "nombre": "Santa Catarina Yosonot√∫"
                                 },
                                 {
                                     "id": 375,
@@ -5711,7 +5725,7 @@
                                 },
                                 {
                                     "id": 387,
-                                    "nombre": "Santa Cruz Xoxocotl·n"
+                                    "nombre": "Santa Cruz Xoxocotl√°n"
                                 },
                                 {
                                     "id": 388,
@@ -5723,247 +5737,247 @@
                                 },
                                 {
                                     "id": 390,
-                                    "nombre": "Santa InÈs de Zaragoza"
+                                    "nombre": "Santa In√©s de Zaragoza"
                                 },
                                 {
                                     "id": 391,
-                                    "nombre": "Santa InÈs del Monte"
+                                    "nombre": "Santa In√©s del Monte"
                                 },
                                 {
                                     "id": 392,
-                                    "nombre": "Santa InÈs Yatzeche"
+                                    "nombre": "Santa In√©s Yatzeche"
                                 },
                                 {
                                     "id": 393,
-                                    "nombre": "Santa LucÌa del Camino"
+                                    "nombre": "Santa Luc√≠a del Camino"
                                 },
                                 {
                                     "id": 394,
-                                    "nombre": "Santa LucÌa Miahuatl·n"
+                                    "nombre": "Santa Luc√≠a Miahuatl√°n"
                                 },
                                 {
                                     "id": 395,
-                                    "nombre": "Santa LucÌa Monteverde"
+                                    "nombre": "Santa Luc√≠a Monteverde"
                                 },
                                 {
                                     "id": 396,
-                                    "nombre": "Santa LucÌa Ocotl·n"
+                                    "nombre": "Santa Luc√≠a Ocotl√°n"
                                 },
                                 {
                                     "id": 397,
-                                    "nombre": "Santa Magdalena Jicotl·n"
+                                    "nombre": "Santa Magdalena Jicotl√°n"
                                 },
                                 {
                                     "id": 398,
-                                    "nombre": "Santa MarÌa Alotepec"
+                                    "nombre": "Santa Mar√≠a Alotepec"
                                 },
                                 {
                                     "id": 399,
-                                    "nombre": "Santa MarÌa Apazco"
+                                    "nombre": "Santa Mar√≠a Apazco"
                                 },
                                 {
                                     "id": 400,
-                                    "nombre": "Santa MarÌa Atzompa"
+                                    "nombre": "Santa Mar√≠a Atzompa"
                                 },
                                 {
                                     "id": 401,
-                                    "nombre": "Santa MarÌa Camotl·n"
+                                    "nombre": "Santa Mar√≠a Camotl√°n"
                                 },
                                 {
                                     "id": 402,
-                                    "nombre": "Santa MarÌa Chacho·pam"
+                                    "nombre": "Santa Mar√≠a Chacho√°pam"
                                 },
                                 {
                                     "id": 403,
-                                    "nombre": "Santa MarÌa Chilchotla"
+                                    "nombre": "Santa Mar√≠a Chilchotla"
                                 },
                                 {
                                     "id": 404,
-                                    "nombre": "Santa MarÌa Chimalapa"
+                                    "nombre": "Santa Mar√≠a Chimalapa"
                                 },
                                 {
                                     "id": 405,
-                                    "nombre": "Santa MarÌa Colotepec"
+                                    "nombre": "Santa Mar√≠a Colotepec"
                                 },
                                 {
                                     "id": 406,
-                                    "nombre": "Santa MarÌa Cortijo"
+                                    "nombre": "Santa Mar√≠a Cortijo"
                                 },
                                 {
                                     "id": 407,
-                                    "nombre": "Santa MarÌa Coyotepec"
+                                    "nombre": "Santa Mar√≠a Coyotepec"
                                 },
                                 {
                                     "id": 408,
-                                    "nombre": "Santa MarÌa del Rosario"
+                                    "nombre": "Santa Mar√≠a del Rosario"
                                 },
                                 {
                                     "id": 409,
-                                    "nombre": "Santa MarÌa del Tule"
+                                    "nombre": "Santa Mar√≠a del Tule"
                                 },
                                 {
                                     "id": 410,
-                                    "nombre": "Santa MarÌa Ecatepec"
+                                    "nombre": "Santa Mar√≠a Ecatepec"
                                 },
                                 {
                                     "id": 411,
-                                    "nombre": "Santa MarÌa GuelacÈ"
+                                    "nombre": "Santa Mar√≠a Guelac√©"
                                 },
                                 {
                                     "id": 412,
-                                    "nombre": "Santa MarÌa Guienagati"
+                                    "nombre": "Santa Mar√≠a Guienagati"
                                 },
                                 {
                                     "id": 413,
-                                    "nombre": "Santa MarÌa Huatulco"
+                                    "nombre": "Santa Mar√≠a Huatulco"
                                 },
                                 {
                                     "id": 414,
-                                    "nombre": "Santa MarÌa Huazolotitl·n"
+                                    "nombre": "Santa Mar√≠a Huazolotitl√°n"
                                 },
                                 {
                                     "id": 415,
-                                    "nombre": "Santa MarÌa Ipalapa"
+                                    "nombre": "Santa Mar√≠a Ipalapa"
                                 },
                                 {
                                     "id": 416,
-                                    "nombre": "Santa MarÌa Ixcatl·n"
+                                    "nombre": "Santa Mar√≠a Ixcatl√°n"
                                 },
                                 {
                                     "id": 417,
-                                    "nombre": "Santa MarÌa Jacatepec"
+                                    "nombre": "Santa Mar√≠a Jacatepec"
                                 },
                                 {
                                     "id": 418,
-                                    "nombre": "Santa MarÌa Jalapa del MarquÈs"
+                                    "nombre": "Santa Mar√≠a Jalapa del Marqu√©s"
                                 },
                                 {
                                     "id": 419,
-                                    "nombre": "Santa MarÌa Jaltianguis"
+                                    "nombre": "Santa Mar√≠a Jaltianguis"
                                 },
                                 {
                                     "id": 420,
-                                    "nombre": "Santa MarÌa la AsunciÛn"
+                                    "nombre": "Santa Mar√≠a la Asunci√≥n"
                                 },
                                 {
                                     "id": 421,
-                                    "nombre": "Santa MarÌa LachixÌo"
+                                    "nombre": "Santa Mar√≠a Lachix√≠o"
                                 },
                                 {
                                     "id": 422,
-                                    "nombre": "Santa MarÌa Mixtequilla"
+                                    "nombre": "Santa Mar√≠a Mixtequilla"
                                 },
                                 {
                                     "id": 423,
-                                    "nombre": "Santa MarÌa Nativitas"
+                                    "nombre": "Santa Mar√≠a Nativitas"
                                 },
                                 {
                                     "id": 424,
-                                    "nombre": "Santa MarÌa Nduayaco"
+                                    "nombre": "Santa Mar√≠a Nduayaco"
                                 },
                                 {
                                     "id": 425,
-                                    "nombre": "Santa MarÌa Ozolotepec"
+                                    "nombre": "Santa Mar√≠a Ozolotepec"
                                 },
                                 {
                                     "id": 426,
-                                    "nombre": "Santa MarÌa P·palo"
+                                    "nombre": "Santa Mar√≠a P√°palo"
                                 },
                                 {
                                     "id": 427,
-                                    "nombre": "Santa MarÌa PeÒoles"
+                                    "nombre": "Santa Mar√≠a Pe√±oles"
                                 },
                                 {
                                     "id": 428,
-                                    "nombre": "Santa MarÌa Petapa"
+                                    "nombre": "Santa Mar√≠a Petapa"
                                 },
                                 {
                                     "id": 429,
-                                    "nombre": "Santa MarÌa Quiegolani"
+                                    "nombre": "Santa Mar√≠a Quiegolani"
                                 },
                                 {
                                     "id": 430,
-                                    "nombre": "Santa MarÌa Sola"
+                                    "nombre": "Santa Mar√≠a Sola"
                                 },
                                 {
                                     "id": 431,
-                                    "nombre": "Santa MarÌa Tataltepec"
+                                    "nombre": "Santa Mar√≠a Tataltepec"
                                 },
                                 {
                                     "id": 432,
-                                    "nombre": "Santa MarÌa Tecomavaca"
+                                    "nombre": "Santa Mar√≠a Tecomavaca"
                                 },
                                 {
                                     "id": 433,
-                                    "nombre": "Santa MarÌa Temaxcalapa"
+                                    "nombre": "Santa Mar√≠a Temaxcalapa"
                                 },
                                 {
                                     "id": 434,
-                                    "nombre": "Santa MarÌa Temaxcaltepec"
+                                    "nombre": "Santa Mar√≠a Temaxcaltepec"
                                 },
                                 {
                                     "id": 435,
-                                    "nombre": "Santa MarÌa Teopoxco"
+                                    "nombre": "Santa Mar√≠a Teopoxco"
                                 },
                                 {
                                     "id": 436,
-                                    "nombre": "Santa MarÌa Tepantlali"
+                                    "nombre": "Santa Mar√≠a Tepantlali"
                                 },
                                 {
                                     "id": 437,
-                                    "nombre": "Santa MarÌa Texcatitl·n"
+                                    "nombre": "Santa Mar√≠a Texcatitl√°n"
                                 },
                                 {
                                     "id": 438,
-                                    "nombre": "Santa MarÌa Tlahuitoltepec"
+                                    "nombre": "Santa Mar√≠a Tlahuitoltepec"
                                 },
                                 {
                                     "id": 439,
-                                    "nombre": "Santa MarÌa Tlalixtac"
+                                    "nombre": "Santa Mar√≠a Tlalixtac"
                                 },
                                 {
                                     "id": 440,
-                                    "nombre": "Santa MarÌa Tonameca"
+                                    "nombre": "Santa Mar√≠a Tonameca"
                                 },
                                 {
                                     "id": 441,
-                                    "nombre": "Santa MarÌa Totolapilla"
+                                    "nombre": "Santa Mar√≠a Totolapilla"
                                 },
                                 {
                                     "id": 442,
-                                    "nombre": "Santa MarÌa Xadani"
+                                    "nombre": "Santa Mar√≠a Xadani"
                                 },
                                 {
                                     "id": 443,
-                                    "nombre": "Santa MarÌa Yalina"
+                                    "nombre": "Santa Mar√≠a Yalina"
                                 },
                                 {
                                     "id": 444,
-                                    "nombre": "Santa MarÌa YavesÌa"
+                                    "nombre": "Santa Mar√≠a Yaves√≠a"
                                 },
                                 {
                                     "id": 445,
-                                    "nombre": "Santa MarÌa Yolotepec"
+                                    "nombre": "Santa Mar√≠a Yolotepec"
                                 },
                                 {
                                     "id": 446,
-                                    "nombre": "Santa MarÌa Yosoy˙a"
+                                    "nombre": "Santa Mar√≠a Yosoy√∫a"
                                 },
                                 {
                                     "id": 447,
-                                    "nombre": "Santa MarÌa Yucuhiti"
+                                    "nombre": "Santa Mar√≠a Yucuhiti"
                                 },
                                 {
                                     "id": 448,
-                                    "nombre": "Santa MarÌa Zacatepec"
+                                    "nombre": "Santa Mar√≠a Zacatepec"
                                 },
                                 {
                                     "id": 449,
-                                    "nombre": "Santa MarÌa Zaniza"
+                                    "nombre": "Santa Mar√≠a Zaniza"
                                 },
                                 {
                                     "id": 450,
-                                    "nombre": "Santa MarÌa Zoquitl·n"
+                                    "nombre": "Santa Mar√≠a Zoquitl√°n"
                                 },
                                 {
                                     "id": 451,
@@ -5975,7 +5989,7 @@
                                 },
                                 {
                                     "id": 453,
-                                    "nombre": "Santiago ApÛstol"
+                                    "nombre": "Santiago Ap√≥stol"
                                 },
                                 {
                                     "id": 454,
@@ -5983,7 +5997,7 @@
                                 },
                                 {
                                     "id": 455,
-                                    "nombre": "Santiago Atitl·n"
+                                    "nombre": "Santiago Atitl√°n"
                                 },
                                 {
                                     "id": 456,
@@ -5995,7 +6009,7 @@
                                 },
                                 {
                                     "id": 458,
-                                    "nombre": "Santiago Camotl·n"
+                                    "nombre": "Santiago Camotl√°n"
                                 },
                                 {
                                     "id": 459,
@@ -6011,11 +6025,11 @@
                                 },
                                 {
                                     "id": 462,
-                                    "nombre": "Santiago del RÌo"
+                                    "nombre": "Santiago del R√≠o"
                                 },
                                 {
                                     "id": 463,
-                                    "nombre": "Santiago Huajolotitl·n"
+                                    "nombre": "Santiago Huajolotitl√°n"
                                 },
                                 {
                                     "id": 464,
@@ -6023,7 +6037,7 @@
                                 },
                                 {
                                     "id": 465,
-                                    "nombre": "Santiago Ihuitl·n Plumas"
+                                    "nombre": "Santiago Ihuitl√°n Plumas"
                                 },
                                 {
                                     "id": 466,
@@ -6067,7 +6081,7 @@
                                 },
                                 {
                                     "id": 476,
-                                    "nombre": "Santiago Matatl·n"
+                                    "nombre": "Santiago Matatl√°n"
                                 },
                                 {
                                     "id": 477,
@@ -6095,7 +6109,7 @@
                                 },
                                 {
                                     "id": 483,
-                                    "nombre": "Santiago NuyoÛ"
+                                    "nombre": "Santiago Nuyo√≥"
                                 },
                                 {
                                     "id": 484,
@@ -6131,7 +6145,7 @@
                                 },
                                 {
                                     "id": 492,
-                                    "nombre": "Santiago Textitl·n"
+                                    "nombre": "Santiago Textitl√°n"
                                 },
                                 {
                                     "id": 493,
@@ -6151,7 +6165,7 @@
                                 },
                                 {
                                     "id": 497,
-                                    "nombre": "Santiago XiacuÌ"
+                                    "nombre": "Santiago Xiacu√≠"
                                 },
                                 {
                                     "id": 498,
@@ -6163,11 +6177,11 @@
                                 },
                                 {
                                     "id": 500,
-                                    "nombre": "Santiago YolomÈcatl"
+                                    "nombre": "Santiago Yolom√©catl"
                                 },
                                 {
                                     "id": 501,
-                                    "nombre": "Santiago Yosond˙a"
+                                    "nombre": "Santiago Yosond√∫a"
                                 },
                                 {
                                     "id": 502,
@@ -6191,7 +6205,7 @@
                                 },
                                 {
                                     "id": 507,
-                                    "nombre": "Santo Domingo Chihuit·n"
+                                    "nombre": "Santo Domingo Chihuit√°n"
                                 },
                                 {
                                     "id": 508,
@@ -6203,11 +6217,11 @@
                                 },
                                 {
                                     "id": 510,
-                                    "nombre": "Santo Domingo Ixcatl·n"
+                                    "nombre": "Santo Domingo Ixcatl√°n"
                                 },
                                 {
                                     "id": 511,
-                                    "nombre": "Santo Domingo Nuxa·"
+                                    "nombre": "Santo Domingo Nuxa√°"
                                 },
                                 {
                                     "id": 512,
@@ -6235,7 +6249,7 @@
                                 },
                                 {
                                     "id": 518,
-                                    "nombre": "Santo Domingo Tlatay·pam"
+                                    "nombre": "Santo Domingo Tlatay√°pam"
                                 },
                                 {
                                     "id": 519,
@@ -6243,7 +6257,7 @@
                                 },
                                 {
                                     "id": 520,
-                                    "nombre": "Santo Domingo Tonal·"
+                                    "nombre": "Santo Domingo Tonal√°"
                                 },
                                 {
                                     "id": 521,
@@ -6251,11 +6265,11 @@
                                 },
                                 {
                                     "id": 522,
-                                    "nombre": "Santo Domingo XagacÌa"
+                                    "nombre": "Santo Domingo Xagac√≠a"
                                 },
                                 {
                                     "id": 523,
-                                    "nombre": "Santo Domingo Yanhuitl·n"
+                                    "nombre": "Santo Domingo Yanhuitl√°n"
                                 },
                                 {
                                     "id": 524,
@@ -6267,19 +6281,19 @@
                                 },
                                 {
                                     "id": 526,
-                                    "nombre": "Santo Tom·s Jalieza"
+                                    "nombre": "Santo Tom√°s Jalieza"
                                 },
                                 {
                                     "id": 527,
-                                    "nombre": "Santo Tom·s Mazaltepec"
+                                    "nombre": "Santo Tom√°s Mazaltepec"
                                 },
                                 {
                                     "id": 528,
-                                    "nombre": "Santo Tom·s Ocotepec"
+                                    "nombre": "Santo Tom√°s Ocotepec"
                                 },
                                 {
                                     "id": 529,
-                                    "nombre": "Santo Tom·s Tamazulapan"
+                                    "nombre": "Santo Tom√°s Tamazulapan"
                                 },
                                 {
                                     "id": 530,
@@ -6287,7 +6301,7 @@
                                 },
                                 {
                                     "id": 531,
-                                    "nombre": "Santos Reyes P·palo"
+                                    "nombre": "Santos Reyes P√°palo"
                                 },
                                 {
                                     "id": 532,
@@ -6295,11 +6309,11 @@
                                 },
                                 {
                                     "id": 533,
-                                    "nombre": "Santos Reyes Yucun·"
+                                    "nombre": "Santos Reyes Yucun√°"
                                 },
                                 {
                                     "id": 534,
-                                    "nombre": "Silacayo·pam"
+                                    "nombre": "Silacayo√°pam"
                                 },
                                 {
                                     "id": 535,
@@ -6311,7 +6325,7 @@
                                 },
                                 {
                                     "id": 537,
-                                    "nombre": "Tamazulapam del EspÌritu Santo"
+                                    "nombre": "Tamazulapam del Esp√≠ritu Santo"
                                 },
                                 {
                                     "id": 538,
@@ -6323,19 +6337,19 @@
                                 },
                                 {
                                     "id": 540,
-                                    "nombre": "Tataltepec de ValdÈs"
+                                    "nombre": "Tataltepec de Vald√©s"
                                 },
                                 {
                                     "id": 541,
-                                    "nombre": "Teococuilco de Marcos PÈrez"
+                                    "nombre": "Teococuilco de Marcos P√©rez"
                                 },
                                 {
                                     "id": 542,
-                                    "nombre": "Teotitl·n de Flores MagÛn"
+                                    "nombre": "Teotitl√°n de Flores Mag√≥n"
                                 },
                                 {
                                     "id": 543,
-                                    "nombre": "Teotitl·n del Valle"
+                                    "nombre": "Teotitl√°n del Valle"
                                 },
                                 {
                                     "id": 544,
@@ -6347,7 +6361,7 @@
                                 },
                                 {
                                     "id": 546,
-                                    "nombre": "Tezoatl·n de Segura y Luna"
+                                    "nombre": "Tezoatl√°n de Segura y Luna"
                                 },
                                 {
                                     "id": 547,
@@ -6371,7 +6385,7 @@
                                 },
                                 {
                                     "id": 552,
-                                    "nombre": "UniÛn Hidalgo"
+                                    "nombre": "Uni√≥n Hidalgo"
                                 },
                                 {
                                     "id": 553,
@@ -6379,7 +6393,7 @@
                                 },
                                 {
                                     "id": 554,
-                                    "nombre": "Villa de Chilapa de DÌaz"
+                                    "nombre": "Villa de Chilapa de D√≠az"
                                 },
                                 {
                                     "id": 555,
@@ -6387,7 +6401,7 @@
                                 },
                                 {
                                     "id": 556,
-                                    "nombre": "Villa de Tamazul·pam del Progreso"
+                                    "nombre": "Villa de Tamazul√°pam del Progreso"
                                 },
                                 {
                                     "id": 557,
@@ -6399,7 +6413,7 @@
                                 },
                                 {
                                     "id": 559,
-                                    "nombre": "Villa DÌaz Ordaz"
+                                    "nombre": "Villa D√≠az Ordaz"
                                 },
                                 {
                                     "id": 560,
@@ -6415,7 +6429,7 @@
                                 },
                                 {
                                     "id": 563,
-                                    "nombre": "Villa Tej˙pam de la UniÛn"
+                                    "nombre": "Villa Tej√∫pam de la Uni√≥n"
                                 },
                                 {
                                     "id": 564,
@@ -6431,19 +6445,19 @@
                                 },
                                 {
                                     "id": 567,
-                                    "nombre": "Zapotitl·n del RÌo"
+                                    "nombre": "Zapotitl√°n del R√≠o"
                                 },
                                 {
                                     "id": 568,
-                                    "nombre": "Zapotitl·n Lagunas"
+                                    "nombre": "Zapotitl√°n Lagunas"
                                 },
                                 {
                                     "id": 569,
-                                    "nombre": "Zapotitl·n Palmas"
+                                    "nombre": "Zapotitl√°n Palmas"
                                 },
                                 {
                                     "id": 570,
-                                    "nombre": "Zimatl·n de Alvarez"
+                                    "nombre": "Zimatl√°n de Alvarez"
                                 }
                             ]
                         
@@ -6465,7 +6479,7 @@
                                 },
                                 {
                                     "id": 3,
-                                    "nombre": "Acatl·n"
+                                    "nombre": "Acatl√°n"
                                 },
                                 {
                                     "id": 4,
@@ -6477,11 +6491,11 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Ahuacatl·n"
+                                    "nombre": "Ahuacatl√°n"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "Ahuatl·n"
+                                    "nombre": "Ahuatl√°n"
                                 },
                                 {
                                     "id": 8,
@@ -6509,7 +6523,7 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Amixtl·n"
+                                    "nombre": "Amixtl√°n"
                                 },
                                 {
                                     "id": 13,
@@ -6545,7 +6559,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Atzitzihuac·n"
+                                    "nombre": "Atzitzihuac√°n"
                                 },
                                 {
                                     "id": 20,
@@ -6573,7 +6587,7 @@
                                 },
                                 {
                                     "id": 24,
-                                    "nombre": "CaÒada Morelos"
+                                    "nombre": "Ca√±ada Morelos"
                                 },
                                 {
                                     "id": 25,
@@ -6609,7 +6623,7 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Chigmecatitl·n"
+                                    "nombre": "Chigmecatitl√°n"
                                 },
                                 {
                                     "id": 32,
@@ -6649,7 +6663,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Cohuec·n"
+                                    "nombre": "Cohuec√°n"
                                 },
                                 {
                                     "id": 40,
@@ -6657,7 +6671,7 @@
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "Coxcatl·n"
+                                    "nombre": "Coxcatl√°n"
                                 },
                                 {
                                     "id": 42,
@@ -6677,7 +6691,7 @@
                                 },
                                 {
                                     "id": 46,
-                                    "nombre": "Cuautinch·n"
+                                    "nombre": "Cuautinch√°n"
                                 },
                                 {
                                     "id": 47,
@@ -6701,11 +6715,11 @@
                                 },
                                 {
                                     "id": 50,
-                                    "nombre": "Eloxochitl·n"
+                                    "nombre": "Eloxochitl√°n"
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Epatl·n"
+                                    "nombre": "Epatl√°n"
                                 },
                                 {
                                     "id": 52,
@@ -6753,11 +6767,11 @@
                                 },
                                 {
                                     "id": 61,
-                                    "nombre": "Huehuetl·n el Chico"
+                                    "nombre": "Huehuetl√°n el Chico"
                                 },
                                 {
                                     "id": 62,
-                                    "nombre": "Huehuetl·n el Grande"
+                                    "nombre": "Huehuetl√°n el Grande"
                                 },
                                 {
                                     "id": 63,
@@ -6777,7 +6791,7 @@
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "Huitzilan de Serd·n"
+                                    "nombre": "Huitzilan de Serd√°n"
                                 },
                                 {
                                     "id": 82,
@@ -6793,7 +6807,7 @@
                                 },
                                 {
                                     "id": 85,
-                                    "nombre": "Ixtacamaxtitl·n"
+                                    "nombre": "Ixtacamaxtitl√°n"
                                 },
                                 {
                                     "id": 86,
@@ -6801,7 +6815,7 @@
                                 },
                                 {
                                     "id": 87,
-                                    "nombre": "Iz˙car de Matamoros"
+                                    "nombre": "Iz√∫car de Matamoros"
                                 },
                                 {
                                     "id": 88,
@@ -6829,7 +6843,7 @@
                                 },
                                 {
                                     "id": 94,
-                                    "nombre": "Juan N. MÈndez"
+                                    "nombre": "Juan N. M√©ndez"
                                 },
                                 {
                                     "id": 95,
@@ -6845,11 +6859,11 @@
                                 },
                                 {
                                     "id": 98,
-                                    "nombre": "Los Reyes de Ju·rez"
+                                    "nombre": "Los Reyes de Ju√°rez"
                                 },
                                 {
                                     "id": 99,
-                                    "nombre": "Mazapiltepec de Ju·rez"
+                                    "nombre": "Mazapiltepec de Ju√°rez"
                                 },
                                 {
                                     "id": 100,
@@ -6873,7 +6887,7 @@
                                 },
                                 {
                                     "id": 105,
-                                    "nombre": "Nicol·s Bravo"
+                                    "nombre": "Nicol√°s Bravo"
                                 },
                                 {
                                     "id": 106,
@@ -6897,7 +6911,7 @@
                                 },
                                 {
                                     "id": 111,
-                                    "nombre": "Pahuatl·n"
+                                    "nombre": "Pahuatl√°n"
                                 },
                                 {
                                     "id": 112,
@@ -6925,7 +6939,7 @@
                                 },
                                 {
                                     "id": 118,
-                                    "nombre": "Quimixtl·n"
+                                    "nombre": "Quimixtl√°n"
                                 },
                                 {
                                     "id": 119,
@@ -6933,11 +6947,11 @@
                                 },
                                 {
                                     "id": 120,
-                                    "nombre": "San AndrÈs Cholula"
+                                    "nombre": "San Andr√©s Cholula"
                                 },
                                 {
                                     "id": 121,
-                                    "nombre": "San Antonio CaÒada"
+                                    "nombre": "San Antonio Ca√±ada"
                                 },
                                 {
                                     "id": 122,
@@ -6949,7 +6963,7 @@
                                 },
                                 {
                                     "id": 124,
-                                    "nombre": "San Felipe Tepatl·n"
+                                    "nombre": "San Felipe Tepatl√°n"
                                 },
                                 {
                                     "id": 125,
@@ -6961,19 +6975,19 @@
                                 },
                                 {
                                     "id": 127,
-                                    "nombre": "San JerÛnimo Tecuanipan"
+                                    "nombre": "San Jer√≥nimo Tecuanipan"
                                 },
                                 {
                                     "id": 128,
-                                    "nombre": "San JerÛnimo Xayacatl·n"
+                                    "nombre": "San Jer√≥nimo Xayacatl√°n"
                                 },
                                 {
                                     "id": 129,
-                                    "nombre": "San JosÈ Chiapa"
+                                    "nombre": "San Jos√© Chiapa"
                                 },
                                 {
                                     "id": 130,
-                                    "nombre": "San JosÈ Miahuatl·n"
+                                    "nombre": "San Jos√© Miahuatl√°n"
                                 },
                                 {
                                     "id": 131,
@@ -6985,19 +6999,19 @@
                                 },
                                 {
                                     "id": 133,
-                                    "nombre": "San MartÌn Texmelucan"
+                                    "nombre": "San Mart√≠n Texmelucan"
                                 },
                                 {
                                     "id": 134,
-                                    "nombre": "San MartÌn Totoltepec"
+                                    "nombre": "San Mart√≠n Totoltepec"
                                 },
                                 {
                                     "id": 135,
-                                    "nombre": "San MatÌas Tlalancaleca"
+                                    "nombre": "San Mat√≠as Tlalancaleca"
                                 },
                                 {
                                     "id": 136,
-                                    "nombre": "San Miguel Ixitl·n"
+                                    "nombre": "San Miguel Ixitl√°n"
                                 },
                                 {
                                     "id": 137,
@@ -7005,11 +7019,11 @@
                                 },
                                 {
                                     "id": 138,
-                                    "nombre": "San Nicol·s Buenos Aires"
+                                    "nombre": "San Nicol√°s Buenos Aires"
                                 },
                                 {
                                     "id": 139,
-                                    "nombre": "San Nicol·s de los Ranchos"
+                                    "nombre": "San Nicol√°s de los Ranchos"
                                 },
                                 {
                                     "id": 140,
@@ -7037,7 +7051,7 @@
                                 },
                                 {
                                     "id": 146,
-                                    "nombre": "San Sebasti·n Tlacotepec"
+                                    "nombre": "San Sebasti√°n Tlacotepec"
                                 },
                                 {
                                     "id": 147,
@@ -7045,7 +7059,7 @@
                                 },
                                 {
                                     "id": 148,
-                                    "nombre": "Santa InÈs Ahuatempan"
+                                    "nombre": "Santa In√©s Ahuatempan"
                                 },
                                 {
                                     "id": 149,
@@ -7053,11 +7067,11 @@
                                 },
                                 {
                                     "id": 150,
-                                    "nombre": "Santiago Miahuatl·n"
+                                    "nombre": "Santiago Miahuatl√°n"
                                 },
                                 {
                                     "id": 151,
-                                    "nombre": "Santo Tom·s Hueyotlipan"
+                                    "nombre": "Santo Tom√°s Hueyotlipan"
                                 },
                                 {
                                     "id": 152,
@@ -7073,11 +7087,11 @@
                                 },
                                 {
                                     "id": 155,
-                                    "nombre": "Tecomatl·n"
+                                    "nombre": "Tecomatl√°n"
                                 },
                                 {
                                     "id": 156,
-                                    "nombre": "Tehuac·n"
+                                    "nombre": "Tehuac√°n"
                                 },
                                 {
                                     "id": 157,
@@ -7089,7 +7103,7 @@
                                 },
                                 {
                                     "id": 159,
-                                    "nombre": "Teopantl·n"
+                                    "nombre": "Teopantl√°n"
                                 },
                                 {
                                     "id": 160,
@@ -7097,11 +7111,11 @@
                                 },
                                 {
                                     "id": 161,
-                                    "nombre": "Tepanco de LÛpez"
+                                    "nombre": "Tepanco de L√≥pez"
                                 },
                                 {
                                     "id": 162,
-                                    "nombre": "Tepango de RodrÌguez"
+                                    "nombre": "Tepango de Rodr√≠guez"
                                 },
                                 {
                                     "id": 163,
@@ -7129,7 +7143,7 @@
                                 },
                                 {
                                     "id": 169,
-                                    "nombre": "Tepexi de RodrÌguez"
+                                    "nombre": "Tepexi de Rodr√≠guez"
                                 },
                                 {
                                     "id": 170,
@@ -7137,7 +7151,7 @@
                                 },
                                 {
                                     "id": 171,
-                                    "nombre": "Tepeyahualco de CuauhtÈmoc"
+                                    "nombre": "Tepeyahualco de Cuauht√©moc"
                                 },
                                 {
                                     "id": 172,
@@ -7149,7 +7163,7 @@
                                 },
                                 {
                                     "id": 174,
-                                    "nombre": "Teziutl·n"
+                                    "nombre": "Teziutl√°n"
                                 },
                                 {
                                     "id": 175,
@@ -7165,7 +7179,7 @@
                                 },
                                 {
                                     "id": 178,
-                                    "nombre": "Tlacotepec de Benito Ju·rez"
+                                    "nombre": "Tlacotepec de Benito Ju√°rez"
                                 },
                                 {
                                     "id": 179,
@@ -7193,7 +7207,7 @@
                                 },
                                 {
                                     "id": 185,
-                                    "nombre": "Tlapanal·"
+                                    "nombre": "Tlapanal√°"
                                 },
                                 {
                                     "id": 186,
@@ -7237,7 +7251,7 @@
                                 },
                                 {
                                     "id": 196,
-                                    "nombre": "Xayacatl·n de Bravo"
+                                    "nombre": "Xayacatl√°n de Bravo"
                                 },
                                 {
                                     "id": 197,
@@ -7245,7 +7259,7 @@
                                 },
                                 {
                                     "id": 198,
-                                    "nombre": "Xicotl·n"
+                                    "nombre": "Xicotl√°n"
                                 },
                                 {
                                     "id": 199,
@@ -7261,15 +7275,15 @@
                                 },
                                 {
                                     "id": 202,
-                                    "nombre": "Xochitl·n de Vicente Su·rez"
+                                    "nombre": "Xochitl√°n de Vicente Su√°rez"
                                 },
                                 {
                                     "id": 203,
-                                    "nombre": "Xochitl·n Todos Santos"
+                                    "nombre": "Xochitl√°n Todos Santos"
                                 },
                                 {
                                     "id": 204,
-                                    "nombre": "Yaon·huac"
+                                    "nombre": "Yaon√°huac"
                                 },
                                 {
                                     "id": 205,
@@ -7285,15 +7299,15 @@
                                 },
                                 {
                                     "id": 208,
-                                    "nombre": "Zacatl·n"
+                                    "nombre": "Zacatl√°n"
                                 },
                                 {
                                     "id": 209,
-                                    "nombre": "Zapotitl·n"
+                                    "nombre": "Zapotitl√°n"
                                 },
                                 {
                                     "id": 210,
-                                    "nombre": "Zapotitl·n de MÈndez"
+                                    "nombre": "Zapotitl√°n de M√©ndez"
                                 },
                                 {
                                     "id": 211,
@@ -7321,7 +7335,7 @@
                                 },
                                 {
                                     "id": 217,
-                                    "nombre": "Zoquitl·n"
+                                    "nombre": "Zoquitl√°n"
                                 }
                             ]
                         
@@ -7329,7 +7343,7 @@
                     {
                         "id": 22,
                         "iso": "MX-QRO",
-                        "capital": "QuerÈtaro",
+                        "capital": "Quer√©taro",
                         "nombre": "QUERETARO",
                         
                             "municipios": [
@@ -7347,7 +7361,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "ColÛn"
+                                    "nombre": "Col√≥n"
                                 },
                                 {
                                     "id": 5,
@@ -7355,7 +7369,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "El MarquÈs"
+                                    "nombre": "El Marqu√©s"
                                 },
                                 {
                                     "id": 7,
@@ -7379,7 +7393,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "PeÒamiller"
+                                    "nombre": "Pe√±amiller"
                                 },
                                 {
                                     "id": 11,
@@ -7387,15 +7401,15 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "QuerÈtaro"
+                                    "nombre": "Quer√©taro"
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "San JoaquÌn"
+                                    "nombre": "San Joaqu√≠n"
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "San Juan del RÌo"
+                                    "nombre": "San Juan del R√≠o"
                                 },
                                 {
                                     "id": 15,
@@ -7403,7 +7417,7 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "Tolim·n"
+                                    "nombre": "Tolim√°n"
                                 }
                             ]
                         
@@ -7421,7 +7435,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "JosÈ MarÌa Morelos"
+                                    "nombre": "Jos√© Mar√≠a Morelos"
                                 },
                                 {
                                     "id": 3,
@@ -7429,7 +7443,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "L·zaro C·rdenas"
+                                    "nombre": "L√°zaro C√°rdenas"
                                 },
                                 {
                                     "id": 5,
@@ -7441,7 +7455,7 @@
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "OthÛn P. Blanco"
+                                    "nombre": "Oth√≥n P. Blanco"
                                 },
                                 {
                                     "id": 8,
@@ -7449,7 +7463,7 @@
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 8,
@@ -7461,7 +7475,7 @@
                     {
                         "id": 24,
                         "iso": "MX-SLP",
-                        "capital": "San Luis PotosÌ",
+                        "capital": "San Luis Potos√≠",
                         "nombre": "SAN LUIS POTOSI",
                         
                             "municipios": [
@@ -7475,7 +7489,7 @@
                                 },
                                 {
                                     "id": 3,
-                                    "nombre": "AquismÛn"
+                                    "nombre": "Aquism√≥n"
                                 },
                                 {
                                     "id": 4,
@@ -7487,7 +7501,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "C·rdenas"
+                                    "nombre": "C√°rdenas"
                                 },
                                 {
                                     "id": 7,
@@ -7511,11 +7525,11 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "Ciudad del MaÌz"
+                                    "nombre": "Ciudad del Ma√≠z"
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Ciudad Fern·ndez"
+                                    "nombre": "Ciudad Fern√°ndez"
                                 },
                                 {
                                     "id": 12,
@@ -7523,7 +7537,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "Coxcatl·n"
+                                    "nombre": "Coxcatl√°n"
                                 },
                                 {
                                     "id": 14,
@@ -7535,11 +7549,11 @@
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "Guadalc·zar"
+                                    "nombre": "Guadalc√°zar"
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "Huehuetl·n"
+                                    "nombre": "Huehuetl√°n"
                                 },
                                 {
                                     "id": 16,
@@ -7563,7 +7577,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "RayÛn"
+                                    "nombre": "Ray√≥n"
                                 },
                                 {
                                     "id": 22,
@@ -7583,15 +7597,15 @@
                                 },
                                 {
                                     "id": 24,
-                                    "nombre": "San Luis PotosÌ"
+                                    "nombre": "San Luis Potos√≠"
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "San MartÌn Chalchicuautla"
+                                    "nombre": "San Mart√≠n Chalchicuautla"
                                 },
                                 {
                                     "id": 26,
-                                    "nombre": "San Nicol·s Tolentino"
+                                    "nombre": "San Nicol√°s Tolentino"
                                 },
                                 {
                                     "id": 27,
@@ -7603,7 +7617,7 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Santa MarÌa del RÌo"
+                                    "nombre": "Santa Mar√≠a del R√≠o"
                                 },
                                 {
                                     "id": 30,
@@ -7611,7 +7625,7 @@
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "Soledad de Graciano S·nchez"
+                                    "nombre": "Soledad de Graciano S√°nchez"
                                 },
                                 {
                                     "id": 38,
@@ -7623,15 +7637,15 @@
                                 },
                                 {
                                     "id": 32,
-                                    "nombre": "Tampac·n"
+                                    "nombre": "Tampac√°n"
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "TampamolÛn Corona"
+                                    "nombre": "Tampamol√≥n Corona"
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "TamuÌn"
+                                    "nombre": "Tamu√≠n"
                                 },
                                 {
                                     "id": 35,
@@ -7639,11 +7653,11 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Tanlaj·s"
+                                    "nombre": "Tanlaj√°s"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Tanqui·n de Escobedo"
+                                    "nombre": "Tanqui√°n de Escobedo"
                                 },
                                 {
                                     "id": 38,
@@ -7687,7 +7701,7 @@
                                 },
                                 {
                                     "id": 46,
-                                    "nombre": "Villa Ju·rez"
+                                    "nombre": "Villa Ju√°rez"
                                 },
                                 {
                                     "id": 47,
@@ -7703,7 +7717,7 @@
                     {
                         "id": 25,
                         "iso": "MX-SIN",
-                        "capital": "Culiac·n",
+                        "capital": "Culiac√°n",
                         "nombre": "SINALOA",
                         
                             "municipios": [
@@ -7729,11 +7743,11 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Cosal·"
+                                    "nombre": "Cosal√°"
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "Culiac·n"
+                                    "nombre": "Culiac√°n"
                                 },
                                 {
                                     "id": 8,
@@ -7753,7 +7767,7 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "Mazatl·n"
+                                    "nombre": "Mazatl√°n"
                                 },
                                 {
                                     "id": 11,
@@ -7819,7 +7833,7 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "BacadÈhuachi"
+                                    "nombre": "Bacad√©huachi"
                                 },
                                 {
                                     "id": 9,
@@ -7835,15 +7849,15 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "B·cum"
+                                    "nombre": "B√°cum"
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Ban·michi"
+                                    "nombre": "Ban√°michi"
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Bavi·cora"
+                                    "nombre": "Bavi√°cora"
                                 },
                                 {
                                     "id": 13,
@@ -7851,11 +7865,11 @@
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "BenjamÌn Hill"
+                                    "nombre": "Benjam√≠n Hill"
                                 },
                                 {
                                     "id": 18,
@@ -7871,7 +7885,7 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "CarbÛ"
+                                    "nombre": "Carb√≥"
                                 },
                                 {
                                     "id": 18,
@@ -7899,7 +7913,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "General Plutarco ElÌas Calles"
+                                    "nombre": "General Plutarco El√≠as Calles"
                                 },
                                 {
                                     "id": 29,
@@ -7923,7 +7937,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "Hu·sabas"
+                                    "nombre": "Hu√°sabas"
                                 },
                                 {
                                     "id": 29,
@@ -7931,7 +7945,7 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "HuÈpac"
+                                    "nombre": "Hu√©pac"
                                 },
                                 {
                                     "id": 31,
@@ -7947,7 +7961,7 @@
                                 },
                                 {
                                     "id": 32,
-                                    "nombre": "Mazat·n"
+                                    "nombre": "Mazat√°n"
                                 },
                                 {
                                     "id": 33,
@@ -7959,11 +7973,11 @@
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "N·cori Chico"
+                                    "nombre": "N√°cori Chico"
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Nacozari de GarcÌa"
+                                    "nombre": "Nacozari de Garc√≠a"
                                 },
                                 {
                                     "id": 37,
@@ -7987,7 +8001,7 @@
                                 },
                                 {
                                     "id": 40,
-                                    "nombre": "Puerto PeÒasco"
+                                    "nombre": "Puerto Pe√±asco"
                                 },
                                 {
                                     "id": 41,
@@ -7995,7 +8009,7 @@
                                 },
                                 {
                                     "id": 42,
-                                    "nombre": "RayÛn"
+                                    "nombre": "Ray√≥n"
                                 },
                                 {
                                     "id": 43,
@@ -8007,11 +8021,11 @@
                                 },
                                 {
                                     "id": 45,
-                                    "nombre": "San Felipe de Jes˙s"
+                                    "nombre": "San Felipe de Jes√∫s"
                                 },
                                 {
                                     "id": 46,
-                                    "nombre": "San Ignacio RÌo Muerto"
+                                    "nombre": "San Ignacio R√≠o Muerto"
                                 },
                                 {
                                     "id": 47,
@@ -8019,7 +8033,7 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "San Luis RÌo Colorado"
+                                    "nombre": "San Luis R√≠o Colorado"
                                 },
                                 {
                                     "id": 59,
@@ -8039,7 +8053,7 @@
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "S·ric"
+                                    "nombre": "S√°ric"
                                 },
                                 {
                                     "id": 52,
@@ -8075,7 +8089,7 @@
                                 },
                                 {
                                     "id": 58,
-                                    "nombre": "YÈcora"
+                                    "nombre": "Y√©cora"
                                 }
                             ]
                         
@@ -8089,11 +8103,11 @@
                             "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Balanc·n"
+                                    "nombre": "Balanc√°n"
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "C·rdenas"
+                                    "nombre": "C√°rdenas"
                                 },
                                 {
                                     "id": 3,
@@ -8109,7 +8123,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "Cunduac·n"
+                                    "nombre": "Cunduac√°n"
                                 },
                                 {
                                     "id": 7,
@@ -8125,7 +8139,7 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Jalpa de MÈndez"
+                                    "nombre": "Jalpa de M√©ndez"
                                 },
                                 {
                                     "id": 9,
@@ -8141,7 +8155,7 @@
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "ParaÌso"
+                                    "nombre": "Para√≠so"
                                 },
                                 {
                                     "id": 13,
@@ -8211,15 +8225,15 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "G?Èmez"
+                                    "nombre": "G?√©mez"
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "GÛmez FarÌas"
+                                    "nombre": "G√≥mez Far√≠as"
                                 },
                                 {
                                     "id": 12,
-                                    "nombre": "Gonz·lez"
+                                    "nombre": "Gonz√°lez"
                                 },
                                 {
                                     "id": 13,
@@ -8227,7 +8241,7 @@
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "Gustavo DÌaz Ordaz"
+                                    "nombre": "Gustavo D√≠az Ordaz"
                                 },
                                 {
                                     "id": 15,
@@ -8239,7 +8253,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "JimÈnez"
+                                    "nombre": "Jim√©nez"
                                 },
                                 {
                                     "id": 16,
@@ -8255,7 +8269,7 @@
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "MÈndez"
+                                    "nombre": "M√©ndez"
                                 },
                                 {
                                     "id": 20,
@@ -8263,7 +8277,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Miguel Alem·n"
+                                    "nombre": "Miguel Alem√°n"
                                 },
                                 {
                                     "id": 22,
@@ -8295,7 +8309,7 @@
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "RÌo Bravo"
+                                    "nombre": "R√≠o Bravo"
                                 },
                                 {
                                     "id": 28,
@@ -8307,7 +8321,7 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "San Nicol·s"
+                                    "nombre": "San Nicol√°s"
                                 },
                                 {
                                     "id": 31,
@@ -8331,11 +8345,11 @@
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "Villagr·n"
+                                    "nombre": "Villagr√°n"
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "XicotÈncatl"
+                                    "nombre": "Xicot√©ncatl"
                                 }
                             ]
                         
@@ -8361,7 +8375,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Apetatitl·n de Antonio Carvajal"
+                                    "nombre": "Apetatitl√°n de Antonio Carvajal"
                                 },
                                 {
                                     "id": 5,
@@ -8373,7 +8387,7 @@
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 8,
@@ -8405,7 +8419,7 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "EspaÒita"
+                                    "nombre": "Espa√±ita"
                                 },
                                 {
                                     "id": 14,
@@ -8429,15 +8443,15 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "L·zaro C·rdenas"
+                                    "nombre": "L√°zaro C√°rdenas"
                                 },
                                 {
                                     "id": 18,
-                                    "nombre": "Mazatecochco de JosÈ MarÌa Morelos"
+                                    "nombre": "Mazatecochco de Jos√© Mar√≠a Morelos"
                                 },
                                 {
                                     "id": 19,
-                                    "nombre": "MuÒoz de Domingo Arenas"
+                                    "nombre": "Mu√±oz de Domingo Arenas"
                                 },
                                 {
                                     "id": 20,
@@ -8445,7 +8459,7 @@
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "NatÌvitas"
+                                    "nombre": "Nat√≠vitas"
                                 },
                                 {
                                     "id": 22,
@@ -8453,11 +8467,11 @@
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "Papalotla de XicohtÈncatl"
+                                    "nombre": "Papalotla de Xicoht√©ncatl"
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "San Dami·n Texoloc"
+                                    "nombre": "San Dami√°n Texoloc"
                                 },
                                 {
                                     "id": 29,
@@ -8465,11 +8479,11 @@
                                 },
                                 {
                                     "id": 24,
-                                    "nombre": "San JerÛnimo Zacualpan"
+                                    "nombre": "San Jer√≥nimo Zacualpan"
                                 },
                                 {
                                     "id": 25,
-                                    "nombre": "San JosÈ Teacalco"
+                                    "nombre": "San Jos√© Teacalco"
                                 },
                                 {
                                     "id": 26,
@@ -8489,7 +8503,7 @@
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "SanctÛrum de L·zaro C·rdenas"
+                                    "nombre": "Sanct√≥rum de L√°zaro C√°rdenas"
                                 },
                                 {
                                     "id": 31,
@@ -8525,7 +8539,7 @@
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Tepetitla de Lardiz·bal"
+                                    "nombre": "Tepetitla de Lardiz√°bal"
                                 },
                                 {
                                     "id": 38,
@@ -8553,7 +8567,7 @@
                                 },
                                 {
                                     "id": 42,
-                                    "nombre": "Tocatl·n"
+                                    "nombre": "Tocatl√°n"
                                 },
                                 {
                                     "id": 43,
@@ -8585,7 +8599,7 @@
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Zitlaltepec de Trinidad S·nchez Santos"
+                                    "nombre": "Zitlaltepec de Trinidad S√°nchez Santos"
                                 }
                             ]
                         
@@ -8603,7 +8617,7 @@
                                 },
                                 {
                                     "id": 2,
-                                    "nombre": "Acatl·n"
+                                    "nombre": "Acatl√°n"
                                 },
                                 {
                                     "id": 3,
@@ -8627,11 +8641,11 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "Alpatl·huac"
+                                    "nombre": "Alpatl√°huac"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Alto Lucero de GutiÈrrez Barrios"
+                                    "nombre": "Alto Lucero de Guti√©rrez Barrios"
                                 },
                                 {
                                     "id": 8,
@@ -8643,11 +8657,11 @@
                                 },
                                 {
                                     "id": 10,
-                                    "nombre": "Amatitl·n"
+                                    "nombre": "Amatitl√°n"
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "Amatl·n de los Reyes"
+                                    "nombre": "Amatl√°n de los Reyes"
                                 },
                                 {
                                     "id": 12,
@@ -8691,11 +8705,11 @@
                                 },
                                 {
                                     "id": 20,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Boca del RÌo"
+                                    "nombre": "Boca del R√≠o"
                                 },
                                 {
                                     "id": 22,
@@ -8703,7 +8717,7 @@
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "CamarÛn de Tejeda"
+                                    "nombre": "Camar√≥n de Tejeda"
                                 },
                                 {
                                     "id": 28,
@@ -8763,7 +8777,7 @@
                                 },
                                 {
                                     "id": 34,
-                                    "nombre": "Chocam·n"
+                                    "nombre": "Chocam√°n"
                                 },
                                 {
                                     "id": 35,
@@ -8771,11 +8785,11 @@
                                 },
                                 {
                                     "id": 36,
-                                    "nombre": "Chumatl·n"
+                                    "nombre": "Chumatl√°n"
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "CitlaltÈpetl"
+                                    "nombre": "Citlalt√©petl"
                                 },
                                 {
                                     "id": 38,
@@ -8783,7 +8797,7 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Coahuitl·n"
+                                    "nombre": "Coahuitl√°n"
                                 },
                                 {
                                     "id": 48,
@@ -8811,7 +8825,7 @@
                                 },
                                 {
                                     "id": 44,
-                                    "nombre": "CÛrdoba"
+                                    "nombre": "C√≥rdoba"
                                 },
                                 {
                                     "id": 45,
@@ -8819,7 +8833,7 @@
                                 },
                                 {
                                     "id": 46,
-                                    "nombre": "Cosautl·n de Carvajal"
+                                    "nombre": "Cosautl√°n de Carvajal"
                                 },
                                 {
                                     "id": 47,
@@ -8847,7 +8861,7 @@
                                 },
                                 {
                                     "id": 51,
-                                    "nombre": "Cuitl·huac"
+                                    "nombre": "Cuitl√°huac"
                                 },
                                 {
                                     "id": 52,
@@ -8867,15 +8881,15 @@
                                 },
                                 {
                                     "id": 68,
-                                    "nombre": "FortÌn"
+                                    "nombre": "Fort√≠n"
                                 },
                                 {
                                     "id": 69,
-                                    "nombre": "GutiÈrrez Zamora"
+                                    "nombre": "Guti√©rrez Zamora"
                                 },
                                 {
                                     "id": 56,
-                                    "nombre": "Hidalgotitl·n"
+                                    "nombre": "Hidalgotitl√°n"
                                 },
                                 {
                                     "id": 57,
@@ -8899,7 +8913,7 @@
                                 },
                                 {
                                     "id": 62,
-                                    "nombre": "Ilamatl·n"
+                                    "nombre": "Ilamatl√°n"
                                 },
                                 {
                                     "id": 63,
@@ -8911,19 +8925,19 @@
                                 },
                                 {
                                     "id": 79,
-                                    "nombre": "Ixhuac·n de los Reyes"
+                                    "nombre": "Ixhuac√°n de los Reyes"
                                 },
                                 {
                                     "id": 80,
-                                    "nombre": "Ixhuatl·n de Madero"
+                                    "nombre": "Ixhuatl√°n de Madero"
                                 },
                                 {
                                     "id": 81,
-                                    "nombre": "Ixhuatl·n del CafÈ"
+                                    "nombre": "Ixhuatl√°n del Caf√©"
                                 },
                                 {
                                     "id": 82,
-                                    "nombre": "Ixhuatl·n del Sureste"
+                                    "nombre": "Ixhuatl√°n del Sureste"
                                 },
                                 {
                                     "id": 83,
@@ -8935,7 +8949,7 @@
                                 },
                                 {
                                     "id": 85,
-                                    "nombre": "Ixtaczoquitl·n"
+                                    "nombre": "Ixtaczoquitl√°n"
                                 },
                                 {
                                     "id": 86,
@@ -8947,7 +8961,7 @@
                                 },
                                 {
                                     "id": 88,
-                                    "nombre": "J·ltipan"
+                                    "nombre": "J√°ltipan"
                                 },
                                 {
                                     "id": 89,
@@ -8955,7 +8969,7 @@
                                 },
                                 {
                                     "id": 90,
-                                    "nombre": "Jes˙s Carranza"
+                                    "nombre": "Jes√∫s Carranza"
                                 },
                                 {
                                     "id": 91,
@@ -8963,11 +8977,11 @@
                                 },
                                 {
                                     "id": 92,
-                                    "nombre": "JosÈ Azueta"
+                                    "nombre": "Jos√© Azueta"
                                 },
                                 {
                                     "id": 93,
-                                    "nombre": "Juan RodrÌguez Clara"
+                                    "nombre": "Juan Rodr√≠guez Clara"
                                 },
                                 {
                                     "id": 94,
@@ -8995,7 +9009,7 @@
                                 },
                                 {
                                     "id": 100,
-                                    "nombre": "Las Vigas de RamÌrez"
+                                    "nombre": "Las Vigas de Ram√≠rez"
                                 },
                                 {
                                     "id": 101,
@@ -9023,11 +9037,11 @@
                                 },
                                 {
                                     "id": 107,
-                                    "nombre": "MartÌnez de la Torre"
+                                    "nombre": "Mart√≠nez de la Torre"
                                 },
                                 {
                                     "id": 108,
-                                    "nombre": "Mecatl·n"
+                                    "nombre": "Mecatl√°n"
                                 },
                                 {
                                     "id": 109,
@@ -9035,15 +9049,15 @@
                                 },
                                 {
                                     "id": 110,
-                                    "nombre": "MedellÌn"
+                                    "nombre": "Medell√≠n"
                                 },
                                 {
                                     "id": 111,
-                                    "nombre": "Miahuatl·n"
+                                    "nombre": "Miahuatl√°n"
                                 },
                                 {
                                     "id": 112,
-                                    "nombre": "Minatitl·n"
+                                    "nombre": "Minatitl√°n"
                                 },
                                 {
                                     "id": 113,
@@ -9055,11 +9069,11 @@
                                 },
                                 {
                                     "id": 115,
-                                    "nombre": "Moloac·n"
+                                    "nombre": "Moloac√°n"
                                 },
                                 {
                                     "id": 116,
-                                    "nombre": "Nanchital de L·zaro C·rdenas del R"
+                                    "nombre": "Nanchital de L√°zaro C√°rdenas del R"
                                 },
                                 {
                                     "id": 117,
@@ -9071,7 +9085,7 @@
                                 },
                                 {
                                     "id": 119,
-                                    "nombre": "Naranjos Amatl·n"
+                                    "nombre": "Naranjos Amatl√°n"
                                 },
                                 {
                                     "id": 120,
@@ -9095,7 +9109,7 @@
                                 },
                                 {
                                     "id": 125,
-                                    "nombre": "Otatitl·n"
+                                    "nombre": "Otatitl√°n"
                                 },
                                 {
                                     "id": 126,
@@ -9103,7 +9117,7 @@
                                 },
                                 {
                                     "id": 127,
-                                    "nombre": "Ozuluama de MascareÒas"
+                                    "nombre": "Ozuluama de Mascare√±as"
                                 },
                                 {
                                     "id": 128,
@@ -9111,7 +9125,7 @@
                                 },
                                 {
                                     "id": 129,
-                                    "nombre": "P·nuco"
+                                    "nombre": "P√°nuco"
                                 },
                                 {
                                     "id": 130,
@@ -9131,7 +9145,7 @@
                                 },
                                 {
                                     "id": 134,
-                                    "nombre": "PlatÛn S·nchez"
+                                    "nombre": "Plat√≥n S√°nchez"
                                 },
                                 {
                                     "id": 135,
@@ -9159,7 +9173,7 @@
                                 },
                                 {
                                     "id": 141,
-                                    "nombre": "RÌo Blanco"
+                                    "nombre": "R√≠o Blanco"
                                 },
                                 {
                                     "id": 142,
@@ -9167,11 +9181,11 @@
                                 },
                                 {
                                     "id": 143,
-                                    "nombre": "San AndrÈs Tenejapan"
+                                    "nombre": "San Andr√©s Tenejapan"
                                 },
                                 {
                                     "id": 144,
-                                    "nombre": "San AndrÈs Tuxtla"
+                                    "nombre": "San Andr√©s Tuxtla"
                                 },
                                 {
                                     "id": 145,
@@ -9191,7 +9205,7 @@
                                 },
                                 {
                                     "id": 149,
-                                    "nombre": "Sayula de Alem·n"
+                                    "nombre": "Sayula de Alem√°n"
                                 },
                                 {
                                     "id": 150,
@@ -9215,7 +9229,7 @@
                                 },
                                 {
                                     "id": 155,
-                                    "nombre": "TamalÌn"
+                                    "nombre": "Tamal√≠n"
                                 },
                                 {
                                     "id": 156,
@@ -9239,7 +9253,7 @@
                                 },
                                 {
                                     "id": 161,
-                                    "nombre": "Tatahuicapan de Ju·rez"
+                                    "nombre": "Tatahuicapan de Ju√°rez"
                                 },
                                 {
                                     "id": 162,
@@ -9267,7 +9281,7 @@
                                 },
                                 {
                                     "id": 168,
-                                    "nombre": "Tenochtitl·n"
+                                    "nombre": "Tenochtitl√°n"
                                 },
                                 {
                                     "id": 169,
@@ -9279,7 +9293,7 @@
                                 },
                                 {
                                     "id": 171,
-                                    "nombre": "Tepetl·n"
+                                    "nombre": "Tepetl√°n"
                                 },
                                 {
                                     "id": 172,
@@ -9295,7 +9309,7 @@
                                 },
                                 {
                                     "id": 175,
-                                    "nombre": "Texhuac·n"
+                                    "nombre": "Texhuac√°n"
                                 },
                                 {
                                     "id": 176,
@@ -9311,7 +9325,7 @@
                                 },
                                 {
                                     "id": 179,
-                                    "nombre": "Tihuatl·n"
+                                    "nombre": "Tihuatl√°n"
                                 },
                                 {
                                     "id": 180,
@@ -9331,7 +9345,7 @@
                                 },
                                 {
                                     "id": 184,
-                                    "nombre": "Tlacotepec de MejÌa"
+                                    "nombre": "Tlacotepec de Mej√≠a"
                                 },
                                 {
                                     "id": 185,
@@ -9359,11 +9373,11 @@
                                 },
                                 {
                                     "id": 191,
-                                    "nombre": "Tomatl·n"
+                                    "nombre": "Tomatl√°n"
                                 },
                                 {
                                     "id": 192,
-                                    "nombre": "Tonay·n"
+                                    "nombre": "Tonay√°n"
                                 },
                                 {
                                     "id": 193,
@@ -9375,7 +9389,7 @@
                                 },
                                 {
                                     "id": 195,
-                                    "nombre": "T˙xpam"
+                                    "nombre": "T√∫xpam"
                                 },
                                 {
                                     "id": 196,
@@ -9383,7 +9397,7 @@
                                 },
                                 {
                                     "id": 197,
-                                    "nombre": "Ursulo Galv·n"
+                                    "nombre": "Ursulo Galv√°n"
                                 },
                                 {
                                     "id": 198,
@@ -9439,7 +9453,7 @@
                                 },
                                 {
                                     "id": 211,
-                                    "nombre": "Zontecomatl·n de LÛpez y Fuentes"
+                                    "nombre": "Zontecomatl√°n de L√≥pez y Fuentes"
                                 },
                                 {
                                     "id": 212,
@@ -9451,13 +9465,13 @@
                     {
                         "id": 31,
                         "iso": "MX-YUC",
-                        "capital": "MÈrida",
+                        "capital": "M√©rida",
                         "nombre": "YUCATAN",
                         
                             "municipios": [
                                 {
                                     "id": 1,
-                                    "nombre": "Abal·"
+                                    "nombre": "Abal√°"
                                 },
                                 {
                                     "id": 2,
@@ -9473,7 +9487,7 @@
                                 },
                                 {
                                     "id": 5,
-                                    "nombre": "Bokob·"
+                                    "nombre": "Bokob√°"
                                 },
                                 {
                                     "id": 6,
@@ -9481,7 +9495,7 @@
                                 },
                                 {
                                     "id": 7,
-                                    "nombre": "CacalchÈn"
+                                    "nombre": "Cacalch√©n"
                                 },
                                 {
                                     "id": 8,
@@ -9497,7 +9511,7 @@
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "Celest˙n"
+                                    "nombre": "Celest√∫n"
                                 },
                                 {
                                     "id": 10,
@@ -9505,7 +9519,7 @@
                                 },
                                 {
                                     "id": 11,
-                                    "nombre": "ChacsinkÌn"
+                                    "nombre": "Chacsink√≠n"
                                 },
                                 {
                                     "id": 12,
@@ -9521,7 +9535,7 @@
                                 },
                                 {
                                     "id": 15,
-                                    "nombre": "Chichimil·"
+                                    "nombre": "Chichimil√°"
                                 },
                                 {
                                     "id": 18,
@@ -9533,7 +9547,7 @@
                                 },
                                 {
                                     "id": 16,
-                                    "nombre": "Chochol·"
+                                    "nombre": "Chochol√°"
                                 },
                                 {
                                     "id": 17,
@@ -9549,11 +9563,11 @@
                                 },
                                 {
                                     "id": 20,
-                                    "nombre": "Cuzam·"
+                                    "nombre": "Cuzam√°"
                                 },
                                 {
                                     "id": 21,
-                                    "nombre": "Dz·n"
+                                    "nombre": "Dz√°n"
                                 },
                                 {
                                     "id": 22,
@@ -9561,7 +9575,7 @@
                                 },
                                 {
                                     "id": 23,
-                                    "nombre": "Dzidzant˙n"
+                                    "nombre": "Dzidzant√∫n"
                                 },
                                 {
                                     "id": 28,
@@ -9569,11 +9583,11 @@
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Dzilam Gonz·lez"
+                                    "nombre": "Dzilam Gonz√°lez"
                                 },
                                 {
                                     "id": 24,
-                                    "nombre": "Dzit·s"
+                                    "nombre": "Dzit√°s"
                                 },
                                 {
                                     "id": 25,
@@ -9585,27 +9599,27 @@
                                 },
                                 {
                                     "id": 27,
-                                    "nombre": "HalachÛ"
+                                    "nombre": "Halach√≥"
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "Hocab·"
+                                    "nombre": "Hocab√°"
                                 },
                                 {
                                     "id": 29,
-                                    "nombre": "Hoct˙n"
+                                    "nombre": "Hoct√∫n"
                                 },
                                 {
                                     "id": 30,
-                                    "nombre": "Hom˙n"
+                                    "nombre": "Hom√∫n"
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "HuhÌ"
+                                    "nombre": "Huh√≠"
                                 },
                                 {
                                     "id": 38,
-                                    "nombre": "Hunucm·"
+                                    "nombre": "Hunucm√°"
                                 },
                                 {
                                     "id": 39,
@@ -9617,7 +9631,7 @@
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "KanasÌn"
+                                    "nombre": "Kanas√≠n"
                                 },
                                 {
                                     "id": 34,
@@ -9633,7 +9647,7 @@
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Kopom·"
+                                    "nombre": "Kopom√°"
                                 },
                                 {
                                     "id": 38,
@@ -9641,23 +9655,23 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "ManÌ"
+                                    "nombre": "Man√≠"
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Maxcan˙"
+                                    "nombre": "Maxcan√∫"
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "Mayap·n"
+                                    "nombre": "Mayap√°n"
                                 },
                                 {
                                     "id": 40,
-                                    "nombre": "MÈrida"
+                                    "nombre": "M√©rida"
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "Mococh·"
+                                    "nombre": "Mococh√°"
                                 },
                                 {
                                     "id": 42,
@@ -9673,7 +9687,7 @@
                                 },
                                 {
                                     "id": 45,
-                                    "nombre": "OpichÈn"
+                                    "nombre": "Opich√©n"
                                 },
                                 {
                                     "id": 46,
@@ -9681,7 +9695,7 @@
                                 },
                                 {
                                     "id": 47,
-                                    "nombre": "Panab·"
+                                    "nombre": "Panab√°"
                                 },
                                 {
                                     "id": 58,
@@ -9697,7 +9711,7 @@
                                 },
                                 {
                                     "id": 49,
-                                    "nombre": "RÌo Lagartos"
+                                    "nombre": "R√≠o Lagartos"
                                 },
                                 {
                                     "id": 50,
@@ -9721,11 +9735,11 @@
                                 },
                                 {
                                     "id": 55,
-                                    "nombre": "SeyÈ"
+                                    "nombre": "Sey√©"
                                 },
                                 {
                                     "id": 68,
-                                    "nombre": "SinanchÈ"
+                                    "nombre": "Sinanch√©"
                                 },
                                 {
                                     "id": 69,
@@ -9733,7 +9747,7 @@
                                 },
                                 {
                                     "id": 56,
-                                    "nombre": "Sucil·"
+                                    "nombre": "Sucil√°"
                                 },
                                 {
                                     "id": 57,
@@ -9745,7 +9759,7 @@
                                 },
                                 {
                                     "id": 59,
-                                    "nombre": "Tahdzi˙"
+                                    "nombre": "Tahdzi√∫"
                                 },
                                 {
                                     "id": 60,
@@ -9765,7 +9779,7 @@
                                 },
                                 {
                                     "id": 78,
-                                    "nombre": "TekantÛ"
+                                    "nombre": "Tekant√≥"
                                 },
                                 {
                                     "id": 79,
@@ -9793,11 +9807,11 @@
                                 },
                                 {
                                     "id": 85,
-                                    "nombre": "TemozÛn"
+                                    "nombre": "Temoz√≥n"
                                 },
                                 {
                                     "id": 86,
-                                    "nombre": "Tepak·n"
+                                    "nombre": "Tepak√°n"
                                 },
                                 {
                                     "id": 87,
@@ -9833,15 +9847,15 @@
                                 },
                                 {
                                     "id": 95,
-                                    "nombre": "TixpÈhual"
+                                    "nombre": "Tixp√©hual"
                                 },
                                 {
                                     "id": 96,
-                                    "nombre": "TizimÌn"
+                                    "nombre": "Tizim√≠n"
                                 },
                                 {
                                     "id": 97,
-                                    "nombre": "Tunk·s"
+                                    "nombre": "Tunk√°s"
                                 },
                                 {
                                     "id": 98,
@@ -9853,11 +9867,11 @@
                                 },
                                 {
                                     "id": 100,
-                                    "nombre": "Uc˙"
+                                    "nombre": "Uc√∫"
                                 },
                                 {
                                     "id": 101,
-                                    "nombre": "Um·n"
+                                    "nombre": "Um√°n"
                                 },
                                 {
                                     "id": 102,
@@ -9869,7 +9883,7 @@
                                 },
                                 {
                                     "id": 104,
-                                    "nombre": "Yaxcab·"
+                                    "nombre": "Yaxcab√°"
                                 },
                                 {
                                     "id": 105,
@@ -9877,7 +9891,7 @@
                                 },
                                 {
                                     "id": 106,
-                                    "nombre": "YobaÌn"
+                                    "nombre": "Yoba√≠n"
                                 }
                             ]
                         
@@ -9903,7 +9917,7 @@
                                 },
                                 {
                                     "id": 4,
-                                    "nombre": "Benito Ju·rez"
+                                    "nombre": "Benito Ju√°rez"
                                 },
                                 {
                                     "id": 5,
@@ -9911,7 +9925,7 @@
                                 },
                                 {
                                     "id": 6,
-                                    "nombre": "CaÒitas de Felipe Pescador"
+                                    "nombre": "Ca√±itas de Felipe Pescador"
                                 },
                                 {
                                     "id": 7,
@@ -9919,15 +9933,15 @@
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "ConcepciÛn del Oro"
+                                    "nombre": "Concepci√≥n del Oro"
                                 },
                                 {
                                     "id": 9,
-                                    "nombre": "CuauhtÈmoc"
+                                    "nombre": "Cuauht√©moc"
                                 },
                                 {
                                     "id": 8,
-                                    "nombre": "El Plateado de JoaquÌn Amaro"
+                                    "nombre": "El Plateado de Joaqu√≠n Amaro"
                                 },
                                 {
                                     "id": 9,
@@ -9947,11 +9961,11 @@
                                 },
                                 {
                                     "id": 13,
-                                    "nombre": "General Francisco R. MurguÌa"
+                                    "nombre": "General Francisco R. Murgu√≠a"
                                 },
                                 {
                                     "id": 14,
-                                    "nombre": "General P·nfilo Natera"
+                                    "nombre": "General P√°nfilo Natera"
                                 },
                                 {
                                     "id": 15,
@@ -9971,7 +9985,7 @@
                                 },
                                 {
                                     "id": 17,
-                                    "nombre": "JimÈnez del Teul"
+                                    "nombre": "Jim√©nez del Teul"
                                 },
                                 {
                                     "id": 18,
@@ -10023,7 +10037,7 @@
                                 },
                                 {
                                     "id": 28,
-                                    "nombre": "Nochistl·n de MejÌa"
+                                    "nombre": "Nochistl√°n de Mej√≠a"
                                 },
                                 {
                                     "id": 29,
@@ -10035,7 +10049,7 @@
                                 },
                                 {
                                     "id": 31,
-                                    "nombre": "P·nuco"
+                                    "nombre": "P√°nuco"
                                 },
                                 {
                                     "id": 38,
@@ -10043,7 +10057,7 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "RÌo Grande"
+                                    "nombre": "R√≠o Grande"
                                 },
                                 {
                                     "id": 32,
@@ -10051,7 +10065,7 @@
                                 },
                                 {
                                     "id": 33,
-                                    "nombre": "Santa MarÌa de la Paz"
+                                    "nombre": "Santa Mar√≠a de la Paz"
                                 },
                                 {
                                     "id": 34,
@@ -10059,7 +10073,7 @@
                                 },
                                 {
                                     "id": 35,
-                                    "nombre": "Susticac·n"
+                                    "nombre": "Susticac√°n"
                                 },
                                 {
                                     "id": 36,
@@ -10067,7 +10081,7 @@
                                 },
                                 {
                                     "id": 37,
-                                    "nombre": "Tepechitl·n"
+                                    "nombre": "Tepechitl√°n"
                                 },
                                 {
                                     "id": 38,
@@ -10075,11 +10089,11 @@
                                 },
                                 {
                                     "id": 39,
-                                    "nombre": "Teul de Gonz·lez Ortega"
+                                    "nombre": "Teul de Gonz√°lez Ortega"
                                 },
                                 {
                                     "id": 48,
-                                    "nombre": "Tlaltenango de S·nchez Rom·n"
+                                    "nombre": "Tlaltenango de S√°nchez Rom√°n"
                                 },
                                 {
                                     "id": 49,
@@ -10087,11 +10101,11 @@
                                 },
                                 {
                                     "id": 40,
-                                    "nombre": "Trinidad GarcÌa de la Cadena"
+                                    "nombre": "Trinidad Garc√≠a de la Cadena"
                                 },
                                 {
                                     "id": 41,
-                                    "nombre": "ValparaÌso"
+                                    "nombre": "Valpara√≠so"
                                 },
                                 {
                                     "id": 42,
@@ -10103,11 +10117,11 @@
                                 },
                                 {
                                     "id": 44,
-                                    "nombre": "Villa GarcÌa"
+                                    "nombre": "Villa Garc√≠a"
                                 },
                                 {
                                     "id": 45,
-                                    "nombre": "Villa Gonz·lez Ortega"
+                                    "nombre": "Villa Gonz√°lez Ortega"
                                 },
                                 {
                                     "id": 46,

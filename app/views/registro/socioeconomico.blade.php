@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                {{Form::open(['route' => ['socioeconomico.post', $id]]) }}
+                {{Form::open(['route' => ['socioeconomico.post']]) }}
 
                     <table class="table table-nordered table-hover table-striped">
                         <thead>
@@ -70,16 +70,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($x as $y)
+                        @foreach($data as $d)
                         <tr>
-                            <td>{{$y->parentesco}}</td>
-                            <td>{{$y->edad}}</td>
-                            <td>{{$y->grado_escolar}}</td>
-                            <td>{{$y->ocupacion}}</td>
-                            <td>{{$y->lugar_de_trabajo}}</td>
-                            <td>{{$y->ingreso_mensual}}</td>
+                            <td>{{$d->parentesco}}</td>
+                            <td>{{$d->parentesco}}</td>
+                            <td>{{$d->parentesco}}</td>
+                            <td>{{$d->parentesco}}</td>
+                            <td>{{$d->parentesco}}</td>
+                            <td>{{$d->parentesco}}</td>
                             <td>
-                                {{Form::open(['route' => ['socioeconomico.destroy', $y->id], 'methot' => 'DELETE']) }}
+                                {{Form::open(['route' => ['socioeconomico.destroy', $d->id], 'methot' => 'DELETE']) }}
                                     <button class="btn btn-danger btn-xs">Eliminar</button>
                                 {{Form::close()}}
                             </td>
@@ -88,7 +88,7 @@
                     </tbody>
                 </table>
                 <div class="form-group">
-                    <a href="{{ URL::action('EconomicoController@index', $id)}}">
+                    <a href="{{ URL::action('EconomicoController@index')}}">
                         <button class="btn btn-danger btn-xs">siguiente</button>
                     </a> 
                 </div>

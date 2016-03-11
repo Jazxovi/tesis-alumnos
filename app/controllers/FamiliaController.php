@@ -2,40 +2,39 @@
 
 class FamiliaController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /familia
-	 *
-	 * @return Response
-	 */
-	public function index($id)
+	public function index()
 	{
-		return View::make('registro.aspectos_familiares', compact('id'));
+		$data = Aspectosfamiliare::where('alumno_id', $this->getInfoAlumno()->first()->id)->first();
+		return View::make('aspectosFamiliares.index', compact('data'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /familia/create
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
-		//
+		return View::make('aspectosFamiliares.create');
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /familia
-	 *
-	 * @return Response
-	 */
-	public function store($id)
+	public function store()
 	{
-
+		$rules = [
+			'que_momento_convive_toda_la_familia'					=> 'required',
+			'lugares_que_acudes_con_tu_familia'						=> 'required',
+			'como_es_la_comunicacion_con_tu_familia'	      		=> 'required',
+			'con_que_miembro_de_tu_familia_existe_mayor_confianza'	=> 'required',
+			'nombres'												=> 'required',
+			'telefono'												=> 'required',
+			'mail'													=> 'required',
+			'observaciones'											=> 'required'
+		];
 		$familiares = new Aspecto();
 
-		$familiares->alumno_id = $id;
+		$validator = Validator::make(Input::except('_token'), $rules);
+
+		if ($validator->fails()) {
+			$messages = $validator->messages();
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+
+		$familiares->alumno_id = $this->getInfoAlumno()->first()->id;
 		$familiares->que_momento_convive_toda_la_familia = Input::get('que_momento_convive_toda_la_familia');
 		$familiares->lugares_que_acudes_con_tu_familia = Input::get('lugares_que_acudes_con_tu_familia');
 		$familiares->como_es_la_comunicacion_con_tu_familia = Input::get('como_es_la_comunicacion_con_tu_familia');
@@ -44,58 +43,55 @@ class FamiliaController extends \BaseController {
 		$familiares->telefono = Input::get('telefono');
 		$familiares->mail = Input::get('mail');
 		$familiares->observaciones = Input::get('observaciones');
-
 		$familiares->save();
 
-		return Redirect::route('socioeconomico', compact('id'));
+		return Redirect::route('familiares');
 	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /familia/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
+	public function edit()
 	{
-		//
+		$info = Aspecto::where('alumno_id', $this->getInfoAlumno()->first()->id)->first();
+		return View::make('aspectosFamiliares.edit', compact('info'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /familia/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
+	public function update()
 	{
-		//
+		$rules = [
+			'que_momento_convive_toda_la_familia'					=> 'required',
+			'lugares_que_acudes_con_tu_familia'						=> 'required',
+			'como_es_la_comunicacion_con_tu_familia'	      		=> 'required',
+			'con_que_miembro_de_tu_familia_existe_mayor_confianza'	=> 'required',
+			'nombres'												=> 'required',
+			'telefono'												=> 'required',
+			'mail'													=> 'required',
+			'observaciones'											=> 'required'
+		];
+		$familiares = new Aspecto();
+
+		$validator = Validator::make(Input::except('_token'), $rules);
+
+		if ($validator->fails()) {
+			$messages = $validator->messages();
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+		
+		$aspectos = Aspecto::find($this->getInfoAlumno()->first()->id);
+		$aspectos->que_momento_convive_toda_la_familia = Input::get('que_momento_convive_toda_la_familia');
+		$aspectos->lugares_que_acudes_con_tu_familia = Input::get('lugares_que_acudes_con_tu_familia');
+		$aspectos->como_es_la_comunicacion_con_tu_familia = Input::get('como_es_la_comunicacion_con_tu_familia');
+		$aspectos->con_que_miembro_de_tu_familia_existe_mayor_confianza = Input::get('con_que_miembro_de_tu_familia_existe_mayor_confianza');
+		$aspectos->nombres = Input::get('nombres');
+		$aspectos->telefono = Input::get('telefono');
+		$aspectos->mail = Input::get('mail');
+		$aspectos->observaciones = Input::get('observaciones');
+		$aspectos->save();
+		return Redirect::route('familiares');
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /familia/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+	public function getInfoAlumno()
 	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /familia/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+		$user = Alumno::where('usuario_id', Auth::user()->id);
+		return $user;
 	}
 
 }

@@ -8,11 +8,10 @@ class SocioeconomicoController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index($id)
+	public function index()
 	{
-		$x = Socioeconomico::where('alumno_id', '=', $id)->get();
-
-		return View::make('registro.socioeconomico', compact('id', 'x'));
+		$data = Socioeconomico::where('alumno_id', $this->getInfoAlumno()->first()->id)->get();
+		return View::make('registro.socioeconomico', compact('data'));
 	}
 
 	/**
@@ -32,11 +31,11 @@ class SocioeconomicoController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store($id)
+	public function store()
 	{
 		$socioeconomico = new Socioeconomico();
 
-		$socioeconomico->alumno_id = $id;
+		$socioeconomico->alumno_id = $this->getInfoAlumno()->first()->id;
 		//$socioeconomico->sosten_economico = Input::get('sosten_economico');
 		//$socioeconomico->tipo_vivienda = Input::get('tipo_vivienda');
 		$socioeconomico->parentesco = Input::get('parentesco');
@@ -100,6 +99,12 @@ class SocioeconomicoController extends \BaseController {
 		$socioeconomico->destroy($id);
 
 		return Redirect::back();
+	}
+
+	public function getInfoAlumno()
+	{
+		$user = Alumno::where('usuario_id', Auth::user()->id);
+		return $user;
 	}
 
 }

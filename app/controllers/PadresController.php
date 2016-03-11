@@ -4,19 +4,20 @@ class PadresController extends \BaseController {
 
 	public function index()
 	{
-		return View::make('registro.padres');
+		$alumno = $this->getIdAlumno();
+		$data = Padre::where('alumno_id', $alumno->id)->get();
+		return View::make('padres.index', compact('data'));
 	}
 
 	public function create()
 	{
-		//
+		return View::make('padres.create');
 	}
 
-	public function store($id)
+	public function store()
 	{
 		$padre = new Padre();
-
-		$padre->alumno_id = $id;
+		$padre->alumno_id = $this->getIdAlumno()->id;
 		$padre->nombres_p =Input::get('nombres_p');
 		$padre->esta_vivo_p =Input::get('esta_vivo_p');
 		$padre->telefono_p =Input::get('telefono_p');
@@ -38,55 +39,29 @@ class PadresController extends \BaseController {
 
 		$padre->save();
 
-		return Redirect::route('alimentacion', [$id]);
+		return Redirect::route('padres');
 	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /padres/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
+	public function edit()
 	{
-		//
+		$alumno = $this->getIdAlumno();
+		$data = Padre::where('alumno_id', $alumno->id)->first();
+		return View::make('padres.edit', compact('data'));
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /padres/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /padres/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
 	public function update($id)
 	{
 		//
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /padres/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
+	public function getIdUser()
 	{
-		//
+		return Auth::user()->id;
+	}
+
+	public function getIdAlumno()
+	{
+		return Alumno::where('usuario_id', $this->getIdUser())->first();
 	}
 
 }

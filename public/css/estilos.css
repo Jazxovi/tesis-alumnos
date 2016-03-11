@@ -1,3 +1,6 @@
+input{
+	text-transform: uppercase;
+}
 .espacio{
 	margin-top: 1em;
 }
