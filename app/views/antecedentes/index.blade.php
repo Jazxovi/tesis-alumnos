@@ -22,56 +22,52 @@
                     <td>Respuesta</td>
                 </tr>
                 <tr>
-                    <td>la_primaria_la_cursaste_en_escuela</td>
+                    <td>La primaria la cursaste en escuela</td>
                     <td>{{$data->la_primaria_la_cursaste_en_escuela}}</td>
                 </tr>
                 <tr>
-                    <td>promedio_primaria</td>
+                    <td>Promedio de la primaria</td>
                     <td>{{$data->Promedio_primaria}}</td>
                 </tr>
                 <tr>
-                    <td>la_secundaria_la_cursaste_en_escuela</td>
+                    <td>La secundaria la cursaste en escuela</td>
                     <td>{{$data->la_secundaria_la_cursaste_en_escuela}}</td>
                 </tr>
                 <tr>
-                    <td>promedio_secundaria</td>
+                    <td>Promedio de la secundaria</td>
                     <td>{{$data->promedio_secundaria}}</td>
                 </tr>
                 <tr>
-                    <td>para_ingresar_al_nivel_bachillerato_tu_primera_opcion_fue</td>
+                    <td>Para ingresar al nivel bachillerato, tu primera opción fue</td>
                     <td>{{$data->para_ingresar_al_nivel_bachillerato_tu_primera_opcion_fue}}</td>
                 </tr>
                 <tr>
-                    <td>porque_elegiste_ingresar_a_nuestro_plantel</td>
+                    <td>Porqué elegiste ingresar a nuestro plantel</td>
                     <td>{{$data->porque_elegiste_ingresar_a_nuestro_plantel}}</td>
                 </tr>
                 <tr>
-                    <td>padeces_de_alguna_enfermedad_o_discapasidad</td>
+                    <td>Padeces de alguna enfermedad o discapasidad</td>
                     <td>{{$data->padeces_de_alguna_enfermedad_o_discapasidad}}</td>
                 </tr>
                 <tr>
-                    <td>cual</td>
+                    <td>Cual</td>
                     <td>{{$data->cual}}</td>
                 </tr>
                 <tr>
-                    <td>que_medicamento_tomas</td>
+                    <td>Que medicamento tomas</td>
                     <td>{{$data->que_medicamento_tomas}}</td>
                 </tr>
                 <tr>
-                    <td>con_que_frecuencia</td>
+                    <td>Con que frecuencia</td>
                     <td>{{$data->con_que_frecuencia}}</td>
                 </tr>
                 <tr>
-                    <td>tiempo_empleado_para_transladarte_de_tu_domicilio_al_plantel</td>
+                    <td>Cuanto tiempo empleas para transladarte de tu domicilio al plantel</td>
                     <td>{{$data->tiempo_empleado_para_transladarte_de_tu_domicilio_al_plantel}}</td>
                 </tr>
-                <tr>
-                    <td>con_que_frecuencia</td>
-                    <td>{{$data->con_que_frecuencia}}</td>
-                </tr>
-            </table>
+                </table>
             <div class="form-group">
-                <a href="" class="btn btn-warning">Editar</a>
+                <a href="{{ route('antecedentes.edit')}}" class="btn btn-warning">Editar</a>
             </div>
     </div>
     </div> 

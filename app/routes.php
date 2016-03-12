@@ -30,7 +30,7 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 
 	Route::put('registro/datos_del_alumno', ['as'=> 'alumno.update', 'uses' => 'AlumnoController@update']);
 	
-	Route::post('registro/datos_del_alumno/{id}', ['as'=> 'alumno.post', 'uses' => 'LoginController@create']);
+	Route::post('registro/datos_del_alumno', ['as'=> 'alumno.post', 'uses' => 'LoginController@create']);
 
 	/*
 	|--------------------------------------------------------------------------
@@ -42,6 +42,10 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	Route::get('/registro/antecedentes', ['as' => 'antecedentes', 'uses' => 'AntecedenteController@index' ]);
 
 	Route::get('/registro/crear/antecedentes', ['as' => 'antecedentes.create', 'uses' => 'AntecedenteController@create' ]);
+
+	Route::get('/registro/editar/antecedentes', ['as' => 'antecedentes.edit', 'uses' => 'AntecedenteController@edit' ]);
+
+	Route::put('/registro/actualizar/antecedentes/{id}', ['as' => 'antecedentes.update', 'uses' => 'AntecedenteController@update' ]);
 
 	Route::post('/registro/antecedentes', ['as' => 'antecedentes.store', 'uses' => 'AntecedenteController@store' ]);
 
@@ -57,6 +61,8 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 	Route::get('/registro/crear/padres', ['as' => 'padres.create', 'uses' => 'PadresController@create']);
 
 	Route::get('/registro/editar/padres', ['as' => 'padres.edit', 'uses' => 'PadresController@edit']);
+
+	Route::put('/registro/actualizar/padres/{id}', ['as' => 'padres.update', 'uses' => 'PadresController@update']);
 
 	Route::post('/registro/padres', ['as' => 'padres.post', 'uses' => 'PadresController@store' ]);
 
@@ -106,9 +112,11 @@ Route::post('/login', ['as' => 'login.post', 'uses'=> 'LoginController@postLogin
 
 	Route::post('/registro/socioeconomico/{id}', ['as' => 'socioeconomico.destroy', 'uses' => 'SocioeconomicoController@destroy' ]);
 
-	Route::get('/registro/economico', ['as' => 'economico', 'uses' => 'EconomicoController@index' ]);
+	Route::put('/registro/editar/socioeconomico/{id}', ['as' => 'socioeconomico.update', 'uses' => 'SocioeconomicoController@update']);
 
-	Route::post('/registro/economico', ['as' => 'economico.post', 'uses' => 'EconomicoController@store' ]);
+	/*Route::get('/registro/economico', ['as' => 'economico', 'uses' => 'EconomicoController@index']);
+
+	Route::post('/registro/economico', ['as' => 'economico.post', 'uses' => 'EconomicoController@store' ]);*/
 	/*
 	|--------------------------------------------------------------------------
 	| Ruta para cerrar la Sesion

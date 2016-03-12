@@ -24,6 +24,8 @@
     <script src="{{asset('app/controllers/estadoController.js')}}"></script>
     <script src="{{asset('app/controllers/antecedentesController.js')}}"></script>
     <script src="{{asset('app/controllers/aspectosFamiliaresController.js')}}"></script>
+    <script src="{{asset('app/controllers/padresController.js')}}"></script>
+    <script src="{{asset('app/controllers/socioeconomicoController.js')}}"></script>
 
     @yield('scripts')
 </head>

@@ -36,7 +36,7 @@
                 </div>
                 <div class="tab-pane" id="registro">
                     <div class="row">
-                        {{ Form::open(['route' => 'alumno']) }}
+                        {{ Form::open(['route' => 'alumno.post']) }}
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="Nombre Completo">Nombre Completo</label>

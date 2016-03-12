@@ -1,6 +1,8 @@
 @extends('layout.main')
 @section('contenido')
     <div class="container">
+        <div ng-init="padre = 'si'"></div>
+        <div ng-init="madre = 'si'"></div>
         <h2 class="text-center">Datos Generales de los Padres</h2>
         <div class="row">
             <div class="col-md-3"></div>
@@ -9,7 +11,7 @@
 
                     <div class="form-group">
                         <label for="nombres">Nombre del padre:</label>
-                        <input type="text" class="form-control" name="nombres_p" required>
+                        {{Form::text('nombres_p', null, ['class' => 'form-control'])}}
                     </div>            
 
                     <div class="form-group">
@@ -38,7 +40,7 @@
 
                         <div class="form-group">
                             <label for="ocupacion">Ocupacion:</label>
-                            <input type="text" class="form-control" name="ocupacion_p" required>
+                            <input type="text" class="form-control" name="ocupacion_p" >
                         </div>            
 
                         <div class="form-group">
@@ -79,7 +81,7 @@
 
                     <div class="form-group">
                         <label for="nombres">Nombre de la madre:</label>
-                        <input type="text" class="form-control" name="nombres_m" required>
+                        <input type="text" class="form-control" name="nombres_m">
                     </div>            
 
                     <div class="form-group">
@@ -108,7 +110,7 @@
 
                         <div class="form-group">
                             <label for="ocupacion">Ocupacion:</label>
-                            <input type="text" class="form-control" name="ocupacion_m" required>
+                            <input type="text" class="form-control" name="ocupacion_m">
                         </div>            
 
                         <div class="form-group">
@@ -182,6 +184,14 @@
 
                     <div class="form-group">
                         <button class="btn btn-info">Guardar</button>
+                    </div>
+
+                    <div class="form-group">
+                        @foreach ($errors->all() as $message)
+                            <script>
+                                $.notify("{{$message}}", "error");
+                            </script>
+                        @endforeach
                     </div>
 
                 {{Form::close()}}

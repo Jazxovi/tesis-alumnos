@@ -12,7 +12,7 @@
                     <label for="">Estado {{$user->estado}}</label>
                     <select name="estado" class="form-control" ng-model="estado.iso">
                         <option ng-repeat="x in estados" value="@{{x.iso}}">@{{x.nombre}}</option>
-                        </select>
+                    </select>
                 </div>
                 <div class="form-group" ng-show="estado">
                     <label for="">Municipio {{$user->municipio}}</label>

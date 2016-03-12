@@ -2,35 +2,13 @@
 
 class SocioeconomicoController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /socioeconomico
-	 *
-	 * @return Response
-	 */
 	public function index()
 	{
+		$padre =Padre::where('alumno_id', $this->getInfoAlumno()->first()->id)->first();
 		$data = Socioeconomico::where('alumno_id', $this->getInfoAlumno()->first()->id)->get();
-		return View::make('registro.socioeconomico', compact('data'));
+		return View::make('socioeconomicos.index', compact('padre', 'data'));
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /socioeconomico/create
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /socioeconomico
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
 		$socioeconomico = new Socioeconomico();
@@ -49,40 +27,21 @@ class SocioeconomicoController extends \BaseController {
 		return Redirect::back();
 	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /socioeconomico/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /socioeconomico/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /socioeconomico/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+	
 	public function update($id)
 	{
-		//
+		$data = Padre::find($id);
+		if (Input::get('lugar_trabajo_p')!=null) {
+			$data->lugar_trabajo_p = Input::get('lugar_trabajo_p');
+			$data->ingreso_mensual_p = Input::get('ingreso_mensual_p');
+		}
+		if (Input::get('lugar_trabajo_m')!=null){
+			$data->lugar_trabajo_m = Input::get('lugar_trabajo_m');
+			$data->ingreso_mensual_m = Input::get('ingreso_mensual_m');	
+		}
+		
+		$data->save();
+		return Redirect::back();
 	}
 
 	/**

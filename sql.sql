@@ -426,6 +426,10 @@ create table padres(
 	vives_con_tus_padres varchar(30) not null,
 	con_quien_vives varchar(30) not null,
 	numero_hermanos varchar(30) not null,
+	lugar_trabajo_p varchar(30),
+	lugar_trabajo_m varchar(30),
+	ingreso_mensual_p varchar(30),
+	ingreso_mensual_m varchar(30),
 	que_lugar_ocupas_en_la_familia varchar(30) not null,
 	created_at timestamp,
 	updated_at timestamp

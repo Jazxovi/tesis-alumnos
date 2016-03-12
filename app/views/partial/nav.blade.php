@@ -11,6 +11,7 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="menu">
+            @if(Auth::user())
             <ul class="nav navbar-nav navbar-right">
                 <li class="{{ Request::is('datos_escolares') ? 'active' : '' }}">
                     <a href="{{route('p')}}">Datos Escolares</a>
@@ -37,6 +38,7 @@
                     <a href="{{route('salir')}}">Salir</a>
                 </li>
             </ul>
+            @endif
         </div>
     </div>
 </nav>

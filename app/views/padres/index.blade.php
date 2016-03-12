@@ -16,7 +16,6 @@
         @else
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <a href="{{route('padres.edit')}}" class="label label-primary">Actualizar</a>
                 <table class="table table-hover table-bordered table-striped">
                     <tr>
                         <td>Campo</td>
@@ -97,6 +96,9 @@
                     </tr>
                 @endforeach
                 </table>
+                <div class="form-group">
+                    <a href="{{route('padres.edit')}}" class="btn btn-warning">Actualizar</a>
+                </div>
             </div>
         </div> 
         @endif 
